@@ -20,7 +20,7 @@ function Appbar() {
                 <Typography variant="h6" color="inherit">
                     Escape Game              
                 </Typography>
-            <h4>:            An Astronauts jig-jig fate</h4>
+            <h4>:            An Astronauts fate</h4>
             </Toolbar>
         </AppBar>
     )
