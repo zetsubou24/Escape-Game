@@ -25,7 +25,7 @@
   opacity:0.8;
   display: grid;
   grid-template-columns: auto ;
-  grid-template-rows: 100px 100px 100px 100px 100px;
+  grid-template-rows: 400px 70px;
   background-image: url('./images/bg2.jpg');
   background-color: green;
   background-size: cover;
@@ -34,8 +34,9 @@
 .sub-grid-item1 {
   
   /* align-self: flex-end; */
-  grid-row:  5 / span 1;
-  background-color: rgba(255, 255, 255, 0.8);
+  grid-row:  1 / span 1;
+  
+  /* background-color: rgba(255, 255, 255, 0.8); */
   border: 10 px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
@@ -43,6 +44,10 @@
 }
 .sub-grid-item2 {
   
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  grid-row: 2 / span 1;
   background-color: rgba(255, 255, 255, 0.8);
   border: 10 px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -57,6 +62,7 @@
   text-align: center;
 }
 .item1 {
+
   grid-column: 1 / span 2;
   grid-row: 1 / span 3;
   background-color: rgba(255, 255, 255, 0.8);
@@ -67,6 +73,7 @@
 }
 .item2
 {
+  display: flex;
   grid-column: 3 / span 1;
   background-color: rgba(255, 255, 255, 0.8);
   border: 5px solid rgba(0, 0, 0, 0.8);
@@ -76,6 +83,7 @@
 }
 .item3
 {
+  display: flex;
   grid-column: 4 / span 1;
   background-color: rgba(255, 255, 255, 0.8);
   border: 5px solid rgba(0, 0, 0, 0.8);
@@ -85,6 +93,7 @@
 }
 .item4
 {
+  display: flex;
   grid-column: 3 / span 1;
   grid-row: 2 / span 1;
   background-color: rgba(255, 255, 255, 0.8);
@@ -95,6 +104,7 @@
 }
 .item5
 {
+  display: flex;
   grid-column: 4 / span 1;
   grid-row: 2 / span 1;
   background-color: rgba(255, 255, 255, 0.8);
@@ -105,7 +115,9 @@
 }
 .item6
 {
-  grid-column: 3 / span 1;
+  display: flex;
+
+  grid-column: 3 / span 2;
   grid-row: 3 / span 1;
   background-color: rgba(255, 255, 255, 0.8);
   border: 5px solid rgba(0, 0, 0, 0.8);
@@ -115,6 +127,7 @@
 }
 .item7
 {
+  
   grid-column: 3 / span 2;
   grid-row: 3 / span 1;
   background-color: rgba(255, 255, 255, 0.8);
@@ -125,10 +138,41 @@
 }
 
 
-
+.players
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column ;
+  
+  /* height: 50%; */
+  /* grid-template-columns: 150px 150px;
+  grid-template-rows: 200px 200px 200px 200px 200px;
+  table-layout: auto; */
+  width: 300px ;
+  height: 600px;  
+}
+.player
+{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  width: 150px;
+  height: 120px;
+  text-align: center;
+}
 /* grid ------------------------------------------- */
 
-
+.footerContainer
+{
+  opacity:0.8;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 200px;
+  background-color: green;
+  padding: 10px;
+}
 
 
 /* scroll menu */

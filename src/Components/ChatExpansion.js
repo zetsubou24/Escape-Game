@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MessageBubble from "./MessageBubble"
 
-function Expansionpanel()
+function ChatExpansion()
 {
     const [DemoMessages,setMessages]=useState([{"user1":"hello how are you?"},
     {"user2":"I am good and this game is interesting"},
@@ -40,4 +40,4 @@ function Expansionpanel()
       </div>
     )
 }
-export default Expansionpanel
+export default ChatExpansion

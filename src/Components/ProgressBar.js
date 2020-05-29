@@ -13,7 +13,9 @@ const ProgressBar = () => (
       textAlign="center"
       backgroundColor="whiteAlpha.500"
       shadow={1}
+      
     />
+  
   </ThemeProvider>
 )
 
