@@ -1,0 +1,86 @@
+/*body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+ 
+  background-image: "C:/Users/Surendra/Desktop/PJ Work/Escape Game/Resources/Images/bg_login.jpg"  /* Full height */
+  /*height: 100%; 
+
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+/*.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}*/
+.form_login{
+	width: 100px;
+	height: 100px;
+	
+	position: absolute;
+	/*top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 30px;
+  color: yellow;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 20px;
+  color: white;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 30px;
+  color: yellow;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.bottom-center{
+  position: absolute;
+  bottom: 8px;
+  color: yellow;
+  font-size: 30px;
+  left: 48%;
+}
