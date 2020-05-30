@@ -13,9 +13,13 @@ import Level from "./Components/Level"
 import IMage from "./Components/image"
 import InventoryFlex from "./Components/InventoryFlex"
 // import Image from 'react-bootstrap/Image'
+import Player from "./Components/Player.jsx"
 
 
 function App() {
+  
+  var players_available=10
+  var max_players=10
   const [level, setLevel] = useState(0)
   const [state, setState] = useState({
     tasks: [
@@ -28,6 +32,7 @@ function App() {
       { name: "Osaka", category: "game", bgcolor: "pink", level: "two" }
     ]
   })
+  
 
   const [tasks, setTask] = useState({
     tasks: {
@@ -41,6 +46,15 @@ function App() {
   })
 
 
+  //dynamically add players
+  const addPlayers=()=>{
+    let players=[]
+    for(let i=1;i<=players_available&&i<=max_players;i++)
+    {
+      players.push(<Player number={i} />)
+    }
+    return players
+  }
   const onDragStart = (ev, id) => {
     ev.dataTransfer.setData("id", id);
   }
@@ -154,16 +168,8 @@ function App() {
           }} />
         }
         <div className="players">
-          <div className="player">Player 1</div>
-          <div className="player">Player 2</div>
-          <div className="player">Player 3</div>
-          <div className="player">Player 4</div>
-          <div className="player">Player 5</div>
-          <div className="player">Player 6</div>
-          <div className="player">Player 7</div>
-          <div className="player">Player 8</div>
-          <div className="player">Player 9</div>
-          <div className="player">Player 10</div>
+          
+          {addPlayers()}
         </div>
         {/* <div className="item6"></div> */}
       </div>
