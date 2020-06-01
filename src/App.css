@@ -1,7 +1,8 @@
-.App {
+.GamePage {
   text-align: center;
   background-color: grey;
-  background-image: "../images/bg1.jpg";
+  background-image: url("./images/bg1.jpg");
+  /* background-size: cover; */
 }
 
 /* grid ------------------------------------------- */

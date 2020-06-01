@@ -5,6 +5,7 @@ const Level = (props) => {
     var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
     var tasks=props.handles.tasks
+    var inventory=props.handles.inventory
 return (
     <div className="item1">
             <div className="sub-grid-container">
@@ -17,7 +18,7 @@ return (
               <div className="sub-grid-item2"
               onDragOver={(e)=>onDragOver(e)}
               onDrop={(e)=>onDrop(e, "inventory")} placeholder="INVENTORY">
-              {tasks.inventory}
+              {inventory}
               </div>
             </div>
           </div>

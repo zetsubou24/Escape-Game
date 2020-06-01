@@ -11,5 +11,4 @@ const IMage = () => (
     minHeight={10} />
   </ThemeProvider>
 )
-
 export default IMage

@@ -32,7 +32,6 @@ function ChatExpansion()
           <Typography>
           <MessageBubble messages={DemoMessages} />
             <input type="text" value={msg} onChange={(event)=>setMsg(event.target.value)}/><button onClick={()=>{SetButtonMsg(msg)}}>Send</button>
-
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>

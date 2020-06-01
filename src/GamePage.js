@@ -1,48 +1,55 @@
 import React, { Component, useState, useEffect } from 'react';
-import logo from './logo.svg';
-import Button from '@material-ui/core/Button';
 import './App.css';
 import AppBar from "./Components/AppBar"
 import ChatExpansion from "./Components/ChatExpansion"
 import Boxes from "./Components/Boxes"
 import ProgressBar from "./Components/ProgressBar"
 import Scratchpad from "./Components/ScratchPad"
-// import AppDragDropDemo from "./Components/app-ours"
 import './Game.css';
 import Level from "./Components/Level"
 import IMage from "./Components/image"
 import InventoryFlex from "./Components/InventoryFlex"
-// import Image from 'react-bootstrap/Image'
 import Player from "./Components/Player.jsx"
+import { Header, Segment, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 
-function App() {
-  
-  var players_available=10
+function GamePage() {
+  var players_available=7
   var max_players=10
   const [level, setLevel] = useState(0)
+  const [temp,setTemp]=useState([])
   const [state, setState] = useState({
     tasks: [
       { name: "Battery", category: "game", bgcolor: "yellow", level: "one" },
       { name: "Scrap", category: "game", bgcolor: "pink", level: "one" },
       { name: "Periodic_table ", category: "game", bgcolor: "skyblue", level: "one" }
+      
     ],
     tasks2: [
-      { name: "zenbu", category: "game", bgcolor: "yellow", level: "two" },
-      { name: "Osaka", category: "game", bgcolor: "pink", level: "two" }
+      { name: "Fuel_cell", category: "game", bgcolor: "yellow", level: "two" },
+      { name: "Bike", category: "game", bgcolor: "pink", level: "two" }
+    ],
+    tasks3: [
+      { name: "QR_Code1", category: "game", bgcolor: "yellow", level: "two" },
+      { name: "QR_clues", category: "game", bgcolor: "pink", level: "two" }
     ]
   })
   
-
+  const [Inventory,setInventory]=useState([])
   const [tasks, setTask] = useState({
-    tasks: {
-      game: [],
-      inventory: []
-    },
+    
+      game: []
+      // inventory: []
+    
   })
-  var [tasks2, setTask2] = useState({
-    game: [],
-    inventory: []
+  const [tasks2, setTask2] = useState({
+    game: []
+    // inventory: []
+  })
+  const [tasks3, setTask3] = useState({
+    game: []
+    // inventory: []
   })
 
 
@@ -65,7 +72,7 @@ function App() {
   var onDrop = (ev, cat) => {
     let id = ev.dataTransfer.getData("id");
     var NextS = []
-    var arr = (level == 1) ? state.tasks : state.tasks2
+    var arr = (level == 1) ? state.tasks : ((level==2)?state.tasks2:state.tasks3)
     arr.map((task) => {
       if (task.name == id) {
         task.category = cat;
@@ -80,21 +87,30 @@ function App() {
         tasks: NextS
       });
     }
-    else {
+    else if(level==2){
       setState({
         ...state,
         tasks2: NextS
       });
     }
+    else
+    {
+      setState({
+        ...state,
+        tasks3:NextS
+      })
+    }
   }
-
+  useEffect(()=>{
+      setTemp(Inventory)
+      
+  },[level])
   useEffect(() => {
     var f = {
       game: [],
       inventory: []
     }
-    var arr = (level == 1) ? state.tasks : state.tasks2
-
+    var arr = (level == 1) ? state.tasks : ((level==2)?state.tasks2:state.tasks3)
     console.log(arr)
     arr.forEach((t) => {
       f[t.category].push(
@@ -107,37 +123,37 @@ function App() {
           {t.name}
         </div>
       );
-
       if (level == 1) {
         setTask({
-          game: f.game,
-          inventory: f.inventory
+          game: f.game
+          // inventory: f.inventory
         })
-
       }
-      else {
+      else if(level==2){
         setTask2({
-          game: f.game,
-          inventory: f.inventory
+          game: f.game
+          // inventory: f.inventory
         })
       }
-
-
+      else{
+        setTask3({
+          game:f.game
+        })
+      }
+      setInventory(f.inventory)
     })
   }, [state, level])
-
-
   const handleClick = () => {
-    setLevel((level + 1) % 2)
-    console.log(level)
+    setLevel((level + 1) % 3)
   }
-
-
+  let curTask=(level==1)?tasks:((level==2)?tasks2:tasks3)
   return (
-    <div className="App">
-      <button onClick={() => handleClick()}>Change Level </button>
+    
+    <div className="GamePage">
       <AppBar />
-      <p>
+      <button onClick={() => handleClick()}>Change Level </button>
+      
+      <p className="">
         Gravity is a 2013 science fiction thriller film directed by Alfonso Cuarón, who also co-wrote, co-edited and produced the film. It stars Sandra Bullock and George Clooney as American astronauts who are stranded in space after the mid-orbit destruction of their Space Shuttle, and attempt to return to Earth.
 
 
@@ -151,24 +167,16 @@ function App() {
           </p>
       <ProgressBar />
       <div className="grid-container">
-        {level ?
+        
           <Level handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
             onDrop: onDrop,
-            tasks: tasks
+            tasks: curTask,
+            inventory:Inventory
           }}
           />
-          :
-          <Level handles={{
-            onDragOver: onDragOver,
-            onDragStart: onDragStart,
-            onDrop: onDrop,
-            tasks: tasks2
-          }} />
-        }
         <div className="players">
-          
           {addPlayers()}
         </div>
         {/* <div className="item6"></div> */}
@@ -182,4 +190,4 @@ function App() {
   );
 }
 
-export default App;
+export default GamePage;

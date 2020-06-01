@@ -2,6 +2,9 @@ import React, { useEffect,useState } from "react"
 import bg_welcome from "../images/bg_welcome.jpg"
 import commander from "../images/commander.png"
 import "../style.css"
+import GamePage from "../GamePage"
+import { Header, Segment, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 const Assign = () => {
     var temp;
     const [players,setPlayers]=useState([{
@@ -31,6 +34,10 @@ set:false
                 name:"FFF",
                 set:false
             },
+            {
+                name:"dummy",
+                set:false
+            }
     ])
     const [currentVal,setCurrentVal]=useState({
             "player1":"...",
@@ -91,7 +98,6 @@ set:false
     return (
         <div className="Assign-root">
             <div class="puzzle-location">
-        {/* <img src={bg_welcome} alt="Snow" style={{"width":'100%'}}/> */}
         
 	<div class="top-left">
 		Well now that you're the leader of the group CCC, I want you to split your team into 3 teams. Each one will be working on one puzzle that will ultimately help our astronaut reach back to the Home Pod.
@@ -103,6 +109,7 @@ set:false
 		Member 1 <select id="player1" onChange={handlePlayers} value={currentVal["player1"]}>{options}</select><input type="text" value={currentVal["player1"]} placeHolder="select a Player"/><br />
 		Member 2 <select id="player2" onChange={handlePlayers} value={currentVal["player2"]}>{options}</select><input type="text" value={currentVal["player2"]} placeHolder="select a Player"/><br />
 	</div>
+    <Button as={Link} primary to="/GamePage">Start</Button>
 	</div>
 	<div class="bottom-center">
 		<p>Logic Gate Puzzle</p>
@@ -110,6 +117,7 @@ set:false
 		Member 1 <select id="player3" onChange={handlePlayers} value={currentVal["player3"]}>{options}</select><input type="text" value={currentVal["player3"]} placeHolder="select a Player"/><br />
 		Member 2 <select id="player4" onChange={handlePlayers} value={currentVal["player4"]}>{options}</select><input type="text" value={currentVal["player4"]} placeHolder="select a Player"/><br />
 	</div>	
+    <Button as={Link} primary to="/GamePage2">Start</Button>
 	</div>
 	<div class="bottom-right">
 		<p>Wire Cutting Puzzle</p>
@@ -117,6 +125,7 @@ set:false
 		Member 1 <select id="player5" onChange={handlePlayers} value={currentVal["player5"]}>{options}</select><input type="text" value={currentVal["player5"]} placeHolder="select a Player"/><br />
 		Member 2 <select id="player6" onChange={handlePlayers} value={currentVal["player6"]}>{options}</select><input type="text" value={currentVal["player6"]} placeHolder="select a Player"/><br />
 	</div>
+    <Button as={Link} primary to="/GamePage3">Start</Button>
     </div>
     </div>
     </div>
