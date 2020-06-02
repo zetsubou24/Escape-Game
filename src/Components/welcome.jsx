@@ -1,7 +1,7 @@
 import React from "react"
 import "../Kenobi.css"
 import "../style.css"
-import bg_login from "../images/bg_login.jpg"
+// import bg_login from "/images/bg_login.jpg"
 // import  {  useHistory,Router, Route, Switch, Link} from 'react-router-dom'
 import Kenobi from "./Kenobi"
 import history from "./history"
@@ -10,14 +10,10 @@ import { Link } from 'react-router-dom';
 const Welcome = () =>
 {
 
-	function handleWelcome(ev){
-		ev.preventDefault()
-		return this.props.history.push('/admin/my- settings')
-
-	}
+	
     return (
         <div>
-            <img src={bg_login} alt="Snow"  style={{"width":'100%'}}/>
+            <img src="/images/bg_login.jpg" alt="Snow"  style={{"width":'100%'}}/>
 	<div style={{"text-align":"center"}}>
 		<form class="form_login">
 			<p>

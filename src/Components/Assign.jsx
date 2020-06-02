@@ -1,6 +1,5 @@
 import React, { useEffect,useState } from "react"
-import bg_welcome from "../images/bg_welcome.jpg"
-import commander from "../images/commander.png"
+// import commander from "images/commander.png"
 import "../style.css"
 import GamePage from "../GamePage"
 import { Header, Segment, Button } from 'semantic-ui-react';
@@ -95,14 +94,15 @@ set:false
 
     }
     console.log(currentVal["player1"])
+    var bg_welcome_pic=""
     return (
-        <div className="Assign-root">
+        <div className="Assign-root" style={{backgroundImage: `url("images/bg_welcome.jpg")`}}>
             <div class="puzzle-location">
         
 	<div class="top-left">
 		Well now that you're the leader of the group CCC, I want you to split your team into 3 teams. Each one will be working on one puzzle that will ultimately help our astronaut reach back to the Home Pod.
 	</div>
-	<div class="centered"><img src={commander} className="commander-img"/></div>
+	<div class="centered"><img src="images/commander.png" className="commander-img"/></div>
 	<div class="bottom-left">
 		<p>Fuel Cell Puzzle</p>
 	<div >

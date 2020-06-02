@@ -1,27 +1,67 @@
 .Container_puz2
 {
-    /* background-image: url('../images/Wood.jpg'); */
-    background-size: cover;
+    /* display: flex; */
+    /* background-size: cover; */
+    display: grid;
+    grid-template-columns: 40vw 30vw;
+    grid-template-rows: 60vh;
+
 }
-.grid-container {
+.Container_puz2_item1
+{
+    height: auto;
+}
+.Container_puz2_item2
+{
+    height: auto;
+
+}
+.grid-container-puz {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color:inherit;
     border-radius: 10px;
+    border-style: groove;
     max-width: 33%;
     max-height: 33%;
   }
-.grid-item {
+  
+.grid-item-puz {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.5);
-    padding: 20px;
     
     font-size: 30px;
+    height:150px;
+    width: 150px;
     text-align: center;
 }
-.draggable {
-    display: flex;
+.grid-item-collection{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /* padding: 20px; */
+    font-size: 30px;
+    height: 100px;
     width: 100px;
-    height:100px;
+    max-height: 100px;
+    max-width: 100px;
+    text-align: center;
+}
+.puz2-draggable {
+    display: flex;
+    width: 150px;
+    height:150px;
     background-color: yellow;
+}
+.flex-container-puz2
+{
+    display: flex;
+
+}
+.grid-item-puz-collection
+{
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction:column ;
+    height:400px;
+    width:400px;
 }

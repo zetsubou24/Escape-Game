@@ -1,87 +1,57 @@
 import React, { useState, useEffect } from "react"
-import Wood from "../images/Wood.jpg"
 import "./test.css"
-import { GridListTile } from "@material-ui/core"
+import PicDisplay from "./PicDisplay"
 const PuzzleDNDBoard = (props) =>{
     var onDragOver=props.handles.onDragOver
     var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
     var elems=props.handles.elems
     return(
-        
-  <div class="grid-item"
+  <div class="grid-item-puz-collection"
   onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "puzzle")}}
-  >{elems}</div>
-
+  onDrop={(e)=>{onDrop(e, "puzzle")}}>{elems}</div>
     )
 } 
+
 const SolutionDNDBoard = (props) =>{
     var onDragOver=props.handles.onDragOver
     var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
     var elems=props.handles.elems
-    
+    function GridItemPuz(props){
+      return(
+      <div id={props.id} className="grid-item-puz"
+      onDragOver={(e)=>onDragOver(e)}
+      onDrop={(e)=>{onDrop(e, props.id)}}>{props.val}</div>
+      )
+    }
     return(
-        <div class="grid-container">
-  <div id="1" class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "1")}}>{elems["1"]}</div>
-
-  <div id="2" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "2")}}>{elems["2"]}</div>
-
-  <div id="3" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "3")}}>{elems["3"]}</div>  
-
-  <div id="4" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "4")}}>{elems["4"]}</div>
-
-  <div id="5" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "5")}}>{elems["5"]}</div>
-
-  <div id="6" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "6")}}>{elems["6"]}</div>  
-
-  <div id="7" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "7")}}>{elems["7"]}</div>
-
-  <div id="8" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "8")}}>{elems["8"]}</div>
-
-  <div id="9" class="grid-item"
-  class="grid-item"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "9")}}>{elems["9"]}</div>  
-</div>
-    )
+        <div class="grid-container-puz">
+          <GridItemPuz id="1" val={elems["1"]} />
+          <GridItemPuz id="2" val={elems["2"]} />
+          <GridItemPuz id="3" val={elems["3"]} />
+          <GridItemPuz id="4" val={elems["4"]} />
+          <GridItemPuz id="5" val={elems["5"]} />
+          <GridItemPuz id="6" val={elems["6"]} />
+          <GridItemPuz id="7" val={elems["7"]} />
+          <GridItemPuz id="8" val={elems["8"]} />
+          <GridItemPuz id="9" val={elems["9"]} />
+        </div>
+      )
 } 
 const Puz2 = () =>{
     const [grid,setGrid]=useState({
         tasks:[
-            {name:"1",curarea:"puzzle",bgcolor:"violet"},
-            {name:"2",curarea:"puzzle",bgcolor:"indigo"},
-            {name:"3",curarea:"puzzle",bgcolor:"blue"},
-            {name:"4",curarea:"puzzle",bgcolor:"green"},
-            {name:"5",curarea:"puzzle",bgcolor:"yellow"},
-            {name:"6",curarea:"puzzle",bgcolor:"orange"},
-            {name:"7",curarea:"puzzle",bgcolor:"red"},
-            {name:"8",curarea:"puzzle",bgcolor:"pink"},
-            {name:"9",curarea:"puzzle",bgcolor:"white"}
+            {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/grid-puz2/grid1-1.png"},
+            {name:"2",curarea:"puzzle",bgcolor:"indigo",bg:"images/grid-puz2/grid1-2.png"},
+            {name:"3",curarea:"puzzle",bgcolor:"blue",bg:"images/grid-puz2/grid1-3.png"},
+            {name:"4",curarea:"puzzle",bgcolor:"green",bg:"images/grid-puz2/grid2-1.png"},
+            {name:"5",curarea:"puzzle",bgcolor:"yellow",bg:"images/grid-puz2/grid2-2.png"},
+            {name:"6",curarea:"puzzle",bgcolor:"orange",bg:"images/grid-puz2/grid2-3.png"},
+            {name:"7",curarea:"puzzle",bgcolor:"red",bg:"images/grid-puz2/grid3-1.png"},
+            {name:"8",curarea:"puzzle",bgcolor:"pink",bg:"images/grid-puz2/grid3-2.png"},
+            {name:"9",curarea:"puzzle",bgcolor:"white",bg:"images/grid-puz2/grid3-3.png"},
+            {name:"10",curarea:"puzzle",bgcolor:"white"}
         ]
     })
     const [solutionCurState,setSolutionCurState]=useState({
@@ -115,26 +85,11 @@ const Puz2 = () =>{
         if(t.curarea=="puzzle")
         {
             temp[t.curarea].push(
-                <div id="puzzle"
-                onDragStart={(e) => onDragStart(e, t.name,t.curarea)}
-                draggable
-                className="draggable"
-                style={{ backgroundColor: t.bgcolor }}
-                >
-                {t.name}
-                </div>
+                <PicDisplay handles={{id:"puzzle",onDragStart:onDragStart,t:t,size:100}}/>
             )
         }
         else{
-        temp[t.curarea]=
-                <div id={t.name}
-                onDragStart={(e) => onDragStart(e, t.name,t.curarea)}
-                draggable
-                className="draggable"
-                style={{ backgroundColor: t.bgcolor }}
-                >
-                {t.name}
-                </div>
+        temp[t.curarea]=<PicDisplay handles={{id:t.name,onDragStart:onDragStart,t:t,size:150}}/>
         }
     })
     setSolutionCurState({
@@ -188,20 +143,22 @@ const Puz2 = () =>{
       }
     return(
     <div className="Container_puz2">
+      <div className="Container_puz2_item1">
         <PuzzleDNDBoard handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
             onDrop: onDrop,
             elems: solutionCurState.tasks["puzzle"]
-            
           }}/>
+      </div>
+      <div className="Container_puz2_item2">
         <SolutionDNDBoard handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
             onDrop: onDrop,
             elems: solutionCurState.tasks
-            
           }}/>
+      </div>
     </div>
     )
 }

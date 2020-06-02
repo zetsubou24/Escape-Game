@@ -1,11 +1,11 @@
 import React, { Component, useState, useEffect } from 'react';
-import './App.css';
 import AppBar from "./Components/AppBar"
 import ChatExpansion from "./Components/ChatExpansion"
 import Boxes from "./Components/Boxes"
 import ProgressBar from "./Components/ProgressBar"
 import Scratchpad from "./Components/ScratchPad"
 import './Game.css';
+import "./App.css"
 import Level from "./Components/Level"
 import IMage from "./Components/image"
 import InventoryFlex from "./Components/InventoryFlex"
@@ -117,7 +117,7 @@ function GamePage() {
         <div key={t.name}
           onDragStart={(e) => onDragStart(e, t.name)}
           draggable
-          className="draggable"
+          className="game-draggable"
           style={{ backgroundColor: t.bgcolor }}
         >
           {t.name}
@@ -149,11 +149,11 @@ function GamePage() {
   let curTask=(level==1)?tasks:((level==2)?tasks2:tasks3)
   return (
     
-    <div className="GamePage">
+    <div className="GamePage" style={{backgroundImage: `url("images/bg1.jpg")`}}>
       <AppBar />
       <button onClick={() => handleClick()}>Change Level </button>
       
-      <p className="">
+      <p className="Game-Level-Description">
         Gravity is a 2013 science fiction thriller film directed by Alfonso Cuarón, who also co-wrote, co-edited and produced the film. It stars Sandra Bullock and George Clooney as American astronauts who are stranded in space after the mid-orbit destruction of their Space Shuttle, and attempt to return to Earth.
 
 
@@ -166,7 +166,7 @@ function GamePage() {
         Gravity opened the 70th Venice International Film Festival on August 28, 2013, and had its North American premiere three days later at the Telluride Film Festival. Upon its release, Gravity was met with widespread critical acclaim, including its direction and visuals. Considered one of the best films of 2013, it appeared on numerous critics' year-end lists, and was selected by the American Film Institute in their annual Movies of the Year list.[5] The film became the eighth highest-grossing film of 2013 with a worldwide gross of over $723 million, against a production budget of around $100 million.
           </p>
       <ProgressBar />
-      <div className="grid-container">
+      <div className="game-grid-container">
         
           <Level handles={{
             onDragOver: onDragOver,
@@ -189,5 +189,4 @@ function GamePage() {
     </div>
   );
 }
-
 export default GamePage;

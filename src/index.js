@@ -11,7 +11,7 @@ import Puz2 from "./Test/Puz2"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Puz2 />
+    <App2 />
   </React.StrictMode>,
   document.getElementById('root')
 );

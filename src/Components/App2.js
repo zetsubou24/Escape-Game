@@ -15,15 +15,12 @@ const App2 = () => {
       <Switch>
         <Route path="/" exact component={Welcome} />
         <Route path="/Home" exact component={Kenobi} />
-        <Route path="/Home/Assign" exact component={Assign} />
+        <Route path="/Assign" exact component={Assign} />
         <Route path="/GamePage" exact component={GamePage} />
         <Route path="/GamePage2" exact component={GamePage2} />
         <Route path="/GamePage3" exact component={GamePage3} />
-
-
       </Switch>
     </Router>
   )
 }
-
 export default App2;
