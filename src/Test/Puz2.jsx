@@ -25,9 +25,7 @@ const SolutionDNDBoard = (props) =>{
     }
     let ids=[]
     for(let i=1;i<17;i++)
-    {
       ids.push(<GridItemPuz id={i.toString()} val={elems[i.toString()]} />)
-    }
     return(
         <div class="grid-container-puz">
           {ids}
@@ -77,9 +75,7 @@ const Puz2 = () =>{
     });
     let ids={}
     for(let i=1;i<17;i++)
-    {
       ids[i.toString()]=<div>unset</div>
-    }
     ids["puzzle"]=[]
     const [solutionCurState,setSolutionCurState]=useState({
         tasks:ids
@@ -88,20 +84,16 @@ const Puz2 = () =>{
 
     let temp={}
     for(let i=1;i<17;i++)
-    {
       temp[i.toString()]=<div>unset</div>
-    }
     temp["puzzle"]=[]
     grid.tasks.forEach((t)=>{
-        if(t.curarea=="puzzle")
-        {
+        if(t.curarea=="puzzle"){
             temp[t.curarea].push(
                 <PicDisplay handles={{id:"puzzle",onDragStart:onDragStart,t:t,size:100,curImg:curImg,setCurImg:setCurImg,name:t.name}}/>
-            )
-        }
-        else{
+            )}
+        else
         temp[t.curarea]=<PicDisplay handles={{id:t.name,onDragStart:onDragStart,t:t,size:150,curImg:curImg,setCurImg:setCurImg,name:t.name}}/>
-        }
+        
     })
     setSolutionCurState({
         tasks:temp
@@ -125,24 +117,18 @@ const Puz2 = () =>{
         if(status!=undefined&&status!="puzzle")
         {
             grid.tasks.map((task) => {
-                if (task.name == objId) {
+                if (task.name == objId) 
                   task.curarea = curCell;
-                  
-                }
                 else if(task.name==curObjId)
-                {
                     task.curarea=fromCell
-                }
                 NextS.push(task)
               });
         }
         else
         {
         grid.tasks.map((task) => {
-          if (task.name == objId) {
+          if (task.name == objId) 
             task.curarea = cat;
-            
-          }
         NextS.push(task)
         });
         
