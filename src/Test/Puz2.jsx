@@ -40,20 +40,44 @@ const SolutionDNDBoard = (props) =>{
       )
 } 
 const Puz2 = () =>{
+    const [index,setIndex]=useState({
+      "1":0,
+      "2":0,
+      "3":0,
+      "4":0,
+      "5":0,
+      "6":0,
+      "7":0,
+      "8":0,
+      "9":0,
+    })
+    
+
     const [grid,setGrid]=useState({
         tasks:[
-            {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/grid-puz2/grid1-1.png"},
-            {name:"2",curarea:"puzzle",bgcolor:"indigo",bg:"images/grid-puz2/grid1-2.png"},
-            {name:"3",curarea:"puzzle",bgcolor:"blue",bg:"images/grid-puz2/grid1-3.png"},
-            {name:"4",curarea:"puzzle",bgcolor:"green",bg:"images/grid-puz2/grid2-1.png"},
-            {name:"5",curarea:"puzzle",bgcolor:"yellow",bg:"images/grid-puz2/grid2-2.png"},
-            {name:"6",curarea:"puzzle",bgcolor:"orange",bg:"images/grid-puz2/grid2-3.png"},
-            {name:"7",curarea:"puzzle",bgcolor:"red",bg:"images/grid-puz2/grid3-1.png"},
-            {name:"8",curarea:"puzzle",bgcolor:"pink",bg:"images/grid-puz2/grid3-2.png"},
-            {name:"9",curarea:"puzzle",bgcolor:"white",bg:"images/grid-puz2/grid3-3.png"},
+            {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/grid-puz2/grid1-1.png",bg2:"images/wood.jpg",index:index["1"]},
+            {name:"2",curarea:"puzzle",bgcolor:"indigo",bg:"images/grid-puz2/grid1-2.png",bg2:"images/wood.jpg",index:index["2"]},
+            {name:"3",curarea:"puzzle",bgcolor:"blue",bg:"images/grid-puz2/grid1-3.png",bg2:"images/wood.jpg",index:index["3"]},
+            {name:"4",curarea:"puzzle",bgcolor:"green",bg:"images/grid-puz2/grid2-1.png",bg2:"images/wood.jpg",index:index["4"]},
+            {name:"5",curarea:"puzzle",bgcolor:"yellow",bg:"images/grid-puz2/grid2-2.png",bg2:"images/wood.jpg",index:index["5"]},
+            {name:"6",curarea:"puzzle",bgcolor:"orange",bg:"images/grid-puz2/grid2-3.png",bg2:"images/wood.jpg",index:index["6"]},
+            {name:"7",curarea:"puzzle",bgcolor:"red",bg:"images/grid-puz2/grid3-1.png",bg2:"images/wood.jpg",index:index["7"]},
+            {name:"8",curarea:"puzzle",bgcolor:"pink",bg:"images/grid-puz2/grid3-2.png",bg2:"images/wood.jpg",index:index["8"]},
+            {name:"9",curarea:"puzzle",bgcolor:"white",bg:"images/grid-puz2/grid3-3.png",bg2:"images/wood.jpg",index:index["9"]},
             {name:"10",curarea:"puzzle",bgcolor:"white"}
         ]
     })
+    let [curImg,setCurImg]=useState({
+      "1":"images/grid-puz2/grid1-1.png",
+      "2":"images/grid-puz2/grid1-2.png",
+      "3":"images/grid-puz2/grid1-3.png",
+      "4":"images/grid-puz2/grid2-1.png",
+      "5":"images/grid-puz2/grid2-2.png",
+      "6":"images/grid-puz2/grid2-3.png",
+      "7":"images/grid-puz2/grid3-1.png",
+      "8":"images/grid-puz2/grid3-2.png",
+      "9":"images/grid-puz2/grid3-3.png",
+    });
     const [solutionCurState,setSolutionCurState]=useState({
         tasks:{
             "1":<div>unset</div>,
@@ -81,21 +105,25 @@ const Puz2 = () =>{
         "9":<div id="u">unset</div>,
         "puzzle":[]
     }
+    
     grid.tasks.forEach((t)=>{
         if(t.curarea=="puzzle")
         {
+
             temp[t.curarea].push(
-                <PicDisplay handles={{id:"puzzle",onDragStart:onDragStart,t:t,size:100}}/>
+                <PicDisplay handles={{id:"puzzle",onDragStart:onDragStart,t:t,size:100,index:index,setIndex:setIndex,curImg:curImg,setCurImg:setCurImg,name:t.name}}/>
             )
         }
         else{
-        temp[t.curarea]=<PicDisplay handles={{id:t.name,onDragStart:onDragStart,t:t,size:150}}/>
+        temp[t.curarea]=<PicDisplay handles={{id:t.name,onDragStart:onDragStart,t:t,size:150,index:index,setIndex:setIndex,curImg:curImg,setCurImg:setCurImg,name:t.name}}/>
         }
     })
     setSolutionCurState({
         tasks:temp
     })
-    },[grid])
+    },[grid,index])
+
+    // console.log(curImg)
     const onDragStart = (ev, id,parent) => {
         ev.dataTransfer.setData("id", id);
         ev.dataTransfer.setData("fromId",parent)
