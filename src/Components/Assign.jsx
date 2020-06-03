@@ -57,9 +57,6 @@ set:false
     setOptions(x)
 
     },[players])
-    
-    
-    
     function handlePlayers(event)
     {
         let newVal=event.target.value

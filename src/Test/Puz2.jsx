@@ -11,11 +11,9 @@ const PuzzleDNDBoard = (props) =>{
   onDragOver={(e)=>onDragOver(e)}
   onDrop={(e)=>{onDrop(e, "puzzle")}}>{elems}</div>
     )
-} 
-
+}
 const SolutionDNDBoard = (props) =>{
     var onDragOver=props.handles.onDragOver
-    var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
     var elems=props.handles.elems
     function GridItemPuz(props){
@@ -25,30 +23,18 @@ const SolutionDNDBoard = (props) =>{
       onDrop={(e)=>{onDrop(e, props.id)}}>{props.val}</div>
       )
     }
+    let ids=[]
+    for(let i=1;i<17;i++)
+    {
+      ids.push(<GridItemPuz id={i.toString()} val={elems[i.toString()]} />)
+    }
     return(
         <div class="grid-container-puz">
-          <GridItemPuz id="1" val={elems["1"]} />
-          <GridItemPuz id="2" val={elems["2"]} />
-          <GridItemPuz id="3" val={elems["3"]} />
-          <GridItemPuz id="4" val={elems["4"]} />
-          <GridItemPuz id="5" val={elems["5"]} />
-          <GridItemPuz id="6" val={elems["6"]} />
-          <GridItemPuz id="7" val={elems["7"]} />
-          <GridItemPuz id="8" val={elems["8"]} />
-          <GridItemPuz id="9" val={elems["9"]} />
-          <GridItemPuz id="10" val={elems["10"]} />
-          <GridItemPuz id="11" val={elems["11"]} />
-          <GridItemPuz id="12" val={elems["12"]} />
-          <GridItemPuz id="13" val={elems["13"]} />
-          <GridItemPuz id="14" val={elems["14"]} />
-          <GridItemPuz id="15" val={elems["15"]} />
-          <GridItemPuz id="16" val={elems["16"]} />
-
+          {ids}
         </div>
       )
-} 
+}
 const Puz2 = () =>{
-    
     const [grid,setGrid]=useState({
         tasks:[
             {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/rocket-grid-puz2/image_part_001.jpg",bg2:"images/rocket-night-grid-puz2/image_part_001.jpg"},
@@ -89,48 +75,23 @@ const Puz2 = () =>{
       "16":{img:"images/rocket-grid-puz2/image_part_016.jpg",index:0},
       "17":{img:"images/white.png",index:0}
     });
+    let ids={}
+    for(let i=1;i<17;i++)
+    {
+      ids[i.toString()]=<div>unset</div>
+    }
+    ids["puzzle"]=[]
     const [solutionCurState,setSolutionCurState]=useState({
-        tasks:{
-            "1":<div>unset</div>,
-            "2":<div>unset</div>,
-            "3":<div>unset</div>,
-            "4":<div>unset</div>,
-            "5":<div>unset</div>,
-            "6":<div>unset</div>,
-            "7":<div>unset</div>,
-            "8":<div>unset</div>,
-            "9":<div>unset</div>,
-            "10":<div>unset</div>,
-            "11":<div>unset</div>,
-            "12":<div>unset</div>,
-            "13":<div>unset</div>,
-            "14":<div>unset</div>,
-            "15":<div>unset</div>,
-            "16":<div>unset</div>,
-            "puzzle":[]
-        }
+        tasks:ids
     })
     useEffect(()=>{
-    let temp={
-    "1":<div id="u">unset</div>,
-        "2":<div id="u">unset</div>,
-        "3":<div id="u">unset</div>,
-        "4":<div id="u">unset</div>,
-        "5":<div id="u">unset</div>,
-        "6":<div id="u">unset</div>,
-        "7":<div id="u">unset</div>,
-        "8":<div id="u">unset</div>,
-        "9":<div id="u">unset</div>,
-        "10":<div id="u">unset</div>,
-        "11":<div id="u">unset</div>,
-        "12":<div id="u">unset</div>,
-        "13":<div id="u">unset</div>,
-        "14":<div id="u">unset</div>,
-        "15":<div id="u">unset</div>,
-        "16":<div id="u">unset</div>,
-        "puzzle":[]
+
+    let temp={}
+    for(let i=1;i<17;i++)
+    {
+      temp[i.toString()]=<div>unset</div>
     }
-    
+    temp["puzzle"]=[]
     grid.tasks.forEach((t)=>{
         if(t.curarea=="puzzle")
         {
@@ -147,7 +108,6 @@ const Puz2 = () =>{
     })
     },[grid,curImg])
 
-    // console.log(curImg)
     const onDragStart = (ev, id,parent) => {
         ev.dataTransfer.setData("id", id);
         ev.dataTransfer.setData("fromId",parent)
@@ -213,5 +173,4 @@ const Puz2 = () =>{
     </div>
     )
 }
-
 export default Puz2
