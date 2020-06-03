@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/escape-game/static/css/main.7b71c78a.chunk.css",
+    "main.js": "/escape-game/static/js/main.8a02d3cb.chunk.js",
+    "main.js.map": "/escape-game/static/js/main.8a02d3cb.chunk.js.map",
+    "runtime-main.js": "/escape-game/static/js/runtime-main.feb4eb44.js",
+    "runtime-main.js.map": "/escape-game/static/js/runtime-main.feb4eb44.js.map",
+    "static/js/2.7171896b.chunk.js": "/escape-game/static/js/2.7171896b.chunk.js",
+    "static/js/2.7171896b.chunk.js.map": "/escape-game/static/js/2.7171896b.chunk.js.map",
+    "index.html": "/escape-game/index.html",
+    "precache-manifest.abf363534860cc059628c6962c93fd00.js": "/escape-game/precache-manifest.abf363534860cc059628c6962c93fd00.js",
+    "service-worker.js": "/escape-game/service-worker.js",
+    "static/css/main.7b71c78a.chunk.css.map": "/escape-game/static/css/main.7b71c78a.chunk.css.map",
+    "static/js/2.7171896b.chunk.js.LICENSE.txt": "/escape-game/static/js/2.7171896b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.feb4eb44.js",
+    "static/js/2.7171896b.chunk.js",
+    "static/css/main.7b71c78a.chunk.css",
+    "static/js/main.8a02d3cb.chunk.js"
+  ]
+}
