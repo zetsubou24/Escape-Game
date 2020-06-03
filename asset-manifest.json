@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b71c78a.chunk.css",
-    "main.js": "/static/js/main.32807e80.chunk.js",
-    "main.js.map": "/static/js/main.32807e80.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.bed61407.js",
-    "runtime-main.js.map": "/static/js/runtime-main.bed61407.js.map",
-    "static/js/2.7171896b.chunk.js": "/static/js/2.7171896b.chunk.js",
-    "static/js/2.7171896b.chunk.js.map": "/static/js/2.7171896b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.f1c840414af77f89cb53a972aad8ff59.js": "/precache-manifest.f1c840414af77f89cb53a972aad8ff59.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.7b71c78a.chunk.css.map": "/static/css/main.7b71c78a.chunk.css.map",
-    "static/js/2.7171896b.chunk.js.LICENSE.txt": "/static/js/2.7171896b.chunk.js.LICENSE.txt"
+    "main.css": "/EscapeGame/static/css/main.7b71c78a.chunk.css",
+    "main.js": "/EscapeGame/static/js/main.2a70b57c.chunk.js",
+    "main.js.map": "/EscapeGame/static/js/main.2a70b57c.chunk.js.map",
+    "runtime-main.js": "/EscapeGame/static/js/runtime-main.7add3d15.js",
+    "runtime-main.js.map": "/EscapeGame/static/js/runtime-main.7add3d15.js.map",
+    "static/js/2.7171896b.chunk.js": "/EscapeGame/static/js/2.7171896b.chunk.js",
+    "static/js/2.7171896b.chunk.js.map": "/EscapeGame/static/js/2.7171896b.chunk.js.map",
+    "index.html": "/EscapeGame/index.html",
+    "precache-manifest.c3692bfb5a2c588086e37bccad7b4dd9.js": "/EscapeGame/precache-manifest.c3692bfb5a2c588086e37bccad7b4dd9.js",
+    "service-worker.js": "/EscapeGame/service-worker.js",
+    "static/css/main.7b71c78a.chunk.css.map": "/EscapeGame/static/css/main.7b71c78a.chunk.css.map",
+    "static/js/2.7171896b.chunk.js.LICENSE.txt": "/EscapeGame/static/js/2.7171896b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bed61407.js",
+    "static/js/runtime-main.7add3d15.js",
     "static/js/2.7171896b.chunk.js",
     "static/css/main.7b71c78a.chunk.css",
-    "static/js/main.32807e80.chunk.js"
+    "static/js/main.2a70b57c.chunk.js"
   ]
 }
