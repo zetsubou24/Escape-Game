@@ -1,14 +1,11 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from "./Components/AppBar"
 import ChatExpansion from "./Components/ChatExpansion"
-import Boxes from "./Components/Boxes"
 import ProgressBar from "./Components/ProgressBar"
 import Scratchpad from "./Components/ScratchPad"
 import './Game.css';
 import "./App.css"
 import Level from "./Components/Level"
-import IMage from "./Components/image"
-import InventoryFlex from "./Components/InventoryFlex"
 import Player from "./Components/Player.jsx"
 import { Header, Segment, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
@@ -40,16 +37,13 @@ function GamePage() {
   const [tasks, setTask] = useState({
     
       game: []
-      // inventory: []
     
   })
   const [tasks2, setTask2] = useState({
     game: []
-    // inventory: []
   })
   const [tasks3, setTask3] = useState({
     game: []
-    // inventory: []
   })
 
 
@@ -72,22 +66,22 @@ function GamePage() {
   var onDrop = (ev, cat) => {
     let id = ev.dataTransfer.getData("id");
     var NextS = []
-    var arr = (level == 1) ? state.tasks : ((level==2)?state.tasks2:state.tasks3)
+    var arr = (level === 1) ? state.tasks : ((level===2)?state.tasks2:state.tasks3)
     arr.map((task) => {
-      if (task.name == id) {
+      if (task.name === id) {
         task.category = cat;
         NextS.push(task)
       }
       else
         NextS.push(task)
     });
-    if (level == 1) {
+    if (level === 1) {
       setState({
         ...state,
         tasks: NextS
       });
     }
-    else if(level==2){
+    else if(level=== 2){
       setState({
         ...state,
         tasks2: NextS
@@ -110,8 +104,7 @@ function GamePage() {
       game: [],
       inventory: []
     }
-    var arr = (level == 1) ? state.tasks : ((level==2)?state.tasks2:state.tasks3)
-    console.log(arr)
+    var arr = (level === 1) ? state.tasks : ((level=== 2)?state.tasks2:state.tasks3)
     arr.forEach((t) => {
       f[t.category].push(
         <div key={t.name}
@@ -123,16 +116,14 @@ function GamePage() {
           {t.name}
         </div>
       );
-      if (level == 1) {
+      if (level === 1) {
         setTask({
           game: f.game
-          // inventory: f.inventory
         })
       }
-      else if(level==2){
+      else if(level=== 2){
         setTask2({
           game: f.game
-          // inventory: f.inventory
         })
       }
       else{
@@ -146,13 +137,12 @@ function GamePage() {
   const handleClick = () => {
     setLevel((level + 1) % 3)
   }
-  let curTask=(level==1)?tasks:((level==2)?tasks2:tasks3)
+  let curTask=(level=== 1)?tasks:((level=== 2)?tasks2:tasks3)
   return (
     
     <div className="GamePage" style={{backgroundImage: `url("images/bg1.jpg")`}}>
       <AppBar />
       <button onClick={() => handleClick()}>Change Level </button>
-      
       <p className="Game-Level-Description">
         Gravity is a 2013 science fiction thriller film directed by Alfonso Cuarón, who also co-wrote, co-edited and produced the film. It stars Sandra Bullock and George Clooney as American astronauts who are stranded in space after the mid-orbit destruction of their Space Shuttle, and attempt to return to Earth.
 

@@ -18,7 +18,7 @@
 }
 .grid-container-puz {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     background-color:inherit;
     border-radius: 10px;
     border-style: groove;
@@ -31,8 +31,8 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     
     font-size: 30px;
-    height:150px;
-    width: 150px;
+    height:100px;
+    width: 100px;
     text-align: center;
 }
 .grid-item-collection{
@@ -48,14 +48,14 @@
 }
 .puz2-draggable {
     display: flex;
-    width: 150px;
-    height:150px;
+    width: 100px;
+    height:100px;
     background-color: yellow;
+    /* background-size: cover; */
 }
 .flex-container-puz2
 {
     display: flex;
-
 }
 .grid-item-puz-collection
 {
