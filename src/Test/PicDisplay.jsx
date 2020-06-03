@@ -21,8 +21,8 @@ export default function PicDisplay(props){
         ...curImg,
         [t.name]:index[t.name]==0?t.bg:t.bg2
     })
-    console.log(curImg)
-}  
+}
+
     return (
         <div id={id} key={t.name}
                 onDragStart={(e) => onDragStart(e, t.name,t.curarea)}
@@ -31,9 +31,8 @@ export default function PicDisplay(props){
                 style={{ backgroundColor: t.bgcolor,
                             backgroundImage: `url(${curImg[t.name]})`,
                             maxWidth:size,
-                            maxHeight:size}}
-                >
-                    <button onClick={handleImage} >flip</button>
+                            maxHeight:size}}>
+                    <button onClick={handleImage}>flip</button>
                 </div>
     )
 }

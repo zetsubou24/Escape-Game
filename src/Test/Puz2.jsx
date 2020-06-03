@@ -51,8 +51,6 @@ const Puz2 = () =>{
       "8":0,
       "9":0,
     })
-    
-
     const [grid,setGrid]=useState({
         tasks:[
             {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/grid-puz2/grid1-1.png",bg2:"images/wood.jpg",index:index["1"]},
