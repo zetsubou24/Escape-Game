@@ -13,3 +13,15 @@ function welcome(){
 function assign(){
 	window.location.href = "Assign.html"
 }
+function puzz1intro(){
+	window.location.href = "puzzintro.html"
+}
+function puzz1(){
+	var ans1 = document.getElementById("puzz1sol").value
+	if (ans1 == 1234) {
+		window.location.href = "index.html"
+	}
+	else{
+		alert("wrong ans")
+	}
+}

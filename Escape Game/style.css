@@ -64,7 +64,7 @@
 
 .bottom-right {
   position: absolute;
-  bottom: 8px;
+  bottom: 10px;
   right: 16px;
   font-size: 30px;
   color: yellow;
@@ -77,10 +77,21 @@
   transform: translate(-50%, -50%);
   
 }
-.bottom-center{
+/*.bottom-center{
   position: absolute;
   bottom: 8px;
   color: yellow;
   font-size: 30px;
   left: 48%;
+}*/
+.bottom-right-continue {
+  position: absolute;
+  bottom: 8px;
+  right:16px;
 }
+.bottom-cent {
+    position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;}
