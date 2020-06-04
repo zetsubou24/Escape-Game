@@ -77,13 +77,13 @@
   transform: translate(-50%, -50%);
   
 }
-/*.bottom-center{
+.bottom-center{
   position: absolute;
   bottom: 8px;
   color: yellow;
   font-size: 30px;
   left: 48%;
-}*/
+}
 .bottom-right-continue {
   position: absolute;
   bottom: 8px;
@@ -95,3 +95,20 @@
   bottom: 20px;
   transform: translate(-50%, -50%);
   margin: 0 auto;}
+
+.bomb{
+      width: 10px;
+      height: 10px;
+      transition: width 4s, height 4s, transform 4s;
+
+    }
+.bomb:hover{
+      width: 200px;
+      height: 200px;
+      transform: rotate(360deg);
+      /*position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);*/
+  
+    }
