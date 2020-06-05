@@ -21,11 +21,10 @@ function GamePage() {
       { name: "Battery", category: "game", bgcolor: "yellow", level: "one" },
       { name: "Scrap", category: "game", bgcolor: "pink", level: "one" },
       { name: "Periodic_table ", category: "game", bgcolor: "skyblue", level: "one" }
-      
     ],
     tasks2: [
-      { name: "Fuel_cell", category: "game", bgcolor: "yellow", level: "two" },
-      { name: "Bike", category: "game", bgcolor: "pink", level: "two" }
+      { name: "Fuel_cell", category: "game", bgcolor: "yellow", level: "two" ,bg:`url('/images/17_27_36.png')`},
+      { name: "Bike", category: "game", bgcolor: "pink", level: "two" ,bg:`url('/images/17_27_36.png')`},
     ],
     tasks3: [
       { name: "QR_Code1", category: "game", bgcolor: "yellow", level: "two" },

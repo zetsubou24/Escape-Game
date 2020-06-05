@@ -73,4 +73,42 @@
   background-color: yellow;
 }
 
+.puz3solution
+{
+  display:flex;
+  align-self: flex-end;
+}
+#puz3-box-visible
+{
+  display:flex
+}
+.bomb{
+  /* background-image: url('Resmages/bomb.png'); */
+  width: 35px;
+  height: 30px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left: 248px;
+  bottom: 32px;
+  transform:rotate(-10deg)
+
+}
+.bomb:hover{
+
+  width: 200px;
+  height: 200px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+.puz4-grid-map
+{
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+}
+
 
