@@ -156,7 +156,8 @@ function GamePage() {
             onDragStart: onDragStart,
             onDrop: onDrop,
             tasks: curTask,
-            inventory:Inventory
+            inventory:Inventory,
+            level:level
           }}
           />
         <div className="players">

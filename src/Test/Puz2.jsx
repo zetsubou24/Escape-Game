@@ -93,7 +93,6 @@ const Puz2 = () =>{
             )}
         else
         temp[t.curarea]=<PicDisplay handles={{id:t.name,onDragStart:onDragStart,t:t,size:150,curImg:curImg,setCurImg:setCurImg,name:t.name}}/>
-        
     })
     setSolutionCurState({
         tasks:temp
@@ -131,7 +130,6 @@ const Puz2 = () =>{
             task.curarea = cat;
         NextS.push(task)
         });
-        
     }
     setGrid({
         tasks: NextS

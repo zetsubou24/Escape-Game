@@ -72,7 +72,7 @@
   z-index: 1;
 }
 .bottom-right {
-  grid-column: 2 / span 1;
+  grid-column: 3 / span 1;
   grid-row: 2 /span 1;
   display: flex;
   flex-flow: column;

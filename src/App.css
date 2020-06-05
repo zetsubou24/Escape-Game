@@ -258,3 +258,18 @@ div.scrollmenu .cardUse:hover {
     transform: rotate(360deg);
   }
 }
+.click-the-head
+{
+  position: absolute;
+  bottom:240px;
+  right:240px;
+  
+}
+.puzzintro-assign
+{
+  /* position: fixed; */
+  height:60px;
+  width:60px;
+  z-index: 100;
+  opacity:0;
+}
