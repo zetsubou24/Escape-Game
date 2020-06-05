@@ -3,6 +3,7 @@
 <head>
 	<title>Puzzle3</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="Libraries/execute.js"></script>
 	<!-- <style type="text/css">
 		.bomb{
 			width: 50px;
@@ -20,8 +21,11 @@
 <body>
 	<div style="background-image: url('Resources/Images/cockpit.jpg'); height: 100vh;width: 100vw; background-size: cover;">
 		<!-- <img src="Resources/Images/cockpit.jpg" style="height: 100%"> -->
+		<input type="text" name="puz3sol" id="puz3sol" style="display: none;" placeholder="Puzzle3 Solution">
+		<button id="puz3but" style="display: none;" onclick="puz3_2()"> Submit</button>
 		<div>
-			<img src="Resources/Images/bomb.png" class="bomb">
+			<img src="Resources/Images/bomb.png" class="bomb" onclick="puz3()"><br>
+			
 		</div>
 	
 	</div>

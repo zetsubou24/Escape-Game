@@ -19,9 +19,35 @@ function puzz1intro(){
 function puzz1(){
 	var ans1 = document.getElementById("puzz1sol").value
 	if (ans1 == 1234) {
-		window.location.href = "index.html"
+		window.location.href = "Puz3.html"
 	}
 	else{
 		alert("wrong ans")
+	}
+}
+function puz3(){
+	// alert("hello")
+	var x = document.getElementById("puz3sol")
+	var y = document.getElementById("puz3but")
+	if(x.style.display === "none"){
+		x.style.display = "block";
+	}
+	else{
+		x.style.display = "none";
+	}
+	if(y.style.display === "none"){
+		y.style.display = "block";
+	}
+	else{
+		y.style.display = "none";
+	}
+}
+function puz3_2(){
+	var x = document.getElementById("puz3sol");
+	if(x.value == "Taran gadu thopu"){
+		alert("Correct answer");
+	}
+	else{
+		alert("wrong answer");
 	}
 }

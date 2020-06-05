@@ -97,12 +97,14 @@
   margin: 0 auto;}
 
 .bomb{
+      background-image: url('Resources/Images/bomb.png');
       width: 10px;
       height: 10px;
       transition: width 4s, height 4s, transform 4s;
 
     }
 .bomb:hover{
+
       width: 200px;
       height: 200px;
       transform: rotate(360deg);
