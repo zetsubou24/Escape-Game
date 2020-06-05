@@ -44,7 +44,7 @@ function puz3(){
 }
 function puz3_2(){
 	var x = document.getElementById("puz3sol");
-	if(x.value == "Taran gadu thopu"){
+	if(x.value == "102454"){
 		alert("Correct answer");
 	}
 	else{

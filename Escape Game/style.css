@@ -101,6 +101,9 @@
       width: 10px;
       height: 10px;
       transition: width 4s, height 4s, transform 4s;
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
 
     }
 .bomb:hover{
@@ -114,3 +117,11 @@
       transform: translate(-50%, -50%);*/
   
     }
+.puz3solution{
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  font-size: 30px;
+
+}
