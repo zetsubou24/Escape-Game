@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import "../Game.css"
-function Puz3()
+function Puz3(props)
 {
+	let level=props.level
+	let setLevel=props.setLevel
 	const [visible1,setVisible1]=useState(false)
 	const [value,setValue]=useState("")
 	function viewSol()
@@ -12,6 +14,7 @@ function Puz3()
 	{
 		if(value=="102450"||value=="10:24:50")
 		{
+			setLevel((level + 1) % 3)
 			alert("correct!")
 		}
 		else{

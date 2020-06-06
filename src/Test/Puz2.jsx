@@ -32,7 +32,7 @@ const SolutionDNDBoard = (props) =>{
         </div>
       )
 }
-const Puz2 = () =>{
+const Puz2 = (props) =>{
     const [grid,setGrid]=useState({
         tasks:[
             {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/rocket-grid-puz2/image_part_001.jpg",bg2:"images/rocket-night-grid-puz2/image_part_001.jpg"},
@@ -75,7 +75,7 @@ const Puz2 = () =>{
     });
     let ids={}
     for(let i=1;i<17;i++)
-      ids[i.toString()]=<div>unset</div>
+      ids[i.toString()]=<div></div>
     ids["puzzle"]=[]
     const [solutionCurState,setSolutionCurState]=useState({
         tasks:ids
@@ -84,7 +84,7 @@ const Puz2 = () =>{
 
     let temp={}
     for(let i=1;i<17;i++)
-      temp[i.toString()]=<div>unset</div>
+      temp[i.toString()]=<div></div>
     temp["puzzle"]=[]
     grid.tasks.forEach((t)=>{
         if(t.curarea=="puzzle"){

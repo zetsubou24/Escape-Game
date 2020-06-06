@@ -10,7 +10,8 @@ const Level = (props) => {
     var onDrop=props.handles.onDrop
     var inventory=props.handles.inventory
     var level=props.handles.level
-    let bg=(level<=1)?`url("images/bg2.jpg")`:(level==2)?`url('/images/17_27_36.png')`:`url('/images/bg1.jpg')`
+    var setLevel=props.handles.setLevel
+    let bg=(level==1)?`url("images/bg2.jpg")`:(level==2)?`url('/images/17_27_36.png')`:`url('/images/bg1.jpg')`
 return (
     <div className="item1">
             <div className="sub-grid-container" style={{backgroundImage:bg}}>
@@ -18,8 +19,7 @@ return (
               onDragOver={(e)=>onDragOver(e)}
               onDrop={(e)=>{onDrop(e, "game")}}>
                 {/* add puzzle */}
-                {level==1?<Puz2 />:(level==2)?<Puz3 />:<Puz4 />}
-                
+                {level==1?<Puz2 level={level} setLevel={setLevel}/>:(level==2)?<Puz3 level={level} setLevel={setLevel}/>:<Puz4 level={level} setLevel={setLevel}/>}
               </div>
               <div className="sub-grid-item2"
               onDragOver={(e)=>onDragOver(e)}

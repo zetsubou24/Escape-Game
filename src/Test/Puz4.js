@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-
-function Puz4() {
+function Puz4(props) {
+  let level=props.level
+	let setLevel=props.setLevel
   let c_gridMap= {
   
     display: "grid",

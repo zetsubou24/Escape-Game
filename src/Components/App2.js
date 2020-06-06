@@ -10,6 +10,7 @@ import GamePage2 from "../GamePage2"
 import GamePage3 from "../GamePage3"
 import Puzzintro from "./Puzzintro"
 import Puz1 from '../Test/Puz1'
+import FinalPuzzle from "./FinalPuzzle"
 const App2 = () => {
 //   const {loading} = useAuth0();
   return (
@@ -22,6 +23,8 @@ const App2 = () => {
         <Route path="/HomePuzzle" exact component={Puz1} />
         <Route path="/GamePage" exact component={GamePage} />
         <Route path="/GamePage2" exact component={GamePage2} />
+        <Route path="/FinalPuzzle" exact component={FinalPuzzle} />
+
         
       </Switch>
     </Router>

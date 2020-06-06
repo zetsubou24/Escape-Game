@@ -26,13 +26,13 @@ const Welcome = () =>
             	<input type="text" id="name" placeholder="Nick Name" />
         	</p>
         	<p>
+				<Link to="/Home">
 				<button
             		id="submitbutton"
             		type="button"
-            		onClick="window.location.href='/Home;'"
 				>Submit
             	</button>
-				<Button class="ui button" as={Link} primary to="/Home">Lets go!</Button>
+				</Link>
         	</p>
 		</form>
 	</div>

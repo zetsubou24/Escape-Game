@@ -16,8 +16,7 @@ export default function PicDisplay(props){
         [t.name]:{img:curImg[t.name].index==0?t.bg:t.bg2,
                   index:(curImg[t.name].index+1)%2}
     })
-
-}
+    }
 
     return (
         <div id={id} key={t.name}

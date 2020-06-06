@@ -21,8 +21,9 @@ export default function Puz1()
             {/* <img src="images/bg_welcome2.jpg" alt="stuck_on_mars" style={{width:"100%"}} usemap="#p1intro" / > */}
 	<div class="top-left">
 		<p style={{color: "blue"}}>
-			Savita Yantraih Prithiveem  Aramnaat Dyaam Andahat  Atoorte Baddham Ashwam Iv Adhukshat – चतुःशत Gurutvakarshan
-
+        &emsp; &emsp; &emsp; &emsp; Solve the riddle below to ascertain the value of gravity on the planet.<br /><br />
+			&emsp; &emsp; &emsp; &emsp; "Savita Yantraih Prithiveem  Aramnaat Dyaam Andahat  Atoorte Baddham Ashwam Iv Adhukshat – चतुःशत Gurutvakarshan
+"
 		</p>
 		
 	</div>
