@@ -148,7 +148,7 @@ function GamePage() {
         Gravity opened the 70th Venice International Film Festival on August 28, 2013, and had its North American premiere three days later at the Telluride Film Festival. Upon its release, Gravity was met with widespread critical acclaim, including its direction and visuals. Considered one of the best films of 2013, it appeared on numerous critics' year-end lists, and was selected by the American Film Institute in their annual Movies of the Year list.[5] The film became the eighth highest-grossing film of 2013 with a worldwide gross of over $723 million, against a production budget of around $100 million.
       </p>
       <ProgressBar />
-      <div className="game-grid-container">
+      <div className="game-grid-container" >
         
           <Level handles={{
             onDragOver: onDragOver,

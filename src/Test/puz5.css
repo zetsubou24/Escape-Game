@@ -1,0 +1,121 @@
+#container {
+margin-left:auto;
+margin-right:auto;
+width: 100px;
+}
+#glass {
+/* background: rgba( 255, 255, 255, 0.50); */
+width: 80px;
+height: 400px;
+position: relative;
+  border-radius: 100%;
+}
+#water {
+background-image: url("./waves3.png");
+background-position: top right;
+position: absolute;
+bottom: 0px;
+width: 80px;
+height: 4em;
+  border-radius: 100%;
+-webkit-transition: all 3s ease-out;
+-moz-transition: all 3s ease-out;
+-o-transition: all 3s ease-out;
+transition: all 3s ease-out;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+
+}
+#glass:hover #water {
+height: 15em;
+background-position: top left;
+-webkit-transition: all 3s ease-out;
+-moz-transition: all 3s ease-out;
+-o-transition: all 3s ease-out;
+transition: all 3s ease-out;
+}
+#scale
+{
+  display:flex;
+  justify-content: space-evenly;
+  flex-flow:column
+}
+#container2 {
+  margin-left:auto;
+  margin-right:auto;
+  width: 100px;
+  }
+  #glass2 {
+  /* background: rgba(235, 57, 57, 1); */
+  width: 80px;
+  height: 400px;
+  position: relative;
+    border-radius: 100%;
+
+  }
+  #water2 {
+  background-image: url("./waves2.png");
+  background-position: top right;
+  position: absolute;
+  bottom: 0px;
+  width: 80px;
+  height: 4em;
+  border-radius: 100%;
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+  transition: all 3s ease-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  
+  }
+  #glass2:hover #water2 {
+  height: 15em;
+  background-position: top left;
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+  transition: all 3s ease-out;
+  }
+
+
+  #container3 {
+    margin-left:auto;
+    margin-right:auto;
+    width: 100px;
+    }
+    #glass3 {
+    /* background: rgba(235, 57, 57, 1); */
+    width: 120px;
+    height: 400px;
+    position: relative;
+      border-radius: 100%;
+  
+    }
+    #water3 {
+    background-image: url("./waves1.png");
+    background-position: top right;
+    position: absolute;
+    bottom: 0px;
+    width: 120px;
+    height: 4em;
+      border-radius: 100%;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    }
+    #glass3:hover #water3 {
+    height: 15em;
+    background-position: top left;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+    }

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 function Puz4(props) {
   let level=props.level
-	let setLevel=props.setLevel
+  let setLevel=props.setLevel
+  const [which,setWhich]=useState(0)
   let c_gridMap= {
   
     display: "grid",
@@ -72,12 +73,19 @@ function reset()
     <div>
     <div className="App" style={{width:"400px",backgroundSize:"cover"}}>
   
+    <div>
+      <button onClick={()=>setWhich(0)} style={{color:"red"}}>Images</button> &emsp;
+      <button onClick={()=>{setWhich(1)}} style={{color:"red"}}>Puzzle</button>
+    </div>
+    {
+      which==0?<img src ="images/puzzle4.jpg" style={{width:"800px"}}/>:
      <div className="puz4-grid-map" style={{backgroundImage: `url('images/maze.png')`,backgroundSize:"cover"}}  >
        {gridCells}
      </div>
+    }
 
     </div>
-    <button onClick={reset}>Reset</button>
+    <button onClick={reset} style={{color:"blue"}}>Reset</button>
     </div>
     
    
