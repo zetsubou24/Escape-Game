@@ -35,7 +35,7 @@ export default function Puz5(props)
 	}
 	useEffect(()=>{
 		// if(height!=={}&&height2!=={}){
-		let cur=(height.height==undefined?60:height.height/2)+(height2.height==undefined?60:height2.height/2)
+		let cur=(height.height==undefined?120:height.height)+(height2.height==undefined?60:height2.height/2)
 		setHeight3({height:cur})
 		// }
 	},[height,height2])
@@ -46,7 +46,7 @@ export default function Puz5(props)
 			<td>
 	<div id="scale" style={{height:"400px",width:"20px",color:"red"}}>
 		<div id="0" style={{height:"50px",textAlign:"left"}}>100</div>
-		<div id="1" style={{height:"50px",textAlign:"left"}} >80</div>
+		<div id="1" style={{height:"50px",textAlign:"left"}}>80</div>
 		<div id="2" style={{height:"50px",textAlign:"left"}}>60</div>
 		<div id="3" style={{height:"50px",textAlign:"left"}}>30</div>
 		<div id="4" style={{height:"50px",textAlign:"left"}}>0</div>
