@@ -47,11 +47,11 @@ export default function Puz6()
     <button id="4" onClick={onPress} style={{position:"absolute",left:124,top:750,color:"red"}}>{input4?"on":"off"}</button><br />
     <button id="5" onClick={onPress} style={{position:"absolute",left:124,top:850,color:"red"}}>{input5?"on":"off"}</button><br />
         <div style={{color:"red"}}>
-            <div style={{position:"absolute",left:378,top:470}}>OR1:{or1}</div><br/>
-            <div style={{position:"absolute",left:407,top:631}}>OR2:{or2}</div><br/>
-            <div style={{position:"absolute",left:460,top:780}}>NOT:{not?"set":"unset"}</div><br/>
-            <div style={{position:"absolute",left:588,top:579}}>OR3:{or3}</div>
-            <div style={{position:"absolute",left:701,top:737}}>ANSWER IS{or4}</div>
+            <div style={{position:"absolute",left:378,top:470}}>{or1}</div><br/>
+            <div style={{position:"absolute",left:407,top:631}}>{or2}</div><br/>
+            <div style={{position:"absolute",left:460,top:780}}>{not?"1":"0"}</div><br/>
+            <div style={{position:"absolute",left:588,top:579}}>{or3}</div>
+            <div style={{position:"absolute",left:701,top:737}}>{or4}</div>
             <br/>
             {/* <div className={}> */}
 

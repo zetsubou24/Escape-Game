@@ -6,6 +6,7 @@ export default function Puz5(props)
 	const [height,setHeight]=useState({})
 	const [height2,setHeight2]=useState({})
 	const [height3,setHeight3]=useState({})
+	const [check,setCheck]=useState(height3.height)
 	function handleClick()
 	{
 		let heighto = document.getElementById('water').clientHeight;
@@ -34,22 +35,34 @@ export default function Puz5(props)
 
 	}
 	useEffect(()=>{
-		// if(height!=={}&&height2!=={}){
-		let cur=(height.height==undefined?120:height.height)+(height2.height==undefined?60:height2.height/2)
+		
+		let cur=Math.min((height.height==undefined?40:height.height)+(height2.height==undefined?20:height2.height),400)
+		
 		setHeight3({height:cur})
-		// }
+		setCheck(height3.height*100/400)
+
+		
+		
+		
+		
+		
 	},[height,height2])
-	console.log(height3)
+	// useEffect(()=>{
+	// 	if(((Math.abs(100-check)<40)&&(height.height/height2.height)>=1.8&&(height.height/height2.height)<2.1))
+	// 	setVisible
+	// },[check])
+	
     return(
         <table>
 		<tr>
 			<td>
-	<div id="scale" style={{height:"400px",width:"20px",color:"red"}}>
-		<div id="0" style={{height:"50px",textAlign:"left"}}>100</div>
-		<div id="1" style={{height:"50px",textAlign:"left"}}>80</div>
-		<div id="2" style={{height:"50px",textAlign:"left"}}>60</div>
-		<div id="3" style={{height:"50px",textAlign:"left"}}>30</div>
-		<div id="4" style={{height:"50px",textAlign:"left"}}>0</div>
+	<div id="scale" style={{height:"400px",width:"20px",color:"red",justifyContent:"space-between"}}>
+		<div id="0" style={{height:"80px",textAlign:"left"}}>100</div>
+		<div id="1" style={{height:"80px",textAlign:"left"}}>70</div>
+		<div id="2" style={{height:"80px",textAlign:"left"}}>50</div>
+		<div id="-1" style={{height:"80px",textAlign:"left"}}>40</div>
+		<div id="3" style={{height:"80px",textAlign:"left"}}>20</div>
+		<div id="4" style={{height:"80px",textAlign:"left"}}>5</div>
 		</div>
 			</td>
 			<td>&emsp;&emsp;</td>
@@ -74,12 +87,12 @@ export default function Puz5(props)
 				</div>
 			</td>
 			<td>
-			<div style={{width:"250px"}}><h1 style={{color:"red"}}>=</h1></div>
+	<div style={{width:"250px"}}><h1 style={{color:"red"}}>=</h1></div>
 			</td>
 			<td>
 			<div id="container">
 					<div id="glass3" >
-						<div id="water3" style={height3} onClick={handleClick3}><p style={{color:"blue"}}>H<sub>2</sub>0</p></div>
+						<div id="water3" style={height3} onClick={handleClick3}><p style={{color:"blue"}}>H<sub>2</sub>0</p> <hr /></div>
 					</div>
 					<button onClick={reset} style={{color:"red"}}>reset</button>
 				</div>
@@ -88,9 +101,14 @@ export default function Puz5(props)
 			<div style={{width:"180px"}}><h1 style={{color:"red"}}>+</h1></div>
 			</td>
 			<td>
-				<img src="images/battery.png" style={{width:"150px",height:"200px"}}/>
+				{((Math.abs(100-check)<40)&&(height.height/height2.height)>=1.8&&(height.height/height2.height)<2.1)?<img src="images/battery.png" style={{width:"150px",height:"200px"}}/>:null}
+				P
 			</td>
 		</tr>
+		<tr><td>
+
+			{/* <h1 style={{color:"red"}}>{((Math.abs(100-check)<40)&&(height.height/height2.height)>=1.8&&(height.height/height2.height)<2.1)?"correct":null}</h1> */}
+			</td></tr>
 	</table>
     )
 }

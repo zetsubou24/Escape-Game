@@ -16,8 +16,8 @@ background-position: top right;
 position: absolute;
 bottom: 0px;
 width: 80px;
-height: 4em;
-  border-radius: 100%;
+height: 2em;
+border-radius: 100%;
 -webkit-transition: all 3s ease-out;
 -moz-transition: all 3s ease-out;
 -o-transition: all 3s ease-out;
@@ -28,12 +28,12 @@ border-radius: 10px;
 
 }
 #glass:hover #water {
-height: 15em;
+height: 12em;
 background-position: top left;
 -webkit-transition: all 3s ease-out;
 -moz-transition: all 3s ease-out;
 -o-transition: all 3s ease-out;
-transition: all 3s ease-out;
+transition: all 5s ease-out;
 }
 #scale
 {
@@ -60,7 +60,7 @@ transition: all 3s ease-out;
   position: absolute;
   bottom: 0px;
   width: 80px;
-  height: 4em;
+  height: 2em;
   border-radius: 100%;
   -webkit-transition: all 3s ease-out;
   -moz-transition: all 3s ease-out;
@@ -72,12 +72,12 @@ transition: all 3s ease-out;
   
   }
   #glass2:hover #water2 {
-  height: 15em;
+  height: 12em;
   background-position: top left;
   -webkit-transition: all 3s ease-out;
   -moz-transition: all 3s ease-out;
   -o-transition: all 3s ease-out;
-  transition: all 3s ease-out;
+  transition: all 5s ease-out;
   }
 
 
@@ -100,7 +100,8 @@ transition: all 3s ease-out;
     position: absolute;
     bottom: 0px;
     width: 120px;
-    height: 4em;
+    height: 2em;
+    max-height: 420px;
       border-radius: 100%;
     -webkit-transition: all 3s ease-out;
     -moz-transition: all 3s ease-out;
@@ -112,10 +113,17 @@ transition: all 3s ease-out;
     
     }
     #glass3:hover #water3 {
-    height: 15em;
+    height: 12em;
     background-position: top left;
     -webkit-transition: all 3s ease-out;
     -moz-transition: all 3s ease-out;
     -o-transition: all 3s ease-out;
-    transition: all 3s ease-out;
+    transition: all 5s ease-out;
     }
+    #water3 hr
+    {
+      position:absolute;
+      background-color:red;
+      bottom:420px
+    }
+ 
