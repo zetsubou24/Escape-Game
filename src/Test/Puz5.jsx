@@ -39,12 +39,6 @@ export default function Puz5(props)
 		let cur=Math.min((height.height==undefined?40:height.height)+(height2.height==undefined?20:height2.height),400)
 		setHeight3({height:cur})
 		setCheck(height3.height*100/400)
-
-		
-		
-		
-		
-		
 	},[height,height2])
 	// useEffect(()=>{
 	// 	if(((Math.abs(100-check)<40)&&(height.height/height2.height)>=1.8&&(height.height/height2.height)<2.1))

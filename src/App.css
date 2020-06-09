@@ -6,9 +6,10 @@
 }
 .Game-Level-Description
 {
-  font-family: "Lucida Console", Courier, monospace;
+  /* font-family: "Lucida Console", Courier, monospace; */
+  font-family: "Friz Quadrata Std Medium";
   background-color: black;
-  color: rgba(216, 0, 0, 0.8);
+  color: rgba(69, 255, 69, 1);
   opacity: 0.8;
 }
 /* grid ------------------------------------------- */

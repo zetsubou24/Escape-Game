@@ -11,7 +11,7 @@ position: relative;
   border-radius: 100%;
 }
 #water {
-background-image: url("./waves3.png");
+background-image: url("./waves3_edit.png");
 background-position: top right;
 position: absolute;
 bottom: 0px;
@@ -55,7 +55,7 @@ transition: all 5s ease-out;
 
   }
   #water2 {
-  background-image: url("./waves2.png");
+  background-image: url("./waves2_edit.png");
   background-position: top right;
   position: absolute;
   bottom: 0px;

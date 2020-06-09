@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+// import PatternLock from "react-pattern-lock";
+import Pattern from "./Pattern"
 function Puz4(props) {
+  const f=<Pattern></Pattern>
   let level=props.level
   let setLevel=props.setLevel
   const [which,setWhich]=useState(0)
@@ -79,9 +82,10 @@ function reset()
     </div>
     {
       which==0?<img src ="images/puzzle4.jpg" style={{width:"800px"}}/>:
-     <div className="puz4-grid-map" style={{backgroundImage: `url('images/mars.png')`,backgroundSize:"cover"}}  >
-       {gridCells}
-     </div>
+    //  <div className="puz4-grid-map" style={{backgroundImage: `url('images/mars.png')`,backgroundSize:"cover"}}  >
+    //    {gridCells}
+    //  </div>
+    f
     }
 
     </div>
