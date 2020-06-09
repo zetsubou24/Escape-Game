@@ -33,6 +33,10 @@ const SolutionDNDBoard = (props) =>{
       )
 }
 const Puz2 = (props) =>{
+    let level=props.handles.level
+    let setLevel=props.handles.setLevel
+    let success=props.handles.success
+    let setSuccess=props.handles.setSuccess
     const [grid,setGrid]=useState({
         tasks:[
             {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/rocket-grid-puz2/image_part_001.jpg",bg2:"images/rocket-night-grid-puz2/image_part_001.jpg"},
@@ -73,6 +77,8 @@ const Puz2 = (props) =>{
       "16":{img:"images/rocket-grid-puz2/image_part_016.jpg",index:0},
       "17":{img:"images/white.png",index:0}
     });
+    const [ans,setAns]=useState("")
+
     let ids={}
     for(let i=1;i<17;i++)
       ids[i.toString()]=<div></div>
@@ -80,6 +86,15 @@ const Puz2 = (props) =>{
     const [solutionCurState,setSolutionCurState]=useState({
         tasks:ids
     })
+    function handleAnswer(ev)
+    {
+        if(ans=="RX-081")
+        {
+            setSuccess(1)
+            alert("correct")
+            setLevel((level+1)%3)
+        }
+    }
     useEffect(()=>{
 
     let temp={}
@@ -154,6 +169,8 @@ const Puz2 = (props) =>{
             elems: solutionCurState.tasks
           }}/>
       </div>
+      <input type="text" placeholder="Answer here" style={{width:"200px"}} value={ans} onChange={(ev)=>setAns(ev.target.value)}/><br/>
+      <button style={{width:"200px",color:"green"}} onClick={handleAnswer}>Check</button>
     </div>
     )
 }

@@ -7,15 +7,12 @@ import './Game.css';
 import "./App.css"
 import Level from "./Components/Level"
 import Player from "./Components/Player.jsx"
-import { Header, Segment, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-
-
 function GamePage() {
   var players_available=7
   var max_players=10
   const [level, setLevel] = useState(0)
-  const [temp,setTemp]=useState([])
+  const [success,setSuccess]=useState(-1)
   const [state, setState] = useState({
     tasks: [
       { name: "Battery", category: "game", bgcolor: "yellow", level: "one" },
@@ -34,9 +31,7 @@ function GamePage() {
   
   const [Inventory,setInventory]=useState([])
   const [tasks, setTask] = useState({
-    
       game: []
-    
   })
   const [tasks2, setTask2] = useState({
     game: []
@@ -61,7 +56,6 @@ function GamePage() {
   var onDragOver = (ev) => {
     ev.preventDefault();
   }
-
   var onDrop = (ev, cat) => {
     let id = ev.dataTransfer.getData("id");
     var NextS = []
@@ -94,10 +88,6 @@ function GamePage() {
       })
     }
   }
-  useEffect(()=>{
-      setTemp(Inventory)
-      
-  },[level])
   useEffect(() => {
     var f = {
       game: [],
@@ -130,9 +120,16 @@ function GamePage() {
           game:f.game
         })
       }
+      if(success==1)
+      f.inventory.push(<div style={{width: "200px",
+        height: "50px",
+        backgroundColor: "yellow"}}
+        onDragStart={(e) => onDragStart(e, t.name,t.curarea)}
+        draggable
+                >yes</div>)
       setInventory(f.inventory)
     })
-  }, [state, level])
+  }, [state, level,success])
   const handleClick = () => {
     setLevel((level + 1) % 3)
   }
@@ -149,7 +146,6 @@ function GamePage() {
       </p>
       <ProgressBar />
       <div className="game-grid-container" >
-        
           <Level handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
@@ -157,7 +153,9 @@ function GamePage() {
             tasks: curTask,
             inventory:Inventory,
             level:level,
-            setLevel:setLevel
+            setLevel:setLevel,
+            success:success,
+            setSuccess:setSuccess
           }}
           />
         <div className="players">

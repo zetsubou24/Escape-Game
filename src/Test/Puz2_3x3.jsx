@@ -6,6 +6,7 @@ const PuzzleDNDBoard = (props) =>{
     var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
     var elems=props.handles.elems
+
     return(
   <div class="grid-item-puz-collection"
   onDragOver={(e)=>onDragOver(e)}
@@ -33,6 +34,10 @@ const SolutionDNDBoard = (props) =>{
       )
 }
 const Puz2 = (props) =>{
+    let level=props.handles.level
+    let setLevel=props.handles.setLevel
+    let success=props.handles.success
+    let setSuccess=props.handles.setSuccess
     const [grid,setGrid]=useState({
         tasks:[
             {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/puzzle2frontface/image_part_001.jpg",bg2:"images/Puzzle2sol/image_part_001.jpg"},
@@ -59,6 +64,7 @@ const Puz2 = (props) =>{
       "9":{img:"images/Puzzle2sol/image_part_009.jpg",index:0},
       "10":{img:"images/white.png",index:0}
     });
+    const [ans,setAns]=useState("")
     let ids={}
     for(let i=1;i<10;i++)
       ids[i.toString()]=<div></div>
@@ -84,7 +90,15 @@ const Puz2 = (props) =>{
         tasks:temp
     })
     },[grid,curImg])
-
+    function handleAnswer(ev)
+    {
+        if(ans=="5-NOV-2013")
+        {
+            setSuccess(1)
+            alert("correct")
+            setLevel((level+1)%3)
+        }
+    }
     const onDragStart = (ev, id,parent) => {
         ev.dataTransfer.setData("id", id);
         ev.dataTransfer.setData("fromId",parent)
@@ -132,14 +146,18 @@ const Puz2 = (props) =>{
             elems: solutionCurState.tasks["puzzle"]
           }}/>
       </div>
-      <div className="Container_puz2_item2">
+      <div className="Container_puz2_item2" >
         <SolutionDNDBoard handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
             onDrop: onDrop,
             elems: solutionCurState.tasks
           }}/>
+          
       </div>
+      <input type="text" placeholder="Answer here" style={{width:"200px"}} value={ans} onChange={(ev)=>setAns(ev.target.value)}/><br/>
+      <button style={{width:"200px",color:"green"}} onClick={handleAnswer}>Check</button>
+      
     </div>
     )
 }
