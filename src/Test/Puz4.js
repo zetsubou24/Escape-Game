@@ -79,7 +79,7 @@ function reset()
     </div>
     {
       which==0?<img src ="images/puzzle4.jpg" style={{width:"800px"}}/>:
-     <div className="puz4-grid-map" style={{backgroundImage: `url('images/maze.png')`,backgroundSize:"cover"}}  >
+     <div className="puz4-grid-map" style={{backgroundImage: `url('images/mars.png')`,backgroundSize:"cover"}}  >
        {gridCells}
      </div>
     }

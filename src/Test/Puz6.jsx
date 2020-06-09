@@ -40,7 +40,7 @@ export default function Puz6()
     return (
         <div style={{backgroundImage:`url('images/gates.png')`,height:"100%",width:"100%",backgroundRepeat:"no-repeat"}} onClick={mouseCoord}>
             
-            herrro
+            
     <button id="1" onClick={onPress} style={{position:"absolute",left:124,top:450,color:"red"}}>{input1?"on":"off"}</button><br />
     <button id="2" onClick={onPress} style={{position:"absolute",left:124,top:544,color:"red"}}>{input2?"on":"off"}</button><br />
     <button id="3" onClick={onPress} style={{position:"absolute",left:124,top:646,color:"red"}}>{input3?"on":"off"}</button><br />
@@ -52,18 +52,9 @@ export default function Puz6()
             <div style={{position:"absolute",left:460,top:780}}>{not?"1":"0"}</div><br/>
             <div style={{position:"absolute",left:588,top:579}}>{or3}</div>
             <div style={{position:"absolute",left:701,top:737}}>{or4}</div>
+            {or4==1?<img src="images/2080ti.png" style={{position:"absolute",left:860,top:689,height:"100px",width:"100px"}}/>:null}
             <br/>
-            {/* <div className={}> */}
-
             </div>
-
-            {/* <svg height="210" width="500">
-  <line x1="69" y1="39" x2="347" y2="25" style={{stroke:"rgb(255,0,0)",strokeWidth:"2"}} />
-</svg> */}
-
         </div>
-
-
-        // </div>
     )
 }
