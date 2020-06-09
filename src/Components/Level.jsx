@@ -1,7 +1,7 @@
 import React from "react"
 import "../Game.css"
 import "../App.css"
-import Puz2 from "../Test/Puz2"
+import Puz2 from "../Test/Puz2_3x3"
 import Puz3 from "../Test/Puz3"
 import Puz4 from "../Test/Puz4"
 const Level = (props) => {

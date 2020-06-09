@@ -89,10 +89,10 @@ const Puz2 = (props) =>{
     grid.tasks.forEach((t)=>{
         if(t.curarea=="puzzle"){
             temp[t.curarea].push(
-                <PicDisplay handles={{id:"puzzle",onDragStart:onDragStart,t:t,size:100,curImg:curImg,setCurImg:setCurImg,name:t.name}}/>
+                <PicDisplay handles={{id:"puzzle",onDragStart:onDragStart,t:t,size:100,curImg:curImg,setCurImg:setCurImg,name:t.name,class:"puz2-draggable"}}/>
             )}
         else
-        temp[t.curarea]=<PicDisplay handles={{id:t.name,onDragStart:onDragStart,t:t,size:150,curImg:curImg,setCurImg:setCurImg,name:t.name}}/>
+        temp[t.curarea]=<PicDisplay handles={{id:t.name,onDragStart:onDragStart,t:t,size:150,curImg:curImg,setCurImg:setCurImg,name:t.name,class:"puz2-draggable"}}/>
     })
     setSolutionCurState({
         tasks:temp

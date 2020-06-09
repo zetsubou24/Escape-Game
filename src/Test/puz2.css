@@ -1,0 +1,67 @@
+.Container_puz2
+{
+    /* display: flex; */
+    /* background-size: cover; */
+    display: grid;
+    grid-template-columns: 40vw 30vw;
+    grid-template-rows: 60vh;
+
+}
+.Container_puz2_item1
+{
+    height: auto;
+}
+.Container_puz2_item2
+{
+    height: auto;
+
+}
+.grid-container-puz2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:inherit;
+    border-radius: 10px;
+    border-style: groove;
+    max-width: 33%;
+    max-height: 33%;
+  }
+  
+.grid-item-puz2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    
+    font-size: 30px;
+    height:150px;
+    width: 150px;
+    text-align: center;
+}
+.grid-item-collection{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /* padding: 20px; */
+    font-size: 30px;
+    height: 150px;
+    width: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    text-align: center;
+}
+.puz2-draggable-3x3 {
+    display: flex;
+    width: 150px;
+    height:150px;
+    background-color: yellow;
+    /* background-size: cover; */
+}
+.flex-container-puz2
+{
+    display: flex;
+}
+.grid-item-puz-collection
+{
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction:column ;
+    height:450px;
+    width:450px;
+}

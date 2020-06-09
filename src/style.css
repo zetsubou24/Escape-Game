@@ -19,6 +19,13 @@
   border: 3px solid green;
   padding: 10px;
 } */
+.bottom-cent {
+  position: fixed;
+left: 50%;
+bottom: 20px;
+transform: translate(-50%, -50%);
+margin: 0 auto;
+}
 .form_login{
 	width: 100px;
 	height: 100px;
@@ -33,6 +40,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.bottom-right-brackets
+{
+  position: absolute;
+  bottom:0;
+  right:100px;
+  height:100px;
+  /* width:100px; */
 }
 .container {
   position: relative;
