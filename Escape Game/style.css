@@ -125,3 +125,47 @@
   font-size: 30px;
 
 }
+
+.docs{
+  /* background-image: url('Resources/Images/pngguru.com.png'); */
+  width: 10px;
+  height: 10px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left: 70%;
+  /* right: 90%; */
+  bottom: 50px;
+  top: 60%;
+
+}
+.docs:hover{
+
+  width: 200px;
+  height: 200px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+.star{
+  /* background-image: url('Resources/Images/pngguru.com.png'); */
+  width: 10px;
+  height: 10px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.star:hover{
+
+  width: 200px;
+  height: 200px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}

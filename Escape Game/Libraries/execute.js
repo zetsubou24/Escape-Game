@@ -51,3 +51,7 @@ function puz3_2(){
 		alert("wrong answer");
 	}
 }
+
+function puz3_doc(){
+	window.location.href = "puzz3docs.html"
+}
