@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import "../Game.css"
 function Puz3(props)
 {
-	let level=props.level
-	let setLevel=props.setLevel
+	let level=props.handles.level
+	let setLevel=props.handles.setLevel
 	const [visible1,setVisible1]=useState(false)
 	const [value,setValue]=useState("")
 	function viewSol()

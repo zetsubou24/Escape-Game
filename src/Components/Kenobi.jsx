@@ -1,10 +1,12 @@
 import React from "react"
-// import Bg_welcome from "images/bg_welcome.jpg" 
 import "../Kenobi.css"
 import "../style.css"
-// import commander from "images/commander.png"
 import { Link } from 'react-router-dom';
+import {loginExchange} from "../Globals.js"
 const Kenobi = () => {
+
+    console.log("from kenobi",loginExchange.getCredentials())
+
     const toDis="Hello there. I am Commander Kenobi and I've been told you guys are the best in the business. I have a mission for you to save our fellow astronaut who's stuck on Mars. He needs to find his way to our Home Base Pod. He will need your assistance."
     const assign = () => {
     }

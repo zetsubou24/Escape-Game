@@ -23,8 +23,6 @@ const App2 = () => {
         <Route path="/GamePage" exact component={GamePage} />
         <Route path="/GamePage2" exact component={GamePage2} />
         <Route path="/FinalPuzzle" exact component={FinalPuzzle} />
-
-        
       </Switch>
     </Router>
   )

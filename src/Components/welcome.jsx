@@ -1,16 +1,19 @@
 import React from "react"
 import "../Kenobi.css"
 import "../style.css"
-// import bg_login from "/images/bg_login.jpg"
-// import  {  useHistory,Router, Route, Switch, Link} from 'react-router-dom'
-import Kenobi from "./Kenobi"
-import history from "./history"
-import { Header, Segment, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import {loginExchange} from "../Globals.js"
 const Welcome = () =>
 {
-
-	
+	loginExchange.setUserName("taran")
+	loginExchange.setPassWord("taranu")
+	// console.log(obj.getCredentials())
+	function storeLogin(ev)
+	{
+		loginExchange.setUserName(document.getElementById("username").value)
+		loginExchange.setPassWord(document.getElementById("password").value)
+		loginExchange.setNickName(document.getElementById("nickname").value)
+	}
     return (
         <div>
             <img src="/images/bg_login.jpg" alt="Snow"  style={{"width":'100%'}}/>
@@ -23,13 +26,14 @@ const Welcome = () =>
             	<input type="password" id="password" placeholder="Password" />
         	</p>
         	<p>
-            	<input type="text" id="name" placeholder="Nick Name" />
+            	<input type="text" id="nickname" placeholder="Nick Name" />
         	</p>
         	<p>
 				<Link to="/Home">
 				<button
             		id="submitbutton"
-            		type="button"
+					type="button"
+					onClick={storeLogin}
 				>Submit
             	</button>
 				</Link>

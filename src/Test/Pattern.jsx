@@ -16,15 +16,15 @@ class Pattern extends React.Component {
   errorTimeout = 0;
 
   componentDidMount() {
-    window.addEventListener("keydown", ({ which }) => {
-      if (which === 38) {
-        this.setState({
-          size: this.state.size >= 10 ? 10 : this.state.size + 1
-        });
-      } else if (which === 40) {
-        this.setState({ size: this.state.size > 3 ? this.state.size - 1 : 3 });
-      }
-    });
+    // window.addEventListener("keydown", ({ which }) => {
+    //   if (which === 38) {
+    //     this.setState({
+    //       size: this.state.size >= 10 ? 10 : this.state.size + 1
+    //     });
+    //   } else if (which === 40) {
+    //     this.setState({ size: this.state.size > 3 ? this.state.size - 1 : 3 });
+    //   }
+    // });
   }
 
   onReset = () => {

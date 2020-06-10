@@ -29,7 +29,7 @@ function GamePage() {
     ]
   })
   
-  const [Inventory,setInventory]=useState([])
+  const [Inventory,setInventory]=useState([]) 
   const [tasks, setTask] = useState({
       game: []
   })
@@ -89,11 +89,11 @@ function GamePage() {
     }
   }
   useEffect(() => {
-    var f = {
+    let f = {
       game: [],
       inventory: []
     }
-    var arr = (level === 1) ? state.tasks : ((level=== 2)?state.tasks2:state.tasks3)
+    let arr = (level === 1) ? state.tasks : ((level=== 2)?state.tasks2:state.tasks3)
     arr.forEach((t) => {
       f[t.category].push(
         <div key={t.name}

@@ -27,7 +27,7 @@ return (
               <div className="sub-grid-item2"
               onDragOver={(e)=>onDragOver(e)}
               onDrop={(e)=>onDrop(e, "inventory")} placeholder="INVENTORY">
-                Inventory
+                Inventory big ugly 
               {inventory}
               </div>
             </div>
