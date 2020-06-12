@@ -19,6 +19,8 @@ function GamePage2() {
   var max_players=10
   const [level, setLevel] = useState(0)
   const [temp,setTemp]=useState([])
+  const [success,setSuccess]=useState(-1)
+
   const [state, setState] = useState({
     tasks: [
       { name: "Battery", category: "game", bgcolor: "yellow", level: "one" },
@@ -35,7 +37,10 @@ function GamePage2() {
     ]
   })
   
-  const [Inventory,setInventory]=useState([])
+  const [inventory,setInventory]=useState([
+  ])
+
+
   const [tasks, setTask] = useState({
     
       game: []
@@ -97,10 +102,7 @@ function GamePage2() {
       })
     }
   }
-  useEffect(()=>{
-      setTemp(Inventory)
-      
-  },[level])
+  
   useEffect(() => {
     var f = {
       game: [],
@@ -133,9 +135,9 @@ function GamePage2() {
           game:f.game
         })
       }
-      setInventory(f.inventory)
+      // setInventory(f.inventory)
     })
-  }, [state, level])
+  }, [state, level ])
   const handleClick = () => {
     setLevel((level + 1) % 3)
   }
@@ -158,9 +160,12 @@ function GamePage2() {
             onDragStart: onDragStart,
             onDrop: onDrop,
             tasks: curTask,
-            inventory:Inventory,
+            inventory:inventory,
+            setInventory:setInventory,
             level:level,
-            setLevel:setLevel
+            setLevel:setLevel,
+            success:success,
+            setSuccess:setSuccess
           }}
           />
         <div className="players">
