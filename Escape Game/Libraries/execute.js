@@ -45,13 +45,13 @@ function puz3(){
 function puz3_2(){
 	var x = document.getElementById("puz3sol");
 	if(x.value == "102454"){
-		alert("Correct answer");
+		window.location.href="test5/puzzle8.html"
 	}
 	else{
 		alert("wrong answer");
 	}
-}
+	}
 
-function puz3_doc(){
+	function puz3_doc(){
 	window.location.href = "puzz3docs.html"
 }
