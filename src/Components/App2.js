@@ -9,7 +9,8 @@ import GamePage from "../GamePage"
 import GamePage2 from "../GamePage2"
 import Puzzintro from "./Puzzintro"
 import Puz1 from '../Test/Puz1'
-import FinalPuzzle from "./FinalPuzzle"
+import Puz8 from "../Test/Puz8"
+import Ending from "../Test/Ending"
 const App2 = () => {
 //   const {loading} = useAuth0();
   return (
@@ -22,7 +23,9 @@ const App2 = () => {
         <Route path="/HomePuzzle" exact component={Puz1} />
         <Route path="/GamePage" exact component={GamePage} />
         <Route path="/GamePage2" exact component={GamePage2} />
-        <Route path="/FinalPuzzle" exact component={FinalPuzzle} />
+        <Route path="/FinalPuzzle" exact component={Puz8} />
+        <Route path="/Ending" exact component={Ending} />
+
       </Switch>
     </Router>
   )

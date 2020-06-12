@@ -25,6 +25,10 @@ class LoginExchange
     {
         return this.#username.toString()+"#"+this.#password.toString()+"#"+this.Nickname
     }
+    getNickName()
+    {
+        return this.Nickname
+    }
     reset()
     {
         this.setNickName(this.#temp1)

@@ -1,4 +1,7 @@
 import React, { useEffect,useState } from "react"
+
+import { Link } from 'react-router-dom';
+
 import "./puz7.css"
 export default function Puz7(props)
 {
@@ -13,7 +16,7 @@ export default function Puz7(props)
     const [panel,setPanel]=useState(false)
     const [compass,setCompass]=useState(null)
     const [pcb,setPcb]=useState(null)
-
+    const [finalPuz,setFinalPuz]=useState(false)
     const [materials,setMaterials]=useState({
       tasks:[
         {name:"pcb",positionX:130,positionY:130,bgColor:"red",curPos:"inventory",bg:`url(images/videocard.png)`},
@@ -55,7 +58,8 @@ export default function Puz7(props)
       setMap(f.map.length>0?f.map[f.map.length-1]:null)
       setCompass(f.compass.length>0?f.compass[f.compass.length-1]:null)
       setPcb(f.pcb.length>0?f.pcb[f.pcb.length-1]:null)
-
+      if(props.handles.inventory.length==0)
+      setFinalPuz(true)
 
     },[materials])
     const onDragStart = (ev, id) => {
@@ -114,27 +118,22 @@ export default function Puz7(props)
                 <div id="map" style={{position:"absolute",height:"120px",width:"150px",left:"37%",top:"90%"}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "map")}}>
-                  {map!=null?<img src="images/foldedmap.png" />:<p style={{color:"red",backgroundColor:"red",height:"10px",width:"inherit"}}>map here</p>}
+                  {map!=null?<img src="images/foldedmap.png" />:<p style={{color:"red",backgroundColor:"red",height:"10px",width:"inherit"}}>map</p>}
                 </div>
                 <div id="battery" style={{position:"absolute",height:"100px",width:"120px",left:"37%",top:"115%"}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "battery")}}>
                   {battery!=null?battery:<p style={{color:"red",height:"10px"}}>battery</p>}
                 </div>
+                {finalPuz?
+                <Link to="/FinalPuzzle">
+                <button >Click to continue</button>
+                </Link>
+                :null}
+
 
                 </div>
-                {/* <div 
-                    onDragStart={(e) => onDragStart(e, 1)}
-                    draggable
-                    className="game-draggable"
-                    style={{ backgroundColor: "red", width: "100px", height: "100px" }}
-                  ></div> */}
-                  <div id="inventory"
-                  onDragOver={(e)=>onDragOver(e)}
-                  onDrop={(e)=>{onDrop(e, "inventory")}}
-                  style={{height:"100px",width:"100px",borderColor:"red"}}>
-                    {/* {Inventory} */}
-                  </div>
+                
 
               </div>
             
