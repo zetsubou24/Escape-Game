@@ -31,7 +31,6 @@ function GamePage3() {
     ],
     tasks3: [
       { name: "QR_Code1", category: "game", bgcolor: "yellow", level: "two" },
-      { name: "QR_clues", category: "game", bgcolor: "pink", level: "two" }
     ]
   })
   
@@ -140,6 +139,7 @@ function GamePage3() {
     setLevel((level + 1) % 6)
   }
   let curTask=(level=== 1)?tasks:((level=== 2)?tasks2:tasks3)
+//   let curDesc=
   return (
     
     <div className="GamePage" style={{backgroundImage: `url("images/bg1.jpg")`}}>
