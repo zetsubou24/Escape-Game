@@ -60,7 +60,9 @@
   width:100%;
 }
 
-
+p.Game-Level-Description {
+  height: 170px;
+}
 .draggable {
   display: flex;
   width: 200px;
@@ -94,6 +96,32 @@
   transform:rotate(-10deg)
 
 }
+.bomb2{
+  /* background-image: url('Resmages/bomb.png'); */
+  width: 35px;
+  height: 30px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left:500px;
+  bottom:60px;
+  transform:rotate(-10deg)
+
+}
+/* .puz3-items{
+     display:flex;
+
+} */
+.bomb2:hover{
+
+  width: 280px;
+  height: 280px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
 .bomb:hover{
 
   width: 200px;
@@ -105,6 +133,29 @@
   transform: translate(-50%, -50%);*/
 
 }
+.star{
+  /* background-image: url('Resmages/bomb.png'); */
+  width: 35px;
+  height: 30px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left:100px;
+  top:400px;
+  transform:rotate(-10deg)
+
+}
+.star:hover{
+
+  width: 280px;
+  height: 280px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+
 .puz4-grid-map
 {
   display: grid;

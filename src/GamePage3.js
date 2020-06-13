@@ -20,36 +20,21 @@ function GamePage3() {
   const [success,setSuccess]=useState(-1)
 
   const [state, setState] = useState({
-    tasks: [
-      { name: "Battery", category: "game", bgcolor: "yellow", level: "one" },
-      { name: "Scrap", category: "game", bgcolor: "pink", level: "one" },
-      { name: "Periodic_table ", category: "game", bgcolor: "skyblue", level: "one" }
-    ],
-    tasks2: [
-      { name: "Fuel_cell", category: "game", bgcolor: "yellow", level: "two" ,bg:`url('/images/17_27_36.png')`},
-      { name: "Bike", category: "game", bgcolor: "pink", level: "two" ,bg:`url('/images/17_27_36.png')`},
-    ],
-    tasks3: [
-      { name: "QR_Code1", category: "game", bgcolor: "yellow", level: "two" },
-    ]
+    
+    1: { name: "puzzle_2", category: "game",  description:["Here is another simple puzzle." , "\n" ,"All you have to do is use these pieces of the puzzle and solve it"] },
+    2: { name: "puzzle_3", category: "game", description:["This might be a bit tricky.","\n" ," You need to really move around the map for solving this!"]},
+    3: { name: "puzzle_4", category: "game", description:["Move a mile straight, then two miles right Repeat this again and go a mile straight Four miles to left, then a mile straight once more That’s how you reach what you are looking for."] },
+    4: { name: "puzzle_5", category: "game", description:[" A Chemist once said 'One doesn't simply solve Stoichiometric equations without balancing'. ","\n","Try out the reaction for yourself and see if you can get the output."]},
+    5: { name: "puzzle_6", category: "game", description:[" Now let's get our hands dirty with some basics of Electrical engineering. ","\n" ,"You have to find the correct sequence of the logic gate switches to get the output!" ]},
+    6: { name: "puzzle_7", category: "game", description:["Wow isn't that rover looking beautiful! Of course it does. It is what is going to take you back to the Home Base! All you need to do is to find out some way to get it running!" ]},
+    0: { name: "puzzle_7", category: "game", description:["Wow isn't that rover looking beautiful! Of course it does. It is what is going to take you back to the Home Base! All you need to do is to find out some way to get it running!" ]},
+    
   })
   
   const [inventory,setInventory]=useState([])
 
 
-  const [tasks, setTask] = useState({
-    
-      game: []
-    
-  })
-  const [tasks2, setTask2] = useState({
-    game: []
-  })
-  const [tasks3, setTask3] = useState({
-    game: []
-  })
-
-
+  const[curDesc,setCurDesc]=useState("")
   //dynamically add players
   const addPlayers=()=>{
     let players=[]
@@ -59,6 +44,7 @@ function GamePage3() {
     }
     return players
   }
+  
   const onDragStart = (ev, id) => {
     ev.dataTransfer.setData("id", id);
   }
@@ -100,45 +86,26 @@ function GamePage3() {
   }
   
   useEffect(() => {
-    var f = {
-      game: [],
-      inventory: []
-    }
-    var arr = (level === 1) ? state.tasks : ((level=== 2)?state.tasks2:state.tasks3)
-    arr.forEach((t) => {
-      f[t.category].push(
-        <div key={t.name}
-          onDragStart={(e) => onDragStart(e, t.name)}
-          draggable
-          className="game-draggable"
-          style={{ backgroundColor: t.bgcolor }}
-        >
-          {t.name}
-        </div>
-      );
-      
-      // setInventory(f.inventory)
-    })
-    if (level === 1) {
-        setTask({
-          game: f.game
-        })
-      }
-      else if(level=== 2){
-        setTask2({
-          game: f.game
-        })
-      }
-      else{
-        setTask3({
-          game:f.game
-        })
-      }
+    // var f = {
+    //   curDesc:"",
+    //   inventory: []
+    // }
+    let temp=[]
+    state[level].description.forEach(element => {
+      if(element=="\n")
+        temp.push(<br/>)
+      else
+      temp.push(element)
+
+    });
+    setCurDesc(temp)
+    
   }, [state, level ])
   const handleClick = () => {
     setLevel((level + 1) % 6)
   }
-  let curTask=(level=== 1)?tasks:((level=== 2)?tasks2:tasks3)
+  // let curTask=(level=== 1)?tasks:((level=== 2)?tasks2:tasks3)
+  let curTask="hmmm"
 //   let curDesc=
   return (
     
@@ -146,9 +113,7 @@ function GamePage3() {
       <AppBar />
       <button onClick={() => handleClick()}>Change Level </button>
       <p className="Game-Level-Description">
-        Gravity is a 2013 science fiction thriller film directed by Alfonso Cuarón, who also co-wrote, co-edited and produced the film. It stars Sandra Bullock and George Clooney as American astronauts who are stranded in space after the mid-orbit destruction of their Space Shuttle, and attempt to return to Earth.
-        Cuarón wrote the screenplay with his son Jonás and attempted to develop the film at Universal Pictures. Later, the distribution rights were acquired by Warner Bros. Pictures. David Heyman, who previously worked with Cuarón on Harry Potter and the Prisoner of Azkaban (2004), produced the film with him. Gravity was produced entirely in the United Kingdom, where British visual effects company Framestore spent more than three years creating most of the film's visual effects, which make up over 80 of its 91 minutes.
-        Gravity opened the 70th Venice International Film Festival on August 28, 2013, and had its North American premiere three days later at the Telluride Film Festival. Upon its release, Gravity was met with widespread critical acclaim, including its direction and visuals. Considered one of the best films of 2013, it appeared on numerous critics' year-end lists, and was selected by the American Film Institute in their annual Movies of the Year list.[5] The film became the eighth highest-grossing film of 2013 with a worldwide gross of over $723 million, against a production budget of around $100 million.
+       {curDesc}
       </p>
       <ProgressBar />
       <div className="game-grid-container" >
