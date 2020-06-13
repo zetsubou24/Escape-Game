@@ -2,10 +2,17 @@ import React,{useState,useEffect} from "react"
 import "./Puz6.css"
 export default function Puz6(props)
 {
+    let level=props.handles.level
+	let setLevel=props.handles.setLevel
+	let inventory=props.handles.inventory
+	let setInventory=props.handles.setInventory
+	var onDragOver=props.handles.onDragOver
+    var onDragStart=props.handles.onDragStart
+    var onDrop=props.handles.onDrop
     const [input1,setInput1]=useState(false)
-    const [input2,setInput2]=useState(false)
+    const [input2,setInput2]=useState(true)
     const [input3,setInput3]=useState(false)
-    const [input4,setInput4]=useState(false)
+    const [input4,setInput4]=useState(true)
     const [input5,setInput5]=useState(false)
     const [or1,setOr1]=useState(false)
     const [or2,setOr2]=useState(false)
@@ -31,17 +38,29 @@ export default function Puz6(props)
         setOr3(or1&or2)
         setNot(!input4)
         setOr4(not&or3)
-
     })
     function mouseCoord(event)
     {
         // alert(event.clientX+" "+event.clientY)
     }
+    function handleSuccess()
+    {
 
+        alert("correct")
+		setInventory([...inventory,<div 
+			id="pcb"
+			key="pcb"
+			style={{width: "100px",
+					height: "50px",
+					backgroundRepeat:"no-repeat",
+					backgroundImage:`url(images/videocard.png)`}}
+			onDragStart={(e) => onDragStart(e,"pcb")}
+			draggable
+			></div>])
+		setLevel((level+1)%6)
+    }
     return (
         <div className="puz6-container" style={{backgroundImage:`url('images/gates.png')`,height:"100%",width:"100%",backgroundRepeat:"no-repeat"}} onClick={mouseCoord}>
-            
-            
     <button id="1" onClick={onPress} style={{position:"absolute",left:124,top:380,color:"red"}}>{input1?"on":"off"}</button><br />
     <button id="2" onClick={onPress} style={{position:"absolute",left:124,top:484,color:"red"}}>{input2?"on":"off"}</button><br />
     <button id="3" onClick={onPress} style={{position:"absolute",left:124,top:586,color:"red"}}>{input3?"on":"off"}</button><br />
@@ -53,7 +72,9 @@ export default function Puz6(props)
             <div style={{position:"absolute",left:500,top:720}}><div className="output" style={{background:not?"green":"red"}}></div></div><br/>
             <div style={{position:"absolute",left:645,top:490}}><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
             <div style={{position:"absolute",left:741,top:665}}><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
-            {or4==1?<img src="images/2080ti.png" style={{position:"absolute",left:860,top:620,height:"100px",width:"100px"}}/>:null}
+            {or4==1?
+            handleSuccess()
+            :null}
             <br/>
             </div>
         </div>

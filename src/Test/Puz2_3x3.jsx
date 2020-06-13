@@ -38,6 +38,8 @@ const Puz2 = (props) =>{
     let setLevel=props.handles.setLevel
     let success=props.handles.success
     let setSuccess=props.handles.setSuccess
+    let inventory=props.handles.inventory
+    let setInventory=props.handles.setInventory
     const [grid,setGrid]=useState({
         tasks:[
             {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/puzzle2frontface/image_part_001.jpg",bg2:"images/Puzzle2sol/image_part_001.jpg"},
@@ -94,9 +96,20 @@ const Puz2 = (props) =>{
     {
         if(ans=="5-NOV-2013")
         {
-            setSuccess(1)
+            // setSuccess(1)
             alert("correct")
-            setLevel((level+1)%3)
+            props.handles.setInventory([<div 
+              id={"map"}
+              key={"map"}
+              style={{width: "100px",
+                      height: "50px",
+                      backgroundRepeat:"no-repeat",
+                      backgroundImage:`url(images/map.png)`}}
+              onDragStart={(e) => onDragStart(e, "map")}
+              draggable
+            ></div>])
+            // setLevel((level+1)%3)
+            setLevel((level+1)%6)
         }
     }
     const onDragStart = (ev, id,parent) => {
@@ -157,6 +170,8 @@ const Puz2 = (props) =>{
       </div>
       <input type="text" placeholder="Answer here" style={{width:"200px"}} value={ans} onChange={(ev)=>setAns(ev.target.value)}/><br/>
       <button style={{width:"200px",color:"green"}} onClick={handleAnswer}>Check</button>
+    <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}}/>
+
       
     </div>
     )

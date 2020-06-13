@@ -99,7 +99,7 @@ export default function Puz7(props)
                 style={{width: "900px", height: "700px"}} onClick={(ev)=>console.log(ev.clientX,ev.clientY)}>
                 {roverItems}
 
-                <div id="pcb" style={{position:"absolute",height:"100px",width:"100px",left:"25%",top:"105%"}}
+                <div id="pcb" style={{position:"absolute",height:"100px",width:"100px",left:"25%",top:"100%"}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "pcb")}}>
                   {pcb!=null?<img src="images/wires3.png" />:<p style={{color:"red",height:"10px"}}>pcb</p>}
@@ -115,21 +115,24 @@ export default function Puz7(props)
                 </div>:
                 null
                 }
-                <div id="map" style={{position:"absolute",height:"120px",width:"150px",left:"37%",top:"90%"}}
+                <div id="map" style={{position:"absolute",height:"120px",width:"150px",left:"37%",top:"85%"}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "map")}}>
                   {map!=null?<img src="images/foldedmap.png" />:<p style={{color:"red",backgroundColor:"red",height:"10px",width:"inherit"}}>map</p>}
                 </div>
-                <div id="battery" style={{position:"absolute",height:"100px",width:"120px",left:"37%",top:"115%"}}
+                <div id="battery" style={{position:"absolute",height:"100px",width:"120px",left:"37%",top:"110%"}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "battery")}}>
                   {battery!=null?battery:<p style={{color:"red",height:"10px"}}>battery</p>}
                 </div>
-                {finalPuz?
+                
+                {
+                  inventory.length==0?
                 <Link to="/FinalPuzzle">
-                <button >Click to continue</button>
-                </Link>
-                :null}
+                <button style={{color:"red"}}>Click to continue</button>
+                </Link>:null
+                }
+                
 
 
                 </div>

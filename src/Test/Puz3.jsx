@@ -4,6 +4,11 @@ function Puz3(props)
 {
 	let level=props.handles.level
 	let setLevel=props.handles.setLevel
+	let inventory=props.handles.inventory
+	let setInventory=props.handles.setInventory
+	var onDragOver=props.handles.onDragOver
+    var onDragStart=props.handles.onDragStart
+    var onDrop=props.handles.onDrop
 	const [visible1,setVisible1]=useState(false)
 	const [value,setValue]=useState("")
 	function viewSol()
@@ -14,8 +19,24 @@ function Puz3(props)
 	{
 		if(value=="102450"||value=="10:24:50")
 		{
-			setLevel((level + 1) % 3)
+			// setLevel((level + 1) % 3)
 			alert("correct!")
+			props.handles.setInventory(
+				[
+					...inventory,
+					<div 
+				id={"compass"}
+				key={"compass"}
+				style={{width: "100px",
+						height: "50px",
+						backgroundRepeat:"no-repeat",
+						backgroundImage:`url('/images/compass2.png')`}}
+				onDragStart={(e) => onDragStart(e, "compass")}
+				draggable
+				></div>
+				]
+			)
+			setLevel((level + 1) % 6)
 		}
 		else{
 			alert("wrong!")

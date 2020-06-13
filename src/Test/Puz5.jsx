@@ -3,6 +3,13 @@ import "./puz5.css"
 
 export default function Puz5(props)
 {
+	let level=props.handles.level
+	let setLevel=props.handles.setLevel
+	let inventory=props.handles.inventory
+	let setInventory=props.handles.setInventory
+	var onDragOver=props.handles.onDragOver
+    var onDragStart=props.handles.onDragStart
+    var onDrop=props.handles.onDrop
 	const [height,setHeight]=useState({})
 	const [height2,setHeight2]=useState({})
 	const [height3,setHeight3]=useState({})
@@ -44,7 +51,23 @@ export default function Puz5(props)
 	// 	if(((Math.abs(100-check)<40)&&(height.height/height2.height)>=1.8&&(height.height/height2.height)<2.1))
 	// 	setVisible
 	// },[check])
-	
+	function handleSuccess()
+	{
+		alert("correct")
+		setInventory([...inventory,<div 
+			id="battery"
+			key="battery"
+			style={{width: "100px",
+					height: "50px",
+					backgroundRepeat:"no-repeat",
+					backgroundImage:`url(images/battery2.png)`}}
+			onDragStart={(e) => onDragStart(e,"battery")}
+			draggable
+			></div>])
+		setLevel((level+1)%6)
+		
+		
+	}
     return(
         <table>
 		<tr>
@@ -91,15 +114,15 @@ export default function Puz5(props)
 				</div>
 			</td>
 			<td>
-			<div style={{width:"180px"}}><h1 style={{color:"red"}}>+</h1></div>
+	<div style={{width:"180px"}}><h1 style={{color:"red"}}>+{height.height/height2.height}</h1></div>
 			</td>
 			<td>
-				{((height3>380)&&(height.height/height2.height)>=1.7&&(height.height/height2.height)<2.1)?<img src="images/battery.png" style={{width:"150px",height:"200px"}}/>:null}
-				P
+				{((height3.height>300)&&(height.height/height2.height)>=1.7&&(height.height/height2.height)<2.1)?
+				handleSuccess()
+				:null}
 			</td>
 		</tr>
 		<tr><td>
-			{/* <h1 style={{color:"red"}}>{((Math.abs(100-check)<40)&&(height.height/height2.height)>=1.8&&(height.height/height2.height)<2.1)?"correct":null}</h1> */}
 			</td></tr>
 	</table>
     )

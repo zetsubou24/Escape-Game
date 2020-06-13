@@ -2,19 +2,17 @@ import React, { Component, useState, useEffect } from 'react';
 
 import AppBar from "./Components/AppBar"
 import ChatExpansion from "./Components/ChatExpansion"
-import Boxes from "./Components/Boxes"
 import ProgressBar from "./Components/ProgressBar"
 import Scratchpad from "./Components/ScratchPad"
 
 import './Game.css';
 import "./App.css"
-import Level2 from "./Components/Level2"
+import Level3 from "./Components/Level3"
 import Player from "./Components/Player.jsx"
-import { Header, Segment, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 
-function GamePage2() {
+function GamePage3() {
   var players_available=7
   var max_players=10
   const [level, setLevel] = useState(1)
@@ -37,8 +35,7 @@ function GamePage2() {
     ]
   })
   
-  const [inventory,setInventory]=useState([
-  ])
+  const [inventory,setInventory]=useState([])
 
 
   const [tasks, setTask] = useState({
@@ -120,7 +117,10 @@ function GamePage2() {
           {t.name}
         </div>
       );
-      if (level === 1) {
+      
+      // setInventory(f.inventory)
+    })
+    if (level === 1) {
         setTask({
           game: f.game
         })
@@ -135,11 +135,9 @@ function GamePage2() {
           game:f.game
         })
       }
-      // setInventory(f.inventory)
-    })
   }, [state, level ])
   const handleClick = () => {
-    setLevel((level + 1) % 3)
+    setLevel((level + 1) % 6)
   }
   let curTask=(level=== 1)?tasks:((level=== 2)?tasks2:tasks3)
   return (
@@ -155,7 +153,7 @@ function GamePage2() {
       <ProgressBar />
       <div className="game-grid-container" >
         
-          <Level2 handles={{
+          <Level3 handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
             onDrop: onDrop,
@@ -181,4 +179,4 @@ function GamePage2() {
     </div>
   );
 }
-export default GamePage2;
+export default GamePage3;

@@ -100,8 +100,8 @@ set:false
 	</div>
 	<div class="centered">
          {/* <img src="images/commander.png" className="commander-img"/> */}
-        </div> 
-	<div class="bottom-left">
+    </div> 
+	{/* <div class="bottom-left">
 		<p>Team A</p>
 	<div >
 		Member 1 <select id="player1" onChange={handlePlayers} value={currentVal["player1"]}>{options}</select><input type="text" value={currentVal["player1"]} placeHolder="select a Player"/><br />
@@ -120,7 +120,11 @@ set:false
     <Link to="/GamePage2">
     <button >Start</button>
     </Link>
-	</div>
+	</div> */}
+
+    <Link to="/GamePage3">
+        <button style={{position:"absolute",left:"50%",bottom:0}}>start</button>
+    </Link>
 
     </div>
     </div>

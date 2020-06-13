@@ -21,7 +21,6 @@ return (
               <div className="sub-grid-item1"
               onDragOver={(e)=>onDragOver(e)}
               onDrop={(e)=>{onDrop(e, "game")}}>
-                {/* add puzzle */}
                 {level==1?<Puz5 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:(level==2)?<Puz6 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>}
               </div>
               <div className="sub-grid-item2"
