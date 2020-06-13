@@ -8,10 +8,17 @@ export default function Puz8()
     const [ans,setAns]=useState("")
     const [ending,setEnding]=useState(false)
     function checkAns(){
+        console.log(loginExchange.getNickName())
+        console.log(ans)
         var x  = document.getElementById("end")
-        if(x.value.toLowerCase() == loginExchange.getNickName())
+        if(ans == loginExchange.getNickName())
         {
-            setEnding(true)
+            alert('correct!')
+            // setEnding(true)
+            window.location.href="/Ending"
+        }
+        else{
+            alert("wrong!")
         }
     }
     return(
@@ -24,11 +31,11 @@ export default function Puz8()
             </p>
         <form>
             <p style={{alignContent: "center", padding: "0%"}}>
-            	<input type="text" id="end" placeholder="Mantra" />
+            	<input type="text" id="end" placeholder="Mantra" value={ans} onChange={(ev)=>setAns(ev.target.value)}/>
             </p>
             <p>
                 
-                <a id = "butt" href="/Ending" >
+                <a id = "butt" onClick={checkAns}>
                     <span></span>
                     <span></span>
                     <span></span>

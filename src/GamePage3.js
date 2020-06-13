@@ -172,10 +172,10 @@ function GamePage3() {
         {/* <div className="item6"></div> */}
       </div>
       <div></div>
-      <div className="footerContainer">
+      {/* <div className="footerContainer">
         <ChatExpansion />
         <Scratchpad />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -22,6 +22,7 @@
  
   opacity:0.8;
   display: grid;
+  /* grid-template-columns: auto auto; */
   grid-template-columns: auto auto 150px 150px;
   grid-template-rows: 200px 200px 400px;
   background-color: green;
