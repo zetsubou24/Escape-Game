@@ -29,7 +29,7 @@ export default function PicDisplay(props){
                             backgroundImage: `url(${curImg[t.name].img})`,
                             maxWidth:size,
                             maxHeight:size}}>
-                    <button onClick={handleImage} >flip</button>
+                    <button onClick={handleImage} ></button>
                 </div>
     )
 }

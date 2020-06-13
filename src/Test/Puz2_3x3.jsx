@@ -1,38 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./puz2.css"
 import PicDisplay from "./PicDisplay"
-const PuzzleDNDBoard = (props) =>{
-    var onDragOver=props.handles.onDragOver
-    var onDragStart=props.handles.onDragStart
-    var onDrop=props.handles.onDrop
-    var elems=props.handles.elems
 
-    return(
-  <div class="grid-item-puz-collection"
-  onDragOver={(e)=>onDragOver(e)}
-  onDrop={(e)=>{onDrop(e, "puzzle")}}>{elems}</div>
-    )
-}
-const SolutionDNDBoard = (props) =>{
-    var onDragOver=props.handles.onDragOver
-    var onDrop=props.handles.onDrop
-    var elems=props.handles.elems
-    function GridItemPuz(props){
-      return(
-      <div id={props.id} className="grid-item-puz2"
-      onDragOver={(e)=>onDragOver(e)}
-      onDrop={(e)=>{onDrop(e, props.id)}}>{props.val}</div>
-      )
-    }
-    let ids=[]
-    for(let i=1;i<10;i++)
-      ids.push(<GridItemPuz id={i.toString()} val={elems[i.toString()]} />)
-    return(
-        <div class="grid-container-puz2">
-          {ids}
-        </div>
-      )
-}
 const Puz2 = (props) =>{
     let level=props.handles.level
     let setLevel=props.handles.setLevel
@@ -55,15 +24,15 @@ const Puz2 = (props) =>{
         ]
     })
     let [curImg,setCurImg]=useState({
-      "1":{img:"images/Puzzle2sol/image_part_001.jpg",index:0},
+      "1":{img:"images/Puzzle2frontface/image_part_001.jpg",index:0},
       "2":{img:"images/puzzle2frontface/image_part_002.jpg",index:0},
-      "3":{img:"images/Puzzle2sol/image_part_003.jpg",index:0},
+      "3":{img:"images/Puzzle2frontface/image_part_003.jpg",index:0},
       "4":{img:"images/puzzle2frontface/image_part_004.jpg",index:0},
-      "5":{img:"images/Puzzle2sol/image_part_005.jpg",index:0},
-      "6":{img:"images/Puzzle2sol/image_part_006.jpg",index:0},
+      "5":{img:"images/Puzzle2frontface/image_part_005.jpg",index:0},
+      "6":{img:"images/Puzzle2frontface/image_part_006.jpg",index:0},
       "7":{img:"images/puzzle2frontface/image_part_007.jpg",index:0},
       "8":{img:"images/puzzle2frontface/image_part_008.jpg",index:0},
-      "9":{img:"images/Puzzle2sol/image_part_009.jpg",index:0},
+      "9":{img:"images/Puzzle2frontface/image_part_009.jpg",index:0},
       "10":{img:"images/white.png",index:0}
     });
     const [ans,setAns]=useState("")
@@ -149,6 +118,37 @@ const Puz2 = (props) =>{
         })
         
       }
+      const PuzzleDNDBoard = (props) =>{
+        var onDragOver=props.handles.onDragOver
+        var onDragStart=props.handles.onDragStart
+        var elems=props.handles.elems
+    
+        return(
+      <div class="grid-item-puz-collection"
+      onDragOver={(e)=>onDragOver(e)}
+      onDrop={(e)=>{onDrop(e, "puzzle")}}>{elems}</div>
+        )
+    }
+    const SolutionDNDBoard = (props) =>{
+        var onDragOver=props.handles.onDragOver
+        var onDrop=props.handles.onDrop
+        var elems=props.handles.elems
+        function GridItemPuz(props){
+          return(
+          <div id={props.id} className="grid-item-puz2"
+          onDragOver={(e)=>onDragOver(e)}
+          onDrop={(e)=>{onDrop(e, props.id)}}>{props.val}</div>
+          )
+        }
+        let ids=[]
+        for(let i=1;i<10;i++)
+          ids.push(<GridItemPuz id={i.toString()} val={elems[i.toString()]} />)
+        return(
+            <div class="grid-container-puz2">
+              {ids}
+            </div>
+          )
+    }
     return(
     <div className="Container_puz2">
       <div className="Container_puz2_item1">

@@ -49,7 +49,8 @@ return (
         <div className="sub-grid-container" style={{backgroundImage:bg,opacity:1}}>
               <div className="sub-grid-item1"
               onDragOver={(e)=>onDragOver(e)}
-              onDrop={(e)=>{onDrop(e, "game")}}>
+            //   onDrop={(e)=>{onDrop(e, "game")}}
+              >
                   {currentLevel}
               </div>
               <div className="sub-grid-item2"
