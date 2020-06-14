@@ -117,7 +117,7 @@ export default function Puz5(props)
 	<div style={{width:"180px"}}><h1 style={{color:"red"}}>+{height.height/height2.height}</h1></div>
 			</td>
 			<td>
-				{((height3.height>300)&&(height.height/height2.height)>=1.7&&(height.height/height2.height)<2.1)?
+				{((height3.height>300)&&(height.height/height2.height)>=1.7&&(height.height/height2.height)<2.2)?
 				handleSuccess()
 				:null}
 			</td>
