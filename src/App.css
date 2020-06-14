@@ -4,13 +4,17 @@
   /* background-image: url('C:/Users/taran_rishit/Documents/escape-room/Escape-Game/public/images/bg1.jpg'); */
   /* background-size: cover; */
 }
+
+
 .Game-Level-Description
 {
   /* font-family: "Lucida Console", Courier, monospace; */
-  font-family: "Friz Quadrata Std Medium";
-  background-color: black;
-  color: rgba(69, 255, 69, 1);
-  opacity: 0.8;
+  font-family: "alien_font"  !important; 
+  /* background-color: red; */
+  color:red;
+  background: rgba(76, 175, 80, 0.1);
+  /* color: rgba(69, 255, 69, 1); */
+  /* opacity: 0.4; */
 }
 /* grid ------------------------------------------- */
 .cardUser
@@ -23,7 +27,7 @@
   opacity:0.8;
   display: grid;
   /* grid-template-columns: auto auto; */
-  grid-template-columns: auto auto 150px 150px;
+  grid-template-columns: auto auto;
   grid-template-rows: 200px 200px 400px;
   background-color: green;
   padding: 10px;

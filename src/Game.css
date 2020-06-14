@@ -61,7 +61,8 @@
 }
 
 p.Game-Level-Description {
-  height: 170px;
+  height: 100%;
+  margin-bottom: 20px;
 }
 .draggable {
   display: flex;

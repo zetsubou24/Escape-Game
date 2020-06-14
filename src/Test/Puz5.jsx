@@ -65,6 +65,9 @@ export default function Puz5(props)
 			draggable
 			></div>])
 		setLevel((level+1)%6)
+		return(
+			<img src="images/battery.png" />
+		)
 		
 		
 	}
@@ -114,11 +117,11 @@ export default function Puz5(props)
 				</div>
 			</td>
 			<td>
-	<div style={{width:"180px"}}><h1 style={{color:"red"}}>+{height.height/height2.height}</h1></div>
+	<div style={{width:"180px"}}><h1 style={{color:"red"}}>+</h1></div>
 			</td>
 			<td>
 				{((height3.height>300)&&(height.height/height2.height)>=1.7&&(height.height/height2.height)<2.2)?
-				handleSuccess()
+				handleSuccess()  
 				:null}
 			</td>
 		</tr>

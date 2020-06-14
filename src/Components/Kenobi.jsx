@@ -21,7 +21,7 @@ const Kenobi = () => {
   </div>
   <div class="kenobi-bottom-right">
     {/* <button name="next" onclick={assign()}>Click to Continue</button> */}
-    <Link to="/Intro">
+    <Link to="/HomePuzzle">
     <button >Click to Continue</button>
     </Link>
   </div>

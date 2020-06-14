@@ -121,6 +121,7 @@ margin: 0 auto;
 
   top: 8px;
   right: 16px;
+  
 }
 
 
@@ -131,7 +132,13 @@ margin: 0 auto;
   transform: translate(-50%, -50%);
   
 }
-
+.text-bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 30px;
+  color: yellow;
+}
 .kenobi-bottom-left {
   position: absolute;
   bottom: 8px;

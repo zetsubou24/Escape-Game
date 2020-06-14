@@ -1,6 +1,8 @@
 import React ,{useState} from "react"
 import { Link } from 'react-router-dom';
 import "../style.css"
+import { Button, Input } from "semantic-ui-react"
+
 export default function Puz1()
 {
     const [ans,setAns]=useState("")
@@ -14,39 +16,44 @@ export default function Puz1()
         else{
         alert("wrong! ")
         }
-
     }
     return (
-        <div style={{backgroundImage:`url("images/0.97.png")`,width:"100%",height:"100vh",backgroundSize:"cover"}} usemap="#p1intro">
-            {/* <img src="images/bg_welcome2.jpg" alt="stuck_on_mars" style={{width:"100%"}} usemap="#p1intro" / > */}
-	<div class="top-left">
-		<p style={{color: "blue"}}>
+        <div>
+        <div usemap="#p1intro">
+            <img src="images/0.97.png" alt="stuck_on_mars" style={{width:"100%", height: "75vh"}} usemap="#p1intro" / >
+        </div>
+
+	<div style={{display : "flex"}}>
+		<div style={{display : "flex", flexWrap : "wrap"}}>
+        <p style={{color: "white"}}>
         &emsp; &emsp; &emsp; &emsp; Solve the riddle below to ascertain the value of gravity on the planet.<br />
-			&emsp; &emsp; &emsp; &emsp; "Savita Yantraih Prithiveem  Aramnaat Dyaam Andahat  Atoorte Baddham Ashwam Iv Adhukshat – चतुःशत Gurutvakarshan
-"
+			&emsp; &emsp; &emsp; &emsp; "Aren’t you curious to know your weight and then go forth? Your weight is 4000 kilograms including your space suit.  Do this easy math and ace."
 		</p>
-		
-	</div>
-	<div >
+        <Button primary>Hint 1</Button>
+        <Button secondary>Hint 2</Button>
+        </div>
+		<div >
 		{/* <img src="/images/puzz1.png" style={{width: "100%" }}/> */}
         <p className="bottom-right-brackets" >
-			<input type="text" name="puzz1sol" id="puzz1sol" value={ans} onChange={(ev)=>setAns(ev.target.value)} /><br />
-			<button 
+			<Input type="text" name="puzz1sol" id="puzz1sol" value={ans} onChange={(ev)=>setAns(ev.target.value)} ></Input>
+            <br />
+			<Button  
 				id="submitbutton" 
             	type="button" 
-            	onClick={puzz1}>Submit
-            </button>
+            	onClick={puzz1}
+                color="red"
+                >Submit
+            </Button>
             {nextlevel?
-            <Link to="/Assign">
-            <button >
+            <Link to="/GamePage3">
+            <Button color="green">
                 continue to next level
-            </button></Link>:null
+            </Button></Link>:null
             }
 		</p>
+	    </div>
+
 	</div>
-	<div class="bottom-cent">
-		
-	</div>
-        </div>
+    </div>
     )
 }

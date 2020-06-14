@@ -1,13 +1,14 @@
-import React from "react"
+import React ,{useState} from "react"
 import "../Kenobi.css"
 import "../style.css"
 import { Link } from 'react-router-dom';
 import {loginExchange} from "../Globals.js"
+import { Button, Input, Popup } from "semantic-ui-react" 
+
 const Welcome = () =>
 {
 	loginExchange.setUserName("taran")
 	loginExchange.setPassWord("taranu")
-	// console.log(obj.getCredentials())
 	function storeLogin(ev)
 	{
 		loginExchange.setUserName(document.getElementById("username").value)
@@ -20,27 +21,26 @@ const Welcome = () =>
 	<div style={{"text-align":"center"}}>
 		<form class="form_login" style={{width:"1000px"}}>
 			<p>
-            	<input type="text" id="username" placeholder="Username" />
+            	<Input type="text" id="username" placeholder="Username" />
         	</p>
         	<p>
-            	<input type="password" id="password" placeholder="Password" />
+            	<Input type="password" id="password" placeholder="Password" />
         	</p>
         	<p>
-			<h4 style={{color:"red",width:"1000px"}}>&emsp; &emsp;&emsp;&emsp;&emsp; Enter your Favorite thing about space </h4>
-
-            	<input type="text" id="nickname" placeholder="Your Favorite" />
-			<h4 style={{color:"red",width:"1000px"}}> PLEASE DO REMEMBER IT!</h4>
-
-
+			{/* <h4 style={{color:"red",width:"1000px"}}>&emsp; &emsp;&emsp;&emsp;&emsp; Enter your Favorite thing about space </h4> */}
+			<Popup inverted content='PLEASE DO REMEMBER IT!' color="red" position = "right center" trigger={<Input id="nickname" placeholder="Enter your Favorite thing about space" />
+			}/>
+			{/* <h4 style={{color:"red",width:"1000px"}}> PLEASE DO REMEMBER IT!</h4> */}
         	</p>
         	<p>
 				<Link to="/Home">
-				<button
+				<Button
             		id="submitbutton"
 					type="button"
 					onClick={storeLogin}
+					color = "red"
 				>Submit
-            	</button>
+            	</Button>
 				</Link>
         	</p>
 		</form>

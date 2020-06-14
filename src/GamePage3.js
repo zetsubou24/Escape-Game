@@ -10,6 +10,7 @@ import "./App.css"
 import Level3 from "./Components/Level3"
 import Player from "./Components/Player.jsx"
 import { Link } from 'react-router-dom';
+import { Button, Input } from "semantic-ui-react"
 
 
 function GamePage3() {
@@ -109,12 +110,8 @@ function GamePage3() {
 //   let curDesc=
   return (
     
-    <div className="GamePage" style={{backgroundImage: `url("images/bg1.jpg")`}}>
+    <div className="GamePage" style={{backgroundImage: `url("images/mars1.jpg")`}}>
       <AppBar />
-      <button onClick={() => handleClick()}>Change Level </button>
-      <p className="Game-Level-Description">
-       {curDesc}
-      </p>
       <ProgressBar />
       <div className="game-grid-container" >
         
@@ -131,9 +128,9 @@ function GamePage3() {
             setSuccess:setSuccess
           }}
           />
-        <div className="players">
+        {/* <div className="players">
           {addPlayers()}
-        </div>
+        </div> */}
         {/* <div className="item6"></div> */}
       </div>
       <div></div>
@@ -141,6 +138,35 @@ function GamePage3() {
         <ChatExpansion />
         <Scratchpad />
       </div> */}
+      <button onClick={() => handleClick()}>Change Level </button>
+      {/* <p className="Game-Level-Description">
+       {curDesc}
+      </p> */}
+      <div style={{display:"flex",width:"100%",flexDirection:"column",fontFamily:"ca"}} className="Game-Level-Description">
+        <div style={{display : "flex", flexWrap : "wrap",width:"100%"}} >
+          <p style={{color: "red",width:"100%",opacity:1.0}}>
+      <h1>{curDesc}</h1>
+		</p>
+        </div>
+        <div style={{alignItems:"center",width:"100%",opacity:1.0}}>
+          <Button primary >Hint 1</Button>
+          <Button secondary>Hint 2</Button>
+          
+          </div>
+      </div>
+		
+
+
+
+
+
+
+
+
+
+
+
+      
     </div>
   );
 }
