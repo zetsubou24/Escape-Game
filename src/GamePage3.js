@@ -22,15 +22,15 @@ function GamePage3() {
 
   const [state, setState] = useState({
     
-    1: { name: "puzzle_2", category: "game",  description:["Here is another simple puzzle." , "\n" ,"All you have to do is use these pieces of the puzzle and solve it"] },
-    2: { name: "puzzle_3", category: "game", description:["This might be a bit tricky.","\n" ," You need to really move around the map for solving this!"]},
+    1: { name: "puzzle_2", category: "game",  description:["These seem to be pieces of some picture." , "\n" ,"They fell out of my journal so I think there might be something in this picture that can help me out!"] },
+    2: { name: "puzzle_3", category: "game", description:["The cockpit. There might be something I can use here.","\n" ," I'll try hovering around things maybe something will pop up."]},
     3: { name: "puzzle_4", category: "game", description:["Move a mile straight, then two miles right Repeat this again and go a mile straight Four miles to left, then a mile straight once more That’s how you reach what you are looking for."] },
-    4: { name: "puzzle_5", category: "game", description:[" A Chemist once said 'One doesn't simply solve Stoichiometric equations without balancing'. ","\n","Try out the reaction for yourself and see if you can get the output."]},
-    5: { name: "puzzle_6", category: "game", description:[" Now let's get our hands dirty with some basics of Electrical engineering. ","\n" ,"You have to find the correct sequence of the logic gate switches to get the output!" ]},
-    6: { name: "puzzle_7", category: "game", description:["Wow isn't that rover looking beautiful! Of course it does. It is what is going to take you back to the Home Base! All you need to do is to find out some way to get it running!" ]},
-    0: { name: "puzzle_7", category: "game", description:["Wow isn't that rover looking beautiful! Of course it does. It is what is going to take you back to the Home Base! All you need to do is to find out some way to get it running!" ]},
-    
+    4: { name: "puzzle_5", category: "game", description:["I seem to have made it to the Chemistry lab of the space ship'. ","\n","I think I can work my way around here and get something useful!"]},
+    5: { name: "puzzle_6", category: "game", description:[" This seems to be some sort of device that fell out of the spaceship. ","\n" ,"Maybe I can make it usable again." ]},
+    6: { name: "puzzle_7", category: "game", description:["Oh YES! That's the Emergency Rover! But it seems to be in quite a bad shape. Maybe the items I found earlier can be helpful here!" ]},
+    0: { name: "puzzle_7", category: "game", description:["Oh YES! That's the Emergency Rover! But it seems to be in quite a bad shape. Maybe the items I found earlier can be helpful here!" ]},
   })
+  
   
   const [inventory,setInventory]=useState([])
 

@@ -11,6 +11,8 @@ position: relative;
   border-radius: 100%;
 }
 #water {
+  /* flex-flow: column-reverse; */
+  flex-basis: ;
 background-image: url("./waves3_edit.png");
 background-position: top right;
 position: absolute;
