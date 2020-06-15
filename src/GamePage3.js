@@ -144,8 +144,10 @@ function GamePage3() {
       </p> */}
       <div style={{display:"flex",width:"100%",flexDirection:"column",fontFamily:"ca"}} className="Game-Level-Description">
         <div style={{display : "flex", flexWrap : "wrap",width:"100%"}} >
-          <p style={{color: "red",width:"100%",opacity:1.0}}>
-      <h1>{curDesc}</h1>
+          <p style={{color: "blue",width:"100%",opacity:1.0,fontSize:"x-large"}}>
+      {curDesc}
+      <br/>
+
 		</p>
         </div>
         <div style={{alignItems:"center",width:"100%",opacity:1.0}}>

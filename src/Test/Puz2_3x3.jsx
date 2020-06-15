@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./puz2.css"
 import PicDisplay from "./PicDisplay"
+import { Input, Button } from "semantic-ui-react"
 
 const Puz2 = (props) =>{
     let level=props.handles.level
@@ -168,8 +169,10 @@ const Puz2 = (props) =>{
           }}/>
           
       </div>
-      <input type="text" placeholder="Answer here" style={{width:"200px"}} value={ans} onChange={(ev)=>setAns(ev.target.value)}/><br/>
-      <button style={{width:"200px",color:"green"}} onClick={handleAnswer}>Check</button>
+      <div>
+      <Input type="text" placeholder="Answer here"  value={ans} onChange={(ev)=>setAns(ev.target.value)}/><br/>
+      <Button color="green" onClick={handleAnswer}>Check</Button>
+      </div>
     <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}}/>
 
       

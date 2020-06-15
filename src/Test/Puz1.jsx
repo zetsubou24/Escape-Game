@@ -2,11 +2,15 @@ import React ,{useState} from "react"
 import { Link } from 'react-router-dom';
 import "../style.css"
 import { Button, Input } from "semantic-ui-react"
+import Hints from "../Components/Hints"
 
 export default function Puz1()
 {
     const [ans,setAns]=useState("")
     const [nextlevel,setNextLevel]=useState(false)
+    const [hidden1, setHidden1] = useState(true)
+    const [hidden2, setHidden2] = useState(true)
+
     function puzz1()
     {
         if(ans=="1508"){
@@ -19,19 +23,28 @@ export default function Puz1()
     }
     return (
         <div>
+            <Hints hidden={hidden1} puzname="Puzzle 1" hintname="Hint 1" hintdesc="Multiply the gravitational force of 4th planet with 4000"/>
+            <Hints hidden={hidden2} puzname="Puzzle 1" hintname="Hint 2" hintdesc="1508"/>
         <div usemap="#p1intro">
             <img src="images/0.97.png" alt="stuck_on_mars" style={{width:"100%", height: "75vh"}} usemap="#p1intro" / >
         </div>
 
 	<div style={{display : "flex",backgroundImage:`url('images/mars1.jpg')`,backgroundSize:"cover",height:"25vh"}}>
 		<div style={{display : "flex", flexWrap : "wrap"}}>
-        <p style={{color: "white"}}>
+        <p style={{color: "blue",width:"100%",opacity:1.0,fontSize:"x-large"}}>
         &emsp; &emsp; &emsp; &emsp; Solve the riddle below to ascertain the value of gravity on the planet.<br />
 			&emsp; &emsp; &emsp; &emsp; "Aren’t you curious to know your weight and then go forth? Your weight is 4000 kilograms including your space suit.  Do this easy math and ace."
-		</p>
+            &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;
+        </p>
         <div style={{height:"25vh"}}>
-        <Button primary>Hint 1</Button>
-        <Button secondary>Hint 2</Button>
+        <Button primary onClick = {() => {
+            setHidden1(!hidden1)
+            setHidden2(true)
+        }}>Hint 1</Button>
+        <Button secondary onClick = {() => {
+            setHidden2(!hidden2)
+            setHidden1(true)
+        }}>Hint 2</Button>
         </div>
         </div>
 	<div >

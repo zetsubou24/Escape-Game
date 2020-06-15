@@ -17,7 +17,7 @@ function Puz4(props) {
     error: false,
     success: false,
     disabled: false,
-    size: 5
+    size: 3
   })
   const [path,setPath]=useState([])
   function handleEvent(ev)
@@ -61,7 +61,7 @@ let onFinish = () => {
   // an imaginary api call
   setTimeout(() => {
     if(patternState){
-    if (patternState.path.join("-") === "20-15-16-17-12-13-14-9-8-7-6-1") {
+    if (patternState.path.join("-") === "20-15-16-17-12-13-14-9-8-7-6") {
       alert("The path is correct and you now have path to the destination")
       setLevel((level+1)%6)
       setPatternState({ ...patternState, isLoading: false, success: true, disabled: true });
@@ -101,7 +101,7 @@ let onReset = () => {
     </div> */}
   
     
-    <div style={{width:"50%"}}><PatternLock
+    <div style={{width:"50%",height:"100%"}}><PatternLock
     size={5}
     onChange={onChange}
     path={patternState.path}

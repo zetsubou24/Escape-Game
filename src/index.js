@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App2 from "./Components/App2"
-
+import Hints from "./Components/Hints"
 ReactDOM.render(
   <React.StrictMode>
     <App2 />
