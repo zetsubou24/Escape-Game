@@ -88,12 +88,12 @@ p.Game-Level-Description {
 }
 .bomb{
   /* background-image: url('Resmages/bomb.png'); */
-  width: 35px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   transition: width 4s, height 4s, transform 4s;
-  position: absolute;
-  left: 248px;
-  bottom: 32px;
+  position: relative;
+  left: 600px ;
+  top:32px;
   transform:rotate(-10deg)
 
 }
@@ -117,6 +117,7 @@ p.Game-Level-Description {
   width: 280px;
   height: 280px;
   transform: rotate(360deg);
+ 
   /*position: absolute;
   top: 50%;
   left: 50%;
@@ -125,8 +126,8 @@ p.Game-Level-Description {
 }
 .bomb:hover{
 
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   transform: rotate(360deg);
   /*position: absolute;
   top: 50%;
@@ -157,6 +158,11 @@ p.Game-Level-Description {
 
 }
 
+#puz3sol
+{
+  position:"relative";
+  right:0
+}
 .puz4-grid-map
 {
   display: grid;

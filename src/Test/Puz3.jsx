@@ -59,8 +59,8 @@ function Puz3(props)
 		{visible1?<div id="puz3-box-visible"><input type="text" name="puz3sol" id="puz3sol" class="puz3solution" placeholder="Puzzle3 Solution" onChange={(ev)=>setValue(ev.target.value)} value={value}/>
 		<button id="puz3but" class="puz3solution" onClick={evalVal} style={{color:"red"}}> Submit</button></div>:null}
 		<div className="puz3-items">
-			<img src="images/compass.jpg" className="bomb" onClick={viewSol} /><br />
-			<img src="images/pngguru.png" className="bomb2" onClick={puz3_doc} /><br />
+			<img src="images/bettercompass.png" className="bomb" onClick={viewSol} /><br />
+			{/* <img src="images/pngguru.png" className="bomb2" onClick={puz3_doc} /><br /> */}
 			<img src="images/Enchanted_Nether_Star.png" className="star" /><br />
 
 

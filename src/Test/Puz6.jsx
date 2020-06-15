@@ -60,12 +60,24 @@ export default function Puz6(props)
 		setLevel((level+1)%6)
     }
     return (
-        <div className="puz6-container" style={{backgroundImage:`url('images/gates.png')`,height:"100%",width:"100%",backgroundRepeat:"no-repeat"}} onClick={mouseCoord}>
-    <button id="1" onClick={onPress} style={{position:"absolute",left:124,top:380,color:"red"}}>{input1?"on":"off"}</button><br />
-    <button id="2" onClick={onPress} style={{position:"absolute",left:124,top:484,color:"red"}}>{input2?"on":"off"}</button><br />
-    <button id="3" onClick={onPress} style={{position:"absolute",left:124,top:586,color:"red"}}>{input3?"on":"off"}</button><br />
-    <button id="4" onClick={onPress} style={{position:"absolute",left:124,top:690,color:"red"}}>{input4?"on":"off"}</button><br />
-    <button id="5" onClick={onPress} style={{position:"absolute",left:124,top:790,color:"red"}}>{input5?"on":"off"}</button><br />
+        <div style={{height:"100%",width:"100%"}}>
+        <div className="puz6-container" style={{backgroundImage:`url('images/circuit.png')`,height:"100%",width:"100%",backgroundRepeat:"no-repeat"}} onClick={mouseCoord}>
+      <div style={{backgroundImage:input1?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"10px"}}>   
+    <button id="1" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
+    </div>   
+    <div style={{backgroundImage:input2?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"25px"}}>   
+    <button id="2" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
+    </div>   
+    <div style={{backgroundImage:input3?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"40px"}}>   
+    <button id="3" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
+    </div>   
+    <div style={{backgroundImage:input4?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"55px"}}>   
+    <button id="4" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
+    </div>   
+    <div style={{backgroundImage:input5?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"70px"}}>   
+    <button id="5" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
+    </div>   
+    
         <div style={{color:"red"}}>
             <div style={{position:"absolute",left:430,top:370}}><div className="output" style={{background:or1==1?"green":"red"}}></div></div><br/>
             <div style={{position:"absolute",left:445,top:561}}><div className="output" style={{background:or2==1?"green":"red"}}></div></div><br/>
@@ -77,6 +89,7 @@ export default function Puz6(props)
             :null}
             <br/>
             </div>
+        </div>
         </div>
     )
 }

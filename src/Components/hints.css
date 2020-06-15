@@ -4,12 +4,11 @@
     background-size: cover;
 }
 .sub-container{
-    font-size: ;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: cadetblue;
+    background-color: black;
 }
 .book{
     position: relative;
@@ -53,4 +52,5 @@
 }
 .details p,h2{
     padding: 10px;
+    color:yellow ;
 }
