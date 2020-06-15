@@ -4,12 +4,15 @@ import PicDisplay from "./PicDisplay"
 import { Input, Button } from "semantic-ui-react"
 
 const Puz2 = (props) =>{
+    let ids=[]
+
     let level=props.handles.level
     let setLevel=props.handles.setLevel
     let success=props.handles.success
     let setSuccess=props.handles.setSuccess
     let inventory=props.handles.inventory
     let setInventory=props.handles.setInventory
+    const [mapVisible,setMapVisible]=useState(false)
     const [grid,setGrid]=useState({
         tasks:[
             {name:"1",curarea:"puzzle",bgcolor:"violet",bg:"images/puzzle2frontface/image_part_001.jpg",bg2:"images/Puzzle2sol/image_part_001.jpg"},
@@ -37,13 +40,30 @@ const Puz2 = (props) =>{
       "10":{img:"images/white.png",index:0}
     });
     const [ans,setAns]=useState("")
-    let ids={}
+    let ids2={}
     for(let i=1;i<10;i++)
-      ids[i.toString()]=<div></div>
-    ids["puzzle"]=[]
+      ids2[i.toString()]=<div></div>
+    ids2["puzzle"]=[]
     const [solutionCurState,setSolutionCurState]=useState({
-        tasks:ids
+        tasks:ids2
     })
+    useEffect(()=>{
+      let counter=0;
+      let total=0;
+      let temp=document.getElementById("solutionDNDBoard").children
+      for(var element in temp){
+        if(temp[element].children==undefined)
+        {
+
+        }
+        else if(temp[element].children[0].id==temp[element].id)
+        total++
+        counter++
+      }
+      // console.log(total)
+      if(total==9)
+      setMapVisible(true)
+    },[solutionCurState])
     useEffect(()=>{
 
     let temp={}
@@ -61,6 +81,8 @@ const Puz2 = (props) =>{
     setSolutionCurState({
         tasks:temp
     })
+    
+    console.log(solutionCurState)
     },[grid,curImg])
     function handleAnswer(ev)
     {
@@ -96,6 +118,12 @@ const Puz2 = (props) =>{
         let curCell=ev.currentTarget.id
         let fromCell=ev.dataTransfer.getData("fromid")
         let status=ev.currentTarget.children[0].id
+       
+        // if(objId==ev.currentTarget.id)
+        // {
+        //   console.log("confirmed")
+        // }
+
         if(status!=undefined&&status!="puzzle")
         {
             grid.tasks.map((task) => {
@@ -141,11 +169,10 @@ const Puz2 = (props) =>{
           onDrop={(e)=>{onDrop(e, props.id)}}>{props.val}</div>
           )
         }
-        let ids=[]
         for(let i=1;i<10;i++)
           ids.push(<GridItemPuz id={i.toString()} val={elems[i.toString()]} />)
         return(
-            <div class="grid-container-puz2">
+            <div id="solutionDNDBoard" class="grid-container-puz2">
               {ids}
             </div>
           )
@@ -160,18 +187,22 @@ const Puz2 = (props) =>{
             elems: solutionCurState.tasks["puzzle"]
           }}/>
       </div>
+
       <div className="Container_puz2_item2" >
+        
+        {!mapVisible?
         <SolutionDNDBoard handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
             onDrop: onDrop,
             elems: solutionCurState.tasks
-          }}/>
+          }}/>:<img src="images/puzzle2-sol.png"/>}
           
       </div>
       <div>
       <Input type="text" placeholder="Answer here"  value={ans} onChange={(ev)=>setAns(ev.target.value)}/><br/>
       <Button color="green" onClick={handleAnswer}>Check</Button>
+
       </div>
     <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}}/>
 

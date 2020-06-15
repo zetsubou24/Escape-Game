@@ -54,6 +54,8 @@ function GamePage3() {
   }
 
   var onDrop = (ev, cat) => {
+    if(ev.target.id!=cat)
+        return;
     let id = ev.dataTransfer.getData("id");
     var NextS = []
     var arr = (level === 1) ? state.tasks : ((level===2)?state.tasks2:state.tasks3)
@@ -128,10 +130,7 @@ function GamePage3() {
             setSuccess:setSuccess
           }}
           />
-        {/* <div className="players">
-          {addPlayers()}
-        </div> */}
-        {/* <div className="item6"></div> */}
+        
       </div>
       <div></div>
       {/* <div className="footerContainer">
@@ -153,22 +152,9 @@ function GamePage3() {
         <div style={{alignItems:"center",width:"100%",opacity:1.0}}>
           <Button primary >Hint 1</Button>
           <Button secondary>Hint 2</Button>
-          
+
           </div>
       </div>
-		
-
-
-
-
-
-
-
-
-
-
-
-      
     </div>
   );
 }

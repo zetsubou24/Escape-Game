@@ -31,10 +31,11 @@ export default function Puz1()
 
 	<div style={{display : "flex",backgroundImage:`url('images/mars1.jpg')`,backgroundSize:"cover",height:"25vh"}}>
 		<div style={{display : "flex", flexWrap : "wrap"}}>
-        <p style={{color: "blue",width:"100%",opacity:1.0,fontSize:"x-large"}}>
-        &emsp; &emsp; &emsp; &emsp; Solve the riddle below to ascertain the value of gravity on the planet.<br />
-			&emsp; &emsp; &emsp; &emsp; "Aren’t you curious to know your weight and then go forth? Your weight is 4000 kilograms including your space suit.  Do this easy math and ace."
-            &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;
+        <div style={{width:"100px"}}></div>
+        <p style={{color: "orange",width:"75%",opacity:1.0,fontSize:"large"}}>
+        Solve the riddle below to ascertain the value of gravity on the planet.<br />
+			"Aren’t you curious to know your weight and then go forth? Your weight is 4000 kilograms including your space suit.  Do this easy math and ace."
+            &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; 
         </p>
         <div style={{height:"25vh"}}>
         <Button primary onClick = {() => {

@@ -45,7 +45,7 @@ const Level3 = (props) => {
   currentLevel=<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
 return (
-    <div className="item1" >
+    <div className="item1"  >
         <div className="sub-grid-container" style={{backgroundImage:bg,opacity:1}}>
               <div className="sub-grid-item1"
               onDragOver={(e)=>onDragOver(e)}
