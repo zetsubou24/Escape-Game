@@ -22,11 +22,13 @@ function GamePage3() {
 
   const [state, setState] = useState({
     
-    1: { name: "puzzle_2", category: "game",  description:["These seem to be pieces of some picture." , "\n" ,"They fell out of my journal so I think there might be something in this picture that can help me out!"] },
-    2: { name: "puzzle_3", category: "game", description:["The cockpit. There might be something I can use here.","\n" ," I'll try hovering around things maybe something will pop up."]},
-    3: { name: "puzzle_4", category: "game", description:["Move a mile straight, then two miles right Repeat this again and go a mile straight Four miles to left, then a mile straight once more That’s how you reach what you are looking for."] },
-    4: { name: "puzzle_5", category: "game", description:["I seem to have made it to the Chemistry lab of the space ship'. ","\n","I think I can work my way around here and get something useful!"]},
-    5: { name: "puzzle_6", category: "game", description:[" This seems to be some sort of device that fell out of the spaceship. ","\n" ,"Maybe I can make it usable again." ]},
+    1: { name: "puzzle_2", category: "game",  description:["These seem to be pieces of some picture." , "\n" ,"They fell out of my journal so I think there might be something in this picture that can help me out!","\n","You'll get to see what needs to be detected when everything is arranged." ] },
+    2: { name: "puzzle_3", category: "game", description:["People always fascinated with time and stars. Unlike earth, you live 37 minutes longer on MARS. So, don’t waste time, those 37 minutes are prime, because the clock that you see ticks the earth’s time."]},
+    3: { name: "puzzle_4", category: "game", description:["\"If you do not change direction, you may end up where you are heading\" Lao Tzu","\n","Move a mile straight, then two miles right. Repeat this again and go a mile straight. Four miles to left, then a mile straight once more. That’s how you reach what you are looking for."
+    ] },
+    4: { name: "puzzle_5", category: "game", description:["I seem to have made it to the Chemistry lab of the space ship'. ","\n","I think I can work my way around here and get something useful!","\n","Fuel Cell reaction: 2H2 + O2 → 2H2O + electricity","\n","About 80 liters per min of Hydrogen (H2) and 20 liters per min of Oxygen (O2) produces a water (H2O) of 32 grams per minute, along with 3.45 kW power"
+    ]},
+    5: { name: "puzzle_6", category: "game", description:[" This seems to be some sort of device that fell out of the spaceship. ","\n" ,"This seems to be some sort of control system device that fell out of the spaceship suit. Maybe I can learn it for starting my Emergency rover." ]},
     6: { name: "puzzle_7", category: "game", description:["Oh YES! That's the Emergency Rover! But it seems to be in quite a bad shape. Maybe the items I found earlier can be helpful here!" ]},
     0: { name: "puzzle_7", category: "game", description:["Oh YES! That's the Emergency Rover! But it seems to be in quite a bad shape. Maybe the items I found earlier can be helpful here!" ]},
   })
