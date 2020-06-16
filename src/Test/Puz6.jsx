@@ -61,14 +61,14 @@ export default function Puz6(props)
     }
     return (
         <div style={{height:"100%",width:"100%"}}>
-        <div className="puz6-container" style={{backgroundImage:`url('images/circuit.png')`,height:"100%",width:"100%",backgroundRepeat:"no-repeat"}} onClick={mouseCoord}>
-      <div style={{backgroundImage:input1?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"10px"}}>   
+        <div className="puz6-container"  onClick={mouseCoord}>
+      <div style={{backgroundImage:input1?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"5px"}}>   
     <button id="1" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
     </div>   
-    <div style={{backgroundImage:input2?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"25px"}}>   
+    <div style={{backgroundImage:input2?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"15px"}}>   
     <button id="2" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
     </div>   
-    <div style={{backgroundImage:input3?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"40px"}}>   
+    <div style={{backgroundImage:input3?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"25px"}}>   
     <button id="3" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
     </div>   
     <div style={{backgroundImage:input4?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"55px"}}>   
@@ -79,11 +79,11 @@ export default function Puz6(props)
     </div>   
     
         <div style={{color:"red"}}>
-            <div style={{position:"absolute",left:430,top:370}}><div className="output" style={{background:or1==1?"green":"red"}}></div></div><br/>
-            <div style={{position:"absolute",left:445,top:561}}><div className="output" style={{background:or2==1?"green":"red"}}></div></div><br/>
-            <div style={{position:"absolute",left:500,top:720}}><div className="output" style={{background:not?"green":"red"}}></div></div><br/>
-            <div style={{position:"absolute",left:645,top:490}}><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
-            <div style={{position:"absolute",left:741,top:665}}><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
+            <div style={{position:"absolute",left:460,top:214}}><div className="output" style={{background:or1==1?"green":"red"}}></div></div><br/>
+            <div style={{position:"absolute",left:462,top:464}}><div className="output" style={{background:or2==1?"green":"red"}} ></div></div><br/>
+            <div style={{position:"absolute",left:462,top:672}}><div className="output" style={{background:not?"green":"red"}}></div></div><br/>
+            <div style={{position:"absolute",left:842,top:321}}><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
+            <div style={{position:"absolute",left:852,top:562}}><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
             {or4==1?
             handleSuccess()
             :null}

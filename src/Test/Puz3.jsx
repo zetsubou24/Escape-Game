@@ -52,13 +52,13 @@ function Puz3(props)
 	}
     return(
         <div style={puz3}>
-		{/* <p style={{color: "yellow",fontSize: "20px"}}>
-			People have always been fascinated about time and stars. But unlike on Earth, you live 37 minutes longer on Mars . So, don’t waste that time, those 37 minutes are prime cause the clock that you see ticks the Earth’s time.<br />
-			Now talking about stars, isn't it fascinating how tiny they look but are infact huge masses in space??
-		</p> */}
+		
 		{visible1?<div id="puz3-box-visible"><input type="text" name="puz3sol" id="puz3sol" class="puz3solution" placeholder="Puzzle3 Solution" onChange={(ev)=>setValue(ev.target.value)} value={value}/>
 		<button id="puz3but" class="puz3solution" onClick={evalVal} style={{color:"red"}}> Submit</button></div>:null}
+
+
 		<div className="puz3-items">
+
 			<img src="images/bettercompass.png" className="bomb" onClick={viewSol} /><br />
 			{/* <img src="images/pngguru.png" className="bomb2" onClick={puz3_doc} /><br /> */}
 			<img src="images/Enchanted_Nether_Star.png" className="star" /><br />

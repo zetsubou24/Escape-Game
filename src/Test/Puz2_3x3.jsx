@@ -86,7 +86,7 @@ const Puz2 = (props) =>{
     },[grid,curImg])
     function handleAnswer(ev)
     {
-        if(ans=="5-NOV-2013")
+        if(ans=="11-JAN-2030")
         {
             // setSuccess(1)
             alert("correct")

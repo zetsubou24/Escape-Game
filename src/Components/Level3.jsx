@@ -19,35 +19,58 @@ const Level3 = (props) => {
   let setSuccess=props.handles.setSuccess
   let bg;
   let currentLevel;
+  let height,width;
   if(level==1)
   {
   bg=`url("images/bg2.jpg")`
+  height="100%"
+  width="100%"
+
   currentLevel=<Puz2 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
   else if(level==2){
   bg=`url('/images/17_27_36.png')`
+  height="100%"
+  width="100%"
+
   currentLevel=<Puz3 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
   else if(level==3){
-  bg=`url('/images/bg1.jpg')`
+  bg=`url('/images/puz4-bg.png')`
+  height="100%"
+  width="100%"
+
   currentLevel=<Puz4 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
   else if(level==4){
   bg=`url("images/black.jpg")`
+  height="100%"
+  width="100%"
+
   currentLevel=<Puz5 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
   else if(level==5){
-  bg=`url('/images/black.jpg')`
+  bg=`url('images/circuit3.png')`
+  height="764px"
+  width="100%"
+  // bg = null
+  // height = "100%"
+  // width = "100%"
+
   currentLevel=<Puz6 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
   else{
-  bg=`url('/images/vehicle.jpeg')`
+  bg=`url('/images/vehicle4.jpg')`
+  height="764px"
+  width="100%"
+
   currentLevel=<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
 return (
     <div className="item1"  >
-        <div className="sub-grid-container" style={{backgroundImage:bg,opacity:1}}>
+        <div className="sub-grid-container" style={{backgroundImage:bg,opacity:1,height:height,width:width}}  >
               <div className="sub-grid-item1"
+              
               onDragOver={(e)=>onDragOver(e)}
             //   onDrop={(e)=>{onDrop(e, "game")}}
               >

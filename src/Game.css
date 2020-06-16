@@ -97,6 +97,20 @@ p.Game-Level-Description {
   transform:rotate(-10deg)
 
 }
+.bomb:hover{
+
+  width: 250px;
+  height: 250px;
+  transform: rotate(360deg);
+  position: relative;
+  left: 600px ;
+  top:32px;
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
 .bomb2{
   /* background-image: url('Resmages/bomb.png'); */
   width: 35px;
@@ -124,17 +138,7 @@ p.Game-Level-Description {
   transform: translate(-50%, -50%);*/
 
 }
-.bomb:hover{
 
-  width: 250px;
-  height: 250px;
-  transform: rotate(360deg);
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
-
-}
 .star{
   /* background-image: url('Resmages/bomb.png'); */
   width: 35px;

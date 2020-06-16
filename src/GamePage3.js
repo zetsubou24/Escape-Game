@@ -126,7 +126,7 @@ function GamePage3() {
     
     <div className="GamePage" style={{backgroundImage: `url("images/mars1.jpg")`}}>
       <AppBar />
-      <ProgressBar />
+      <ProgressBar value={level} />
       <div className="game-grid-container" >
         
           <Level3 handles={{
