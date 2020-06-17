@@ -17,7 +17,7 @@ const Welcome = () =>
 	}
     return (
         <div>
-            <img src="/images/bg_login.jpg" alt="Snow"  style={{"width":'100%'}}/>
+            <img src="/images/astro.gif" alt="Snow"  style={{"width":'100%'}}/>
 	<div style={{"text-align":"center"}}>
 		<form class="form_login" style={{width:"1000px"}}>
 			<p>
