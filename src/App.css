@@ -48,7 +48,7 @@
   opacity:0.8;
   display: grid;
   grid-template-columns: auto ;
-  grid-template-rows: 600px 100px;
+  grid-template-rows: 650px 100px;
   /* background-image: url('C:/Users/taran_rishit/Documents/escape-room/Escape-Game/public/images/bg2.jpg'); */
   background-color: green;
   background-size: cover;

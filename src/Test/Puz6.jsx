@@ -10,9 +10,9 @@ export default function Puz6(props)
     var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
     const [input1,setInput1]=useState(false)
-    const [input2,setInput2]=useState(true)
+    const [input2,setInput2]=useState(false)
     const [input3,setInput3]=useState(false)
-    const [input4,setInput4]=useState(true)
+    const [input4,setInput4]=useState(false)
     const [input5,setInput5]=useState(false)
     const [or1,setOr1]=useState(false)
     const [or2,setOr2]=useState(false)
