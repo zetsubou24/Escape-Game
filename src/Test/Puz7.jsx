@@ -91,46 +91,64 @@ export default function Puz7(props)
           tasks:temp
         })
       }
-
+function mouseCoord(event)
+    {
+        // alert(event.clientX+" "+event.clientY)
+    }
     return(
-              <div className="App">
+              <div className="App" >
                
                 <div id="rover" 
-                style={{width: "900px", height: "700px"}} onClick={(ev)=>console.log(ev.clientX,ev.clientY)}>
+                style={{width: "900px", height: "700px"}} 
+                // onClick={(ev)=>alert(ev.clientX+" "+ev.clientY)}
+                >
                 {roverItems}
 
-                <div id="pcb" style={{position:"absolute",height:"100px",width:"100px",left:"25%",top:"100%"}}
+                <div id="pcb" style={{position:"absolute",height:"100px",width:"100px",left:580,top:472}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "pcb")}}>
-                  {pcb!=null?<img src="images/wires3.png" />:<p style={{color:"red",height:"10px"}}>pcb</p>}
+                  {pcb!=null?<img src="images/wires3.png" />:<p style={{color:"red",height:"10px"}}>
+                  {/* pcb */}
+                  </p>}
                 </div>
 
-                <button onClick={()=>setPanel(!panel)} style={{position:"absolute",left:"30%",top:"90%"}} className="puz7-panel">click me </button>
+                <button onClick={()=>setPanel(!panel)} style={{position:"absolute",left:"686px",top:"337px",height:"100px",width:"100px"}} className="puz7-panel">
+                {/* click me  */}
+                </button>
                 {panel?
                 <div id="compass" style={{position:"absolute",height:"30%",width:"30%",left:"25%",top:"70%",backgroundImage:`url(images/panel.png)`,backgroundSize:"cover"}}
                 
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "compass")}}>
-                  <p style={{color:"red"}}>{compass!=null?compass:"compass here"}</p>
+                  <p style={{color:"red"}}>{compass!=null?compass:
+                  "compass here"
+                  }
+                  </p>
                 </div>:
                 null
                 }
-                <div id="map" style={{position:"absolute",height:"120px",width:"150px",left:"37%",top:"85%"}}
+                <div id="map" style={{position:"absolute",height:"120px",width:"150px",left:806,top:309}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "map")}}>
-                  {map!=null?<img src="images/foldedmap.png" />:<p style={{color:"red",backgroundColor:"red",height:"10px",width:"inherit"}}>map</p>}
+                  {map!=null?<img src="images/foldedmap.png" />:<p style={{color:"red",height:"10px",width:"inherit"}}>
+                  {/* map */}
+                  </p>}
                 </div>
-                <div id="battery" style={{position:"absolute",height:"100px",width:"120px",left:"37%",top:"110%"}}
+                <div id="battery" style={{position:"absolute",height:"100px",width:"120px",left:800,top:530}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "battery")}}>
-                  {battery!=null?battery:<p style={{color:"red",height:"10px"}}>battery</p>}
+                  {battery!=null?battery:<p style={{color:"red",height:"10px"}}>
+                  {/* battery */}
+                  </p>}
                 </div>
                 
                 {
-                  inventory.length==0?
+                  inventory.length==0&&props.handles.setpuz7rover(`url('images/roversuccess.jpg)`)?
+                  
                 <Link to="/FinalPuzzle">
                 <button style={{color:"red"}}>Click to continue</button>
-                </Link>:null
+                </Link> 
+                :null
                 }
                 
 

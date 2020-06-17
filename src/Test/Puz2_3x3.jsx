@@ -196,7 +196,7 @@ const Puz2 = (props) =>{
             onDragStart: onDragStart,
             onDrop: onDrop,
             elems: solutionCurState.tasks
-          }}/>:<img src="images/puzzle2-sol.png"/>}
+          }}/>:<img src="images/witcher3map.png"/>}
           
       </div>
       <div>

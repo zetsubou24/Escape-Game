@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MainPage from "./MainPage"
 import { Switch, Route, Router } from 'react-router-dom';
 import history from "./history"
 import Welcome from "./welcome"
@@ -12,6 +11,8 @@ import Puzzintro from "./Puzzintro"
 import Puz1 from '../Test/Puz1'
 import Puz8 from "../Test/Puz8"
 import Ending from "../Test/Ending"
+import FeedBack from "./FeedBack"
+
 class App2 extends Component {
   componentDidMount() {
     const audioEl = document.getElementsByClassName("audio-element")[0]
@@ -37,6 +38,10 @@ class App2 extends Component {
         <Route path="/GamePage3" exact component={GamePage3} />
         <Route path="/FinalPuzzle" exact component={Puz8} />
         <Route path="/Ending" exact component={Ending} />
+        <Route path="/FeedBack" exact component={FeedBack} />
+
+
+
       </Switch>
     </Router>
   )

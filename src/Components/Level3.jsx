@@ -1,4 +1,4 @@
-import React from "react"
+import React ,{useState} from "react"
 import "../Game.css"
 import "../App.css"
 import Puz2 from "../Test/Puz2_3x3"
@@ -20,6 +20,7 @@ const Level3 = (props) => {
   let bg;
   let currentLevel;
   let height,width;
+  const [puz7rover,setpuz7rover]=useState(`url('/images/vehicle4.jpg')`)
   if(level==1)
   {
   bg=`url("images/bg2.jpg")`
@@ -36,7 +37,7 @@ const Level3 = (props) => {
   currentLevel=<Puz3 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
   else if(level==3){
-  bg=`url('/images/puz4-bg.png')`
+  bg=`url('/images/marssurface2.jpg')`
   height="100%"
   width="100%"
 
@@ -64,7 +65,7 @@ const Level3 = (props) => {
   height="764px"
   width="100%"
 
-  currentLevel=<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
+  currentLevel=<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,puz7rover:puz7rover,setpuz7rover:setpuz7rover}}/>
   }
 return (
     <div className="item1"  >

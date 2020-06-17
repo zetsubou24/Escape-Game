@@ -1,7 +1,11 @@
-import React from "react"
+import React ,{useState} from "react"
 import "./Ending.css"
+import { Link } from 'react-router-dom';
+
 export default function Ending()
 {
+    const [visible1,setVisible1]=useState(false)
+    setTimeout(() => setVisible1(), 5000);
     return(
         <div className="Ending-root">
             <div class="fade"></div>
@@ -10,7 +14,7 @@ export default function Ending()
 <div class="crawl">
     <div class="title">
     <p>Finally</p>
-    <h1>You have successfully reached the Home Base</h1>
+    You have successfully reached the Home Base
     </div>
     
     <p>As soon as you enter the base you remove your suit and find the nearest water bottle and gulp it down.</p>
@@ -19,10 +23,18 @@ export default function Ending()
 
     <p>As soon as you enter the base, you find blood everywhere. In the distance you see a shadow figure.. </p>
     <p>You try to focus your eyes.. is that.. </p>
-    <h1>An Alien...?</h1><br /> <br /> <br /> <br />
+    An Alien...?<br /> <br /> <br /> <br />
     &emsp; &emsp; TO BE CONTINUED..
 </div>
 </section>
+{
+    visible1?<Link to="/FeedBack">
+        <h4 >continue</h4>
+    </Link>:<Link to="/FeedBack">
+        <h4 style={{width:"150px",height:"40px",position:"absolute",top:"0px",left:"0px",backgroundColor:"red"}}>continue</h4>
+    </Link>
+    
+}
         </div>
     )
 }

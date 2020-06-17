@@ -101,7 +101,7 @@ let onReset = () => {
     </div> */}
   
     
-    <div style={{width:"40%",height:"80%",backgroundImage:`url(images/mars-map.png)`,backgroundSize:"cover"}} ><PatternLock
+    <div style={{width:"40%",height:"80%",backgroundImage:`url('images/mars-map.png')`,backgroundSize:"cover"}} ><PatternLock
     size={5}
     onChange={onChange}
     path={patternState.path}

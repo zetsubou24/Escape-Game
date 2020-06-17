@@ -2,13 +2,14 @@ import React from "react"
 import "../Kenobi.css"
 import "../style.css"
 import { Link } from 'react-router-dom';
-import {loginExchange} from "../Globals.js"
+import {loginExchange,quoteExchange} from "../Globals.js"
 const Kenobi = () => {
 
     console.log("from kenobi",loginExchange.getCredentials())
 
     const toDis="Astronaut.. can you hear me? Ah. Seems like you're doing okay. Due to some technical error, it seems like you've crash landed. Find your way back to the Home Base. Good luck soldier."
     const assign = () => {
+
     }
     return (
     <div class="container" style={{height:"100vh"}}>
@@ -17,7 +18,7 @@ const Kenobi = () => {
   </div> */}
   <div class="kenobi-top-left">
     <p style={{color:"red"}}>{toDis}</p><br />
-    <p style={{color:"red"}}> Remember! You can do it!</p>
+    <p style={{color:"red"}}> {quoteExchange.getRandomQuote()}</p>
   </div>
   <div class="kenobi-bottom-right">
     {/* <button name="next" onclick={assign()}>Click to Continue</button> */}

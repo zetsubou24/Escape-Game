@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from 'react-router-dom';
-import {loginExchange} from "../Globals.js"
+import {loginExchange,quoteExchange} from "../Globals.js"
 import "./puz8.css"
 import { useState } from "react";
 export default function Puz8()
@@ -8,10 +8,10 @@ export default function Puz8()
     const [ans,setAns]=useState("")
     const [ending,setEnding]=useState(false)
     function checkAns(){
-        console.log(loginExchange.getNickName())
-        console.log(ans)
+        // console.log(loginExchange.getNickName())
+        // console.log(ans)
         var x  = document.getElementById("end")
-        if(ans == loginExchange.getNickName())
+        if(ans == quoteExchange.getCurQuote())
         {
             alert('correct!')
             // setEnding(true)

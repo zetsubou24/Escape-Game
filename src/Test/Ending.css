@@ -4,7 +4,10 @@
     background: #000;
     overflow: hidden;
   }
-  
+  .alientext
+  {
+    font-size:large;
+  }
   .fade {
     position: relative;
     width: 100%;
@@ -37,7 +40,7 @@
   }
   
   .crawl > .title {
-    font-size: 90%;
+    font-size: 80%;
     text-align: center;
   }
   
