@@ -143,7 +143,7 @@ function mouseCoord(event)
                 </div>
                 
                 {
-                  inventory.length==0&&props.handles.setpuz7rover(`url('images/roversuccess.jpg)`)?
+                  inventory.length==0?
                   
                 <Link to="/FinalPuzzle">
                 <button style={{color:"red"}}>Click to continue</button>
