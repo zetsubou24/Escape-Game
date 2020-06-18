@@ -17,7 +17,7 @@ function Puz3(props)
 	}
 	function evalVal()
 	{
-		if(value=="102450"||value=="10:24:50")
+		if(value==="102450"||value==="10:24:50")
 		{
 			// setLevel((level + 1) % 3)
 			alert("correct!")
@@ -59,9 +59,9 @@ function Puz3(props)
 
 		<div className="puz3-items">
 
-			<img src="images/bettercompass.png" className="bomb" onClick={viewSol} /><br />
+			<img src="images/bettercompass.png" className="bomb" onClick={viewSol} alt="compass"/><br />
 			{/* <img src="images/pngguru.png" className="bomb2" onClick={puz3_doc} /><br /> */}
-			<img src="images/Enchanted_Nether_Star.png" className="star" /><br />
+			<img src="images/Enchanted_Nether_Star.png" className="star" alt="EASTER EGG"/><br />
 
 
 		</div>

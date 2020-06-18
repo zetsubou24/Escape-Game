@@ -14,14 +14,14 @@ const Level2 = (props) => {
   let setLevel=props.handles.setLevel
   let success=props.handles.success
   let setSuccess=props.handles.setSuccess
-    let bg=(level==1)?`url("images/black.jpg")`:(level==2)?`url('/images/black.jpg')`:`url('/images/vehicle.jpeg')`
+    let bg=(level===1)?`url("images/black.jpg")`:(level===2)?`url('/images/black.jpg')`:`url('/images/vehicle.jpeg')`
 return (
     <div className="item1" >
             <div className="sub-grid-container" style={{backgroundImage:bg,opacity:1}}>
               <div className="sub-grid-item1"
               onDragOver={(e)=>onDragOver(e)}
               onDrop={(e)=>{onDrop(e, "game")}}>
-                {level==1?<Puz5 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:(level==2)?<Puz6 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>}
+                {level===1?<Puz5 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:(level===2)?<Puz6 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>}
               </div>
               <div className="sub-grid-item2"
               onDragOver={(e)=>onDragOver(e)}

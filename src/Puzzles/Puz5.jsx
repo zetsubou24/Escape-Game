@@ -41,7 +41,7 @@ export default function Puz5(props) {
 	}
 	useEffect(() => {
 
-		let cur = Math.min((height.height == undefined ? 40 : height.height) + (height2.height == undefined ? 20 : height2.height), 400)
+		let cur = Math.min((height.height === undefined ? 40 : height.height) + (height2.height === undefined ? 20 : height2.height), 400)
 		// setHeight3({height:cur})
 		setCheck(height3.height * 100 / 400)
 	}, [height, height2])
@@ -67,7 +67,7 @@ export default function Puz5(props) {
 		setLevel((level + 1) % 6)
 		},2000)
 		return (
-			<img src="images/battery.png" />
+			<img src="images/battery.png" alt="battery success"/>
 		)
 
 

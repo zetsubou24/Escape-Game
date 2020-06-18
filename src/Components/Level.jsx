@@ -13,7 +13,7 @@ const Level = (props) => {
     let setLevel=props.handles.setLevel
     let success=props.handles.success
     let setSuccess=props.handles.setSuccess
-    let bg=(level==1)?`url("images/bg2.jpg")`:(level==2)?`url('/images/17_27_36.png')`:`url('/images/bg1.jpg')`
+    let bg=(level===1)?`url("images/bg2.jpg")`:(level===2)?`url('/images/17_27_36.png')`:`url('/images/bg1.jpg')`
     
 return (
     <div className="item1" >
@@ -22,7 +22,7 @@ return (
               onDragOver={(e)=>onDragOver(e)}
               onDrop={(e)=>{onDrop(e, "game")}}>
                 {/* add puzzle */}
-                {level==1?<Puz2 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:(level==2)?<Puz3 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:<Puz4 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>}
+                {level===1?<Puz2 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:(level===2)?<Puz3 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>:<Puz4 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess}}/>}
               </div>
               <div className="sub-grid-item2"
               onDragOver={(e)=>onDragOver(e)}

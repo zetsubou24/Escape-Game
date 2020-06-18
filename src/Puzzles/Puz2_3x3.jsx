@@ -52,16 +52,16 @@ const Puz2 = (props) =>{
       let total=0;
       let temp=document.getElementById("solutionDNDBoard").children
       for(var element in temp){
-        if(temp[element].children==undefined)
+        if(temp[element].children===undefined)
         {
 
         }
-        else if(temp[element].children[0].id==temp[element].id)
+        else if(temp[element].children[0].id===temp[element].id)
         total++
         counter++
       }
       // console.log(total)
-      if(total==9)
+      if(total===9)
       setMapVisible(true)
     },[solutionCurState])
     useEffect(()=>{
@@ -71,7 +71,7 @@ const Puz2 = (props) =>{
       temp[i.toString()]=<div></div>
     temp["puzzle"]=[]
     grid.tasks.forEach((t)=>{
-        if(t.curarea=="puzzle"){
+        if(t.curarea==="puzzle"){
             temp[t.curarea].push(
                 <PicDisplay handles={{id:"puzzle",onDragStart:onDragStart,t:t,size:100,curImg:curImg,setCurImg:setCurImg,name:t.name,class:"puz2-draggable-3x3"}}/>
             )}
@@ -82,11 +82,11 @@ const Puz2 = (props) =>{
         tasks:temp
     })
     
-    console.log(solutionCurState)
+    // console.log(solutionCurState)
     },[grid,curImg])
     function handleAnswer(ev)
     {
-        if(ans=="11-JAN-2030")
+        if(ans==="11-JAN-2030")
         {
             // setSuccess(1)
             alert("correct")
@@ -124,12 +124,12 @@ const Puz2 = (props) =>{
         //   console.log("confirmed")
         // }
 
-        if(status!=undefined&&status!="puzzle")
+        if(status!==undefined&&status!=="puzzle")
         {
             grid.tasks.map((task) => {
-                if (task.name == objId) 
+                if (task.name === objId) 
                   task.curarea = curCell;
-                else if(task.name==curObjId)
+                else if(task.name===curObjId)
                     task.curarea=fromCell
                 NextS.push(task)
               });
@@ -137,7 +137,7 @@ const Puz2 = (props) =>{
         else
         {
         grid.tasks.map((task) => {
-          if (task.name == objId) 
+          if (task.name ===objId) 
             task.curarea = cat;
         NextS.push(task)
         });
@@ -196,7 +196,7 @@ const Puz2 = (props) =>{
             onDragStart: onDragStart,
             onDrop: onDrop,
             elems: solutionCurState.tasks
-          }}/>:<img src="images/witcher3map.png"/>}
+          }}/>:<img src="images/witcher3map.png" alt="mars map overview"/>}
           
       </div>
       <div>
@@ -204,7 +204,7 @@ const Puz2 = (props) =>{
       <Button color="green" onClick={handleAnswer} style={{opacity:0.7}}>Check</Button>
 
       </div>
-    <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}}/>
+    <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}} alt="to construct view of picture from pieces"/>
 
       
     </div>

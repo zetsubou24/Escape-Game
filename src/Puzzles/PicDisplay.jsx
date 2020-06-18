@@ -15,7 +15,7 @@ export default function PicDisplay(props){
     {
     setCurImg({
         ...curImg,
-        [t.name]:{img:curImg[t.name].index==0?t.bg:t.bg2,
+        [t.name]:{img:curImg[t.name].index===0?t.bg:t.bg2,
                   index:(curImg[t.name].index+1)%2}
     })
     }

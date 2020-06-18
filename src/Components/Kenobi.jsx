@@ -8,12 +8,10 @@ const Kenobi = () => {
     console.log("from kenobi",loginExchange.getCredentials())
 
     const toDis="Astronaut.. can you hear me? Ah. Seems like you're doing okay. Due to some technical error, it seems like you've crash landed. Find your way back to the Home Base. Good luck soldier."
-    const assign = () => {
-
-    }
+    
     return (
     <div class="container" style={{height:"100vh"}}>
-  <img src="images/bg_welcome2.jpg" className="bg_welcome"/>
+  <img src="images/bg_welcome2.jpg" className="bg_welcome" alt="bg for breifing page"/>
   {/* <div class="kenobi-bottom-left">Please Select your Leader
   </div> */}
   <div class="kenobi-top-left">

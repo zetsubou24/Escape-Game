@@ -1,21 +1,18 @@
 import React, { useEffect,useState } from "react"
-
 import { Link } from 'react-router-dom';
-
 import "./puz7.css"
 export default function Puz7(props)
 {
 
-    // const [Inventory,setInventory]=useState([]) 
     let inventory=props.handles.inventory
     let setInventory=props.handles.setInventory
-
-    const [roverItems,setRoverItems]=useState([])
-    const [battery,setBattery]=useState(null)
-    const [map,setMap]=useState(null)
     const [panel,setPanel]=useState(false)
-    const [compass,setCompass]=useState(null)
-    const [pcb,setPcb]=useState(null)
+    const [items,setItems]=useState({
+      battery:null,
+      map:null,
+      compass:null,
+      pcb:null
+    })
     const [finalPuz,setFinalPuz]=useState(false)
     const [materials,setMaterials]=useState({
       tasks:[
@@ -51,13 +48,16 @@ export default function Puz7(props)
           ></div>
                   )
           
-      })
+      }) 
       props.handles.setInventory(f.inventory)
-      setRoverItems(f.rover)
-      setBattery(f.battery.length>0?f.battery[f.battery.length-1]:null)
-      setMap(f.map.length>0?f.map[f.map.length-1]:null)
-      setCompass(f.compass.length>0?f.compass[f.compass.length-1]:null)
-      setPcb(f.pcb.length>0?f.pcb[f.pcb.length-1]:null)
+      // setRoverItems(f.rover)
+      setItems({
+        battery:f.battery.length>0?f.battery[f.battery.length-1]:null,
+      map:f.map.length>0?f.map[f.map.length-1]:null,
+      compass:f.compass.length>0?f.compass[f.compass.length-1]:null,
+      pcb:f.pcb.length>0?f.pcb[f.pcb.length-1]:null
+      })
+      
       if(props.handles.inventory.length==0)
       setFinalPuz(true)
 
@@ -72,13 +72,17 @@ export default function Puz7(props)
       }
       var onDrop = (ev, cat) => {
 
-        console.log(ev.target)
-        console.log(cat)
-        if(ev.target.id!=cat)
+        if(cat=="inventory")
         return;
+        let id=ev.dataTransfer.getData("id")
+        if(id!=cat)
+        {
+          console.log("fuk")
+          return;
+
+        }
 
         let temp=[]
-        let id=ev.dataTransfer.getData("id")
         materials.tasks.forEach((t)=>{
           if(t.name==id)
           {
@@ -86,7 +90,6 @@ export default function Puz7(props)
           }
           temp.push(t)
         })
-        console.log(temp)
         setMaterials({
           tasks:temp
         })
@@ -102,12 +105,12 @@ function mouseCoord(event)
                 style={{width: "900px", height: "700px"}} 
                 // onClick={(ev)=>alert(ev.clientX+" "+ev.clientY)}
                 >
-                {roverItems}
+                {/* {roverItems} */}
 
                 <div id="pcb" style={{position:"absolute",height:"100px",width:"100px",left:580,top:472}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "pcb")}}>
-                  {pcb!=null?<img src="images/wires3.png" />:<p style={{color:"red",height:"10px"}}>
+                  {items.pcb!=null?<img src="images/wires3.png" />:<p style={{color:"red",height:"10px"}}>
                   {/* pcb */}
                   </p>}
                 </div>
@@ -120,7 +123,7 @@ function mouseCoord(event)
                 
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "compass")}}>
-                  <p style={{color:"red"}}>{compass!=null?compass:
+                  <p style={{color:"red"}}>{items.compass!=null?items.compass:
                   "compass here"
                   }
                   </p>
@@ -130,14 +133,14 @@ function mouseCoord(event)
                 <div id="map" style={{position:"absolute",height:"120px",width:"150px",left:806,top:309}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "map")}}>
-                  {map!=null?<img src="images/foldedmap.png" />:<p style={{color:"red",height:"10px",width:"inherit"}}>
+                  {items.map!=null?<img src="images/foldedmap.png" />:<p style={{color:"red",height:"10px",width:"inherit"}}>
                   {/* map */}
                   </p>}
                 </div>
                 <div id="battery" style={{position:"absolute",height:"100px",width:"120px",left:800,top:530}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "battery")}}>
-                  {battery!=null?battery:<p style={{color:"red",height:"10px"}}>
+                  {items.battery!=null?items.battery:<p style={{color:"red",height:"10px"}}>
                   {/* battery */}
                   </p>}
                 </div>

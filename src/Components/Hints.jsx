@@ -8,7 +8,7 @@ export default function Hints(props)
         <div class="sub-container" style={{display : props.hidden ? "none" : "block"}}>
             <div class="book">
                 <div class="cover">
-                    <img src = "images/cover.jpg" />
+                    <img src = "images/cover.jpg" alt="hint book cover face" />
                 </div>
                 <div class="details">
                     <h2>{props.puzname}</h2>

@@ -120,7 +120,7 @@ function GamePage() {
           game:f.game
         })
       }
-      if(success==1)
+      if(success===1)
       f.inventory.push(<div style={{width: "200px",
         height: "50px",
         backgroundColor: "yellow"}}

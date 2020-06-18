@@ -13,7 +13,7 @@ export default function Puz1()
 
     function puzz1()
     {
-        if(ans=="1512"){
+        if(ans.toLowerCase()==="1512"){
         setNextLevel(true)
         alert("correct! click on 'continue to next level' button below  to proceed  ")
         }
@@ -25,8 +25,8 @@ export default function Puz1()
         <div>
             <Hints hidden={hidden1} puzname="Puzzle 1" hintname="Hint 1" hintdesc="Multiply the gravitational force of 4th planet with 4000"/>
             <Hints hidden={hidden2} puzname="Puzzle 1" hintname="Hint 2" hintdesc="1512"/>
-        <div usemap="#p1intro">
-            <img src="images/mars1.png" alt="stuck_on_mars" style={{width:"100%", height: "75vh"}} usemap="#p1intro" / >
+        <div useMap="#p1intro">
+            <img src="images/mars1.png" alt="stuck_on_mars" style={{width:"100%", height: "75vh"}} useMap="#p1intro" / >
         </div>
 
 	<div style={{display : "flex",backgroundImage:`url('images/mars1.jpg')`,backgroundSize:"cover",height:"25vh"}}>

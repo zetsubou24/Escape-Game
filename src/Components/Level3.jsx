@@ -21,7 +21,7 @@ const Level3 = (props) => {
   let currentLevel;
   let height,width;
   const [puz7rover,setpuz7rover]=useState(`url('/images/vehicle4.jpg')`)
-  if(level==1)
+  if(level===1)
   {
   bg=`url("images/mars1.jpg")`
   height="100%"
@@ -29,28 +29,28 @@ const Level3 = (props) => {
 
   currentLevel=<Puz2 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
-  else if(level==2){
+  else if(level===2){
   bg=`url('/images/17_27_36.png')`
   height="100%"
   width="100%"
 
   currentLevel=<Puz3 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
-  else if(level==3){
+  else if(level===3){
   bg=`url('/images/marssurface2.jpg')`
   height="100%"
   width="100%"
 
   currentLevel=<Puz4 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
-  else if(level==4){
+  else if(level===4){
   bg=`url("images/mars1.jpg")`
   height="100%"
   width="100%"
 
   currentLevel=<Puz5 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
-  else if(level==5){
+  else if(level===5){
   bg=`url('images/circuit3.png')`
   height="764px"
   width="100%"

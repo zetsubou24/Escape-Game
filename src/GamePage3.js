@@ -68,6 +68,8 @@ function GamePage3() {
 
   var onDrop = (ev, cat) => {
     
+    if(cat=="inventory")
+    return;
     let id = ev.dataTransfer.getData("id");
     var NextS = []
     var arr = (level === 1) ? state.tasks : ((level===2)?state.tasks2:state.tasks3)
