@@ -50,6 +50,7 @@ export default function Puz5(props) {
 	// 	setVisible
 	// },[check])
 	function handleSuccess() {
+		setTimeout(()=>{
 		alert("correct")
 		setInventory([...inventory, <div
 			id="battery"
@@ -64,6 +65,7 @@ export default function Puz5(props) {
 			draggable
 		></div>])
 		setLevel((level + 1) % 6)
+		},2000)
 		return (
 			<img src="images/battery.png" />
 		)

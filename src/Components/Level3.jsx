@@ -23,7 +23,7 @@ const Level3 = (props) => {
   const [puz7rover,setpuz7rover]=useState(`url('/images/vehicle4.jpg')`)
   if(level==1)
   {
-  bg=`url("images/bg2.jpg")`
+  bg=`url("images/mars1.jpg")`
   height="100%"
   width="100%"
 
@@ -44,7 +44,7 @@ const Level3 = (props) => {
   currentLevel=<Puz4 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory}}/>
   }
   else if(level==4){
-  bg=`url("images/black.jpg")`
+  bg=`url("images/mars1.jpg")`
   height="100%"
   width="100%"
 

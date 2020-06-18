@@ -200,8 +200,8 @@ const Puz2 = (props) =>{
           
       </div>
       <div>
-      <Input type="text" placeholder="Answer here"  value={ans} onChange={(ev)=>setAns(ev.target.value)}/><br/>
-      <Button color="green" onClick={handleAnswer}>Check</Button>
+      <Input type="text" placeholder="Answer here"  value={ans} onChange={(ev)=>setAns(ev.target.value)} style={{opacity:0.7}}/><br/>
+      <Button color="green" onClick={handleAnswer} style={{opacity:0.7}}>Check</Button>
 
       </div>
     <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}}/>

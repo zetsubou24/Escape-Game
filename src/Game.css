@@ -38,9 +38,9 @@
 
 .header {
   display: inline-block;
-  margin: 0;
-  padding: 0;
-  background-color: #E0E0E0;
+  margin-top: 10px;
+  padding-top: 10px;
+  /* background-color: red; */
   width:100%;
 }
 
@@ -91,9 +91,9 @@ p.Game-Level-Description {
   width: 40px;
   height: 40px;
   transition: width 4s, height 4s, transform 4s;
-  position: relative;
+  position: absolute;
   left: 600px ;
-  top:32px;
+  top:170px;
   transform:rotate(-10deg)
 
 }
@@ -102,9 +102,9 @@ p.Game-Level-Description {
   width: 250px;
   height: 250px;
   transform: rotate(360deg);
-  position: relative;
+  position: absolute;
   left: 600px ;
-  top:32px;
+  top:170px;
   /*position: absolute;
   top: 50%;
   left: 50%;
