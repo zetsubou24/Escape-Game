@@ -8,9 +8,9 @@ import GamePage from "../GamePage"
 import GamePage2 from "../GamePage2"
 import GamePage3 from "../GamePage3"
 import Puzzintro from "./Puzzintro"
-import Puz1 from '../Test/Puz1'
-import Puz8 from "../Test/Puz8"
-import Ending from "../Test/Ending"
+import Puz1 from '../Puzzles/Puz1'
+import Puz8 from "../Puzzles/Puz8"
+import Ending from "../Puzzles/Ending"
 import FeedBack from "./FeedBack"
 
 class App2 extends Component {

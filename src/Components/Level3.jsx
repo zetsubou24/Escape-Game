@@ -1,12 +1,12 @@
 import React ,{useState} from "react"
 import "../Game.css"
 import "../App.css"
-import Puz2 from "../Test/Puz2_3x3"
-import Puz3 from "../Test/Puz3"
-import Puz4 from "../Test/Puz4"
-import Puz5 from "../Test/Puz5"
-import Puz6 from "../Test/Puz6"
-import Puz7 from "../Test/Puz7"
+import Puz2 from "../Puzzles/Puz2_3x3"
+import Puz3 from "../Puzzles/Puz3"
+import Puz4 from "../Puzzles/Puz4"
+import Puz5 from "../Puzzles/Puz5"
+import Puz6 from "../Puzzles/Puz6"
+import Puz7 from "../Puzzles/Puz7"
 const Level3 = (props) => {
   let onDragOver=props.handles.onDragOver
   let onDragStart=props.handles.onDragStart

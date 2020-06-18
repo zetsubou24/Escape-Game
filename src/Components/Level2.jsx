@@ -1,9 +1,9 @@
 import React from "react"
 import "../Game.css"
 import "../App.css"
-import Puz5 from "../Test/Puz5"
-import Puz6 from "../Test/Puz6"
-import Puz7 from "../Test/Puz7"
+import Puz5 from "../Puzzles/Puz5"
+import Puz6 from "../Puzzles/Puz6"
+import Puz7 from "../Puzzles/Puz7"
 const Level2 = (props) => {
   let onDragOver=props.handles.onDragOver
   let onDragStart=props.handles.onDragStart
