@@ -13,7 +13,7 @@ const Welcome = () =>
 	{
 		loginExchange.setUserName(document.getElementById("username").value)
 		loginExchange.setPassWord(document.getElementById("password").value)
-		loginExchange.setNickName(document.getElementById("nickname").value)
+		// loginExchange.setNickName(document.getElementById("nickname").value)
 	}
     return (
         <div>
@@ -28,8 +28,8 @@ const Welcome = () =>
         	</p>
         	<p>
 			{/* <h4 style={{color:"red",width:"1000px"}}>&emsp; &emsp;&emsp;&emsp;&emsp; Enter your Favorite thing about space </h4> */}
-			<Popup inverted content='PLEASE DO REMEMBER IT!' color="red" position = "right center" trigger={<Input id="nickname" placeholder="Enter your Favorite thing about space" />
-			}/>
+			{/* <Popup inverted content='PLEASE DO REMEMBER IT!' color="red" position = "right center" trigger={<Input id="nickname" placeholder="Enter your Favorite thing about space" />
+			}/> */}
 			{/* <h4 style={{color:"red",width:"1000px"}}> PLEASE DO REMEMBER IT!</h4> */}
         	</p>
         	<p>
