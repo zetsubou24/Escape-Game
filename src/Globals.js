@@ -45,16 +45,19 @@ class QuoteExchange
 {
     quotes=
   [
-    "Have faith",
     "Action gets results!",
-    "All is well.",
     "Don't give up, ever.",
     "Failure cannot cope with persistence",
-    "I came, I saw, I conquered!",
-    "Only compelling “ideas” will feed you, today.",
+    "Only compelling ideas will feed you, today.",
     "Do, or do not. There is no try.",
-    "Ideas are bulletproof. I don't have next six words.",
-    "Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me"
+    "Stand out, be original.",
+    "An idea is salvation by imagination",
+    "The man who has no imagination has no wings.",
+    "Imagination creates reality.",
+    "Not all those who wander are lost.",
+    "",
+    
+   
 
   ]
   curIndex=0
