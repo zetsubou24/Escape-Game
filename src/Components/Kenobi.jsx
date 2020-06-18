@@ -19,7 +19,7 @@ const Kenobi = () => {
   <div class="kenobi-top-left">
     <p style={{color:"red"}}>{toDis}</p><br />
     <p style={{color:"red",fontSize:'40px'}}>Remember this Soldier:</p>
-    <p style={{color:"red",fontFamily:'Indie Flower',fontSize:'48px'}}> {quoteExchange.getRandomQuote()}</p>
+    <p style={{color:"red",fontFamily:'Orbitron',fontSize:'48px'}}> {quoteExchange.getRandomQuote()}</p>
     {/* <p style={{className:'quote'}}> {quoteExchange.getRandomQuote()}</p> */}
   </div>
   <div class="kenobi-bottom-right">

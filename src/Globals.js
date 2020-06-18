@@ -55,7 +55,11 @@ class QuoteExchange
     "The man who has no imagination has no wings.",
     "Imagination creates reality.",
     "Not all those who wander are lost.",
-    "",
+    "Don't be afraid to explore everything.",
+    "The sharpest minds are never afraid to search far and wide",
+    "You got to be the very best like no one ever was",
+    "Failure is an option here. If things are not failing, you are not innovating enough.",
+    "A man's dream will never die",
     
    
 
