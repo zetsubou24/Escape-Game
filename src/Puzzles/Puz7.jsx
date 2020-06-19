@@ -6,6 +6,7 @@ export default function Puz7(props)
 
     let inventory=props.handles.inventory
     let setInventory=props.handles.setInventory
+    let cnt=0;
     const [panel,setPanel]=useState(false)
     const [items,setItems]=useState({
       battery:null,
@@ -49,6 +50,7 @@ export default function Puz7(props)
                   )
           
       }) 
+      
       props.handles.setInventory(f.inventory)
       // setRoverItems(f.rover)
       setItems({
@@ -120,12 +122,9 @@ function mouseCoord(event)
                 </button>
                 {panel?
                 <div id="compass" style={{position:"absolute",height:"30%",width:"30%",left:"25%",top:"70%",backgroundImage:`url(images/panel.png)`,backgroundSize:"cover"}}
-                
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "compass")}}>
-                  <p style={{color:"red"}}>{items.compass!=null?items.compass:
-                  "compass here"
-                  }
+                  <p style={{color:"red",width:"200px",height:"200px"}}>{items.compass!=null?items.compass:""}
                   </p>
                 </div>:
                 null
@@ -149,7 +148,7 @@ function mouseCoord(event)
                   inventory.length==0?
                   
                 <Link to="/FinalPuzzle">
-                <button style={{color:"red"}}>Click to continue</button>
+                <button style={{color:"red"}}>Click here to continue</button>
                 </Link> 
                 :null
                 }

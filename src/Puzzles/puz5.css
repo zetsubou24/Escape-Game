@@ -1,3 +1,13 @@
+
+.vl {
+  border-left: 6px solid red;
+  height: 400px;
+  
+}
+
+
+
+
 #container {
 margin-left:auto;
 margin-right:auto;
@@ -12,7 +22,7 @@ position: relative;
 }
 #water {
   /* flex-flow: column-reverse; */
-  flex-basis: ;
+  
 background-image: url("./waves3_edit.png");
 background-position: top right;
 position: absolute;
@@ -30,7 +40,7 @@ border-radius: 10px;
 
 }
 #glass:hover #water {
-height: 12em;
+height: 13em;
 background-position: top left;
 -webkit-transition: all 3s ease-out;
 -moz-transition: all 3s ease-out;
@@ -74,7 +84,7 @@ transition: all 5s ease-out;
   
   }
   #glass2:hover #water2 {
-  height: 12em;
+  height: 13em;
   background-position: top left;
   -webkit-transition: all 3s ease-out;
   -moz-transition: all 3s ease-out;
@@ -115,7 +125,7 @@ transition: all 5s ease-out;
     
     }
     #glass3:hover #water3 {
-    height: 12em;
+    height: 13em;
     background-position: top left;
     -webkit-transition: all 3s ease-out;
     -moz-transition: all 3s ease-out;

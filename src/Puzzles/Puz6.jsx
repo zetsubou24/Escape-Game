@@ -47,6 +47,7 @@ export default function Puz6(props)
     {
 
         alert("correct")
+		setLevel((level+1)%6)
 		setInventory([...inventory,<div 
 			id="pcb"
 			key="pcb"
@@ -57,7 +58,6 @@ export default function Puz6(props)
 			onDragStart={(e) => onDragStart(e,"pcb")}
 			draggable
 			></div>])
-		setLevel((level+1)%6)
     }
     return (
         <div style={{height:"100%",width:"100%"}}>
@@ -85,7 +85,7 @@ export default function Puz6(props)
             <div style={{position:"absolute",left:842,top:321}}><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
             <div style={{position:"absolute",left:852,top:562}}><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
             {or4==1?
-            handleSuccess()
+            setTimeout(()=>{handleSuccess()},2000)
             :null}
             <br/>
             </div>

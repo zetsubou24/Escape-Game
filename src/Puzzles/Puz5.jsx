@@ -50,8 +50,9 @@ export default function Puz5(props) {
 	// 	setVisible
 	// },[check])
 	function handleSuccess() {
-		setTimeout(()=>{
-		alert("correct")
+		
+		alert("Correct,Battery will be auto added to your inventory")
+		setLevel((level + 1) % 6)
 		setInventory([...inventory, <div
 			id="battery"
 			key="battery"
@@ -64,25 +65,29 @@ export default function Puz5(props) {
 			onDragStart={(e) => onDragStart(e, "battery")}
 			draggable
 		></div>])
-		setLevel((level + 1) % 6)
-		},2000)
-		return (
-			<img src="images/battery.png" alt="battery success"/>
-		)
-
-
 	}
 	return (
 		<table>
 			<tr>
 				<td>
+					
+				
+					<div style={{display:"flex"}}>
+					<div class="vl"></div>
 					<div id="scale" style={{ height: "400px", width: "20px", color: "red", justifyContent: "space-between" }}>
-						<div id="0" style={{ height: "80px", textAlign: "left" }}>100</div>
-						<div id="1" style={{ height: "80px", textAlign: "left" }}>70</div>
-						<div id="2" style={{ height: "80px", textAlign: "left" }}>50</div>
-						<div id="-1" style={{ height: "80px", textAlign: "left" }}>40</div>
-						<div id="3" style={{ height: "80px", textAlign: "left" }}>20</div>
-						<div id="4" style={{ height: "80px", textAlign: "left" }}>5</div>
+						<hr style={{width:"1000px"}}></hr>
+						<div id="100" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/> &gt;100</div>
+						<div id="90" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
+						<div id="80" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>80</div>
+						<div id="70" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
+						<div id="60" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>60</div>
+						<div id="50" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
+						<div id="40" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>40</div>
+						<div id="30" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
+						<div id="20" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>20</div>
+						<div id="10" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
+						<div id="5" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>&lt;10</div>
+					</div>
 					</div>
 				</td>
 				<td>&emsp;&emsp;</td>
@@ -121,8 +126,8 @@ export default function Puz5(props) {
 					<div style={{ width: "180px" }}><h1 style={{ color: "red" }}>+</h1></div>
 				</td>
 				<td>
-					{((height3.height > 170) && (height3.height < 190) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) ?
-						handleSuccess()
+					{((height3.height > 155) && (height3.height < 190) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) && setTimeout(()=>{handleSuccess()},2000)?
+						<img src="images/battery.png" alt="battery success"/>
 						: null}
 				</td>
 			</tr>

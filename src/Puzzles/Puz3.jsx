@@ -60,7 +60,7 @@ function Puz3(props)
 		<div className="puz3-items">
 
 			<img src="images/bettercompass.png" className="bomb" onClick={viewSol} alt="compass"/><br />
-			{/* <img src="images/pngguru.png" className="bomb2" onClick={puz3_doc} /><br /> */}
+			<img src="images/pngguru.png" className="bomb2" onClick={puz3_doc} /><br />
 			<img src="images/Enchanted_Nether_Star.png" className="star" alt="EASTER EGG"/><br />
 
 
