@@ -12,7 +12,7 @@ import Puz1 from '../Puzzles/Puz1'
 import Puz8 from "../Puzzles/Puz8"
 import Ending from "../Puzzles/Ending"
 import FeedBack from "./FeedBack"
-import Puz5Desc from "../Puzzles/Puz5-desc"
+import Puz6Desc from "../Puzzles/Puz6-desc"
 
 class App2 extends Component {
   componentDidMount() {
@@ -40,7 +40,7 @@ class App2 extends Component {
         <Route path="/FinalPuzzle" exact component={Puz8} />
         <Route path="/Ending" exact component={Ending} />
         <Route path="/FeedBack" exact component={FeedBack} />
-        <Route path="/Puz5Desc" exact component={Puz5Desc} />
+        <Route path="/Puz6Desc" exact component={Puz6Desc} />
 
 
 

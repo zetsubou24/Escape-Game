@@ -1,5 +1,5 @@
 import React from "react"
-export default function Puz5desc()
+export default function Puz6desc()
 {
     return(
         <div style={{backgroundColor:"white"}}>

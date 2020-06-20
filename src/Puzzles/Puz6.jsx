@@ -46,9 +46,11 @@ export default function Puz6(props)
     function handleSuccess()
     {
 
-        alert("correct")
-		setLevel((level+1)%6)
-		setInventory([...inventory,<div 
+        setTimeout(()=>{
+        // alert("correct")
+        setLevel((level+1)%6)
+        let temp=inventory
+        temp.push(<div 
 			id="pcb"
 			key="pcb"
 			style={{width: "100px",
@@ -57,7 +59,12 @@ export default function Puz6(props)
 					backgroundImage:`url(images/videocard.png)`}}
 			onDragStart={(e) => onDragStart(e,"pcb")}
 			draggable
-			></div>])
+            ></div>)
+		setInventory(temp)
+		console.log("wtf")
+        },10)
+
+        
     }
     return (
         <div style={{height:"100%",width:"100%"}}>
@@ -84,8 +91,7 @@ export default function Puz6(props)
             <div style={{position:"absolute",left:462,top:672}}><div className="output" style={{background:not?"green":"red"}}></div></div><br/>
             <div style={{position:"absolute",left:842,top:321}}><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
             <div style={{position:"absolute",left:852,top:562}}><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
-            {or4==1?
-            setTimeout(()=>{handleSuccess()},2000)
+            {or4==1&&handleSuccess()?""
             :null}
             <br/>
             </div>
