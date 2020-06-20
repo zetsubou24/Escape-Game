@@ -4,7 +4,7 @@ import "../style.css"
 import { Button, Input } from "semantic-ui-react"
 import Hints from "../Components/Hints"
 
-export default function Puz1()
+export default function Puz1(props)
 {
     const [ans,setAns]=useState("")
     const [nextlevel,setNextLevel]=useState(false)
@@ -15,6 +15,8 @@ export default function Puz1()
     {
         if(ans.toLowerCase()==="1512"){
         setNextLevel(true)
+        setHidden1(true)
+        setHidden2(true)
         alert("correct! click on 'continue to next level' button below  to proceed  ")
         }
         else{
@@ -23,7 +25,7 @@ export default function Puz1()
     }
     return (
         <div>
-            <Hints hidden={hidden1} puzname="Puzzle 1" hintname="Hint 1" hintdesc="Multiply the gravitational force of 4th planet with 4000"/>
+            <Hints hidden={hidden1} puzname="Puzzle 1" hintname="Hint 1" hintdesc="Multiply the gravitational force of Mars with 4000"/>
             <Hints hidden={hidden2} puzname="Puzzle 1" hintname="Hint 2" hintdesc="1512"/>
         <div useMap="#p1intro">
             <img src="images/yolo.png" alt="stuck_on_mars" style={{width:"100%", height: "75vh"}} useMap="#p1intro" / >

@@ -94,6 +94,7 @@
 .puz8-top-left {
     position: absolute;
     top: 8px;
-    left: 16px;
-    font-size: 20px;
+    /* left: 206px; */
+    font-size: 169%;
+    text-align: center;
 }

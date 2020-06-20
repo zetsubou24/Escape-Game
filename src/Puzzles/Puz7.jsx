@@ -6,6 +6,8 @@ export default function Puz7(props)
 
     let inventory=props.handles.inventory
     let setInventory=props.handles.setInventory
+    let setHidden1 = props.handles.setHidden1
+    let setHidden2 = props.handles.setHidden2
     let cnt=0;
     const [panel,setPanel]=useState(false)
     const [items,setItems]=useState({

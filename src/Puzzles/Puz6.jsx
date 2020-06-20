@@ -5,7 +5,9 @@ export default function Puz6(props)
     let level=props.handles.level
 	let setLevel=props.handles.setLevel
 	let inventory=props.handles.inventory
-	let setInventory=props.handles.setInventory
+    let setInventory=props.handles.setInventory
+    let setHidden1 = props.handles.setHidden1
+    let setHidden2 = props.handles.setHidden2
 	var onDragOver=props.handles.onDragOver
     var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
@@ -43,26 +45,44 @@ export default function Puz6(props)
     {
         // alert(event.clientX+" "+event.clientY)
     }
+    const tempsuccess = () => {
+        handleSuccess()
+    }
+
     function handleSuccess()
     {
 
-        setTimeout(()=>{
+        
         // alert("correct")
         setLevel((level+1)%6)
-        let temp=inventory
-        temp.push(<div 
-			id="pcb"
-			key="pcb"
-			style={{width: "100px",
-					height: "50px",
-					backgroundRepeat:"no-repeat",
-					backgroundImage:`url(images/videocard.png)`}}
-			onDragStart={(e) => onDragStart(e,"pcb")}
-			draggable
-            ></div>)
-		setInventory(temp)
+        setHidden1(true)
+      setHidden2(true)
+        // let temp=inventory
+        // temp.push(<div 
+		// 	id="pcb"
+		// 	key="pcb"
+		// 	style={{width: "100px",
+		// 			height: "50px",
+		// 			backgroundRepeat:"no-repeat",
+		// 			backgroundImage:`url(images/videocard.png)`}}
+		// 	onDragStart={(e) => onDragStart(e,"pcb")}
+		// 	draggable
+        //     ></div>)
+		// setInventory(inventory.concat(<div 
+		// 	id="pcb"
+		// 	key="pcb"
+		// 	style={{width: "100px",
+		// 			height: "50px",
+		// 			backgroundRepeat:"no-repeat",
+		// 			backgroundImage:`url(images/videocard.png)`}}
+		// 	onDragStart={(e) => onDragStart(e,"pcb")}
+		// 	draggable
+        //     ></div>))
 		console.log("wtf")
-        },10)
+    
+        return(
+            <img src="images/videocard.png" />
+        )
 
         
     }
@@ -91,7 +111,7 @@ export default function Puz6(props)
             <div style={{position:"absolute",left:462,top:672}}><div className="output" style={{background:not?"green":"red"}}></div></div><br/>
             <div style={{position:"absolute",left:842,top:321}}><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
             <div style={{position:"absolute",left:852,top:562}}><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
-            {or4==1&&handleSuccess()?""
+            {or4==1 && setTimeout(() =>tempsuccess(), 1000) ? ""
             :null}
             <br/>
             </div>

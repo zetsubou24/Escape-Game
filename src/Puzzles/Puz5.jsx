@@ -6,6 +6,8 @@ export default function Puz5(props) {
 	let setLevel = props.handles.setLevel
 	let inventory = props.handles.inventory
 	let setInventory = props.handles.setInventory
+	let setHidden1 = props.handles.setHidden1
+	let setHidden2 = props.handles.setHidden2
 	var onDragOver = props.handles.onDragOver
 	var onDragStart = props.handles.onDragStart
 	var onDrop = props.handles.onDrop
@@ -53,6 +55,8 @@ export default function Puz5(props) {
 		
 		alert("Correct,Battery will be auto added to your inventory")
 		setLevel((level + 1) % 6)
+		setHidden1(true)
+      setHidden2(true)
 		setInventory([...inventory, <div
 			id="battery"
 			key="battery"

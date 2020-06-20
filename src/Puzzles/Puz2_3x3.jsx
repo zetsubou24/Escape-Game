@@ -12,6 +12,8 @@ const Puz2 = (props) =>{
     let setSuccess=props.handles.setSuccess
     let inventory=props.handles.inventory
     let setInventory=props.handles.setInventory
+    let setHidden1 = props.handles.setHidden1
+    let setHidden2 = props.handles.setHidden2
     const [mapVisible,setMapVisible]=useState(false)
     const [grid,setGrid]=useState({
         tasks:[
@@ -102,6 +104,8 @@ const Puz2 = (props) =>{
             ></div>])
             // setLevel((level+1)%3)
             setLevel((level+1)%6)
+            setHidden1(true)
+            setHidden2(true)
         }
     }
     const onDragStart = (ev, id,parent) => {

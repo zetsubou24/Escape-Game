@@ -29,7 +29,7 @@ function GamePage3() {
     
     1: { name: "puzzle_2", category: "game",  description:["These seem to be pieces of some picture." , "\n" ,"They fell out of my journal so I think there might be something in this picture that can help me out!","\n","You'll get to see what needs to be detected when everything is arranged." ]
   ,hints:["Puzzle out the pictures in order to find the code. There are two faces for a coin","11-JAN-2030"] ,links:[]},
-    2: { name: "puzzle_3", category: "game", description:["People always fascinated with time and stars. Unlike earth, you live 37 minutes longer on MARS. So, don’t waste time, those 37 minutes are prime, because the clock that you see ticks the earth’s time."]
+    2: { name: "puzzle_3", category: "game", description:[""]//People always fascinated with time and stars. Unlike earth, you live 37 minutes longer on MARS. So, don’t waste time, those 37 minutes are prime, because the clock that you see ticks the earth’s time.
     ,hints:["I'll try hovering around things maybe something will pop up. Gold seems to be favourite colour of the astronaut. ","102450"],links:[]},
     3: { name: "puzzle_4", category: "game", description:["\"If you do not change direction, you may end up where you are heading\" Lao Tzu","\n","Move a mile straight, then two miles right. Repeat this again and go a mile straight. Four miles to left, then a mile straight once more. That’s how you reach what you are looking for."
     ] ,hints:["Start from the bottom left. Hyperlink to Map ","<hyperlink>"],links:[]},
@@ -120,6 +120,8 @@ function GamePage3() {
   }, [state, level ])
   const handleClick = () => {
     setLevel((level + 1) % 6)
+    setHidden1(true)
+    setHidden2(true)
   }
   // let curTask=(level=== 1)?tasks:((level=== 2)?tasks2:tasks3)
   let curTask="hmmm"
@@ -141,7 +143,9 @@ function GamePage3() {
             level:level,
             setLevel:setLevel,
             success:success,
-            setSuccess:setSuccess
+            setSuccess:setSuccess,
+            setHidden1 : setHidden1,
+            setHidden2 : setHidden2
           }}
           />
         
@@ -166,7 +170,6 @@ function GamePage3() {
         {/* <div style={{alignItems:"center",width:"100%",opacity:1.0}}>
           <Button primary >Hint 1</Button>
           <Button secondary>Hint 2</Button>
-
           </div> */}
           <br/>
           <br/>
