@@ -80,10 +80,7 @@ export default function Puz6(props)
         //     ></div>))
 		console.log("wtf")
     
-        return(
-            <img src="images/videocard.png" />
-        )
-
+        
         
     }
     return (
@@ -111,7 +108,8 @@ export default function Puz6(props)
             <div style={{position:"absolute",left:462,top:672}}><div className="output" style={{background:not?"green":"red"}}></div></div><br/>
             <div style={{position:"absolute",left:842,top:321}}><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
             <div style={{position:"absolute",left:852,top:562}}><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
-            {or4==1 && setTimeout(() =>tempsuccess(), 1000) ? ""
+            {or4==1 && setTimeout(() =>tempsuccess(), 2000) ? 
+            <img src="images/videocard.png" style={{position:"absolute",left:"75vw",top:"60vh"}}/>
             :null}
             <br/>
             </div>

@@ -78,19 +78,19 @@ export default function Puz5(props) {
 				
 					<div style={{display:"flex"}}>
 					<div class="vl"></div>
-					<div id="scale" style={{ height: "400px", width: "20px", color: "red", justifyContent: "space-between" }}>
+					<div id="scale" style={{ height: "400px", width: "20px", color: "green", justifyContent: "space-between" }}>
 						<hr style={{width:"1000px"}}></hr>
-						<div id="100" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/> &gt;100</div>
-						<div id="90" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
-						<div id="80" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>80</div>
-						<div id="70" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
-						<div id="60" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>60</div>
-						<div id="50" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
-						<div id="40" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>40</div>
-						<div id="30" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
-						<div id="20" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>20</div>
-						<div id="10" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid red",height: "5px",width:"15px"}}/></div>
-						<div id="5" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid red",height: "5px",width:"40px"}}/>&lt;10</div>
+						<div id="100" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/> &gt;100</div>
+						<div id="90" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
+						<div id="80" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/>80</div>
+						<div id="70" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
+						<div id="60" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/>60</div>
+						<div id="50" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
+						<div id="40" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/>40</div>
+						<div id="30" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
+						<div id="20" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/>20</div>
+						<div id="10" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
+						<div id="5" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/>&lt;10</div>
 					</div>
 					</div>
 				</td>
@@ -100,34 +100,34 @@ export default function Puz5(props) {
 						<div id="glass" >
 							<div id="water" style={height} onClick={handleClick}><p style={{ color: "white" }}>H<sub>2</sub></p></div>
 						</div>
-						<button onClick={reset1} style={{ color: "red" }}>reset</button>
+						<button onClick={reset1} style={{ color: "white" }}>reset</button>
 					</div>
 				</td>
 				<td>
-					<div style={{ width: "200px" }}><h1 style={{ color: "red" }}>+</h1></div>
+					<div style={{ width: "200px" }}><h1 style={{ color: "green" }}>+</h1></div>
 				</td>
 				<td>
 					<div id="container">
 						<div id="glass2" >
-							<div id="water2" style={height2} onClick={handleClick2}><p style={{ color: "orange" }}>O<sub>2</sub></p></div>
+							<div id="water2" style={height2} onClick={handleClick2}><p style={{ color: "red" }}>O<sub>2</sub></p></div>
 						</div>
 						<button onClick={reset2} style={{ color: "red" }}>reset</button>
 
 					</div>
 				</td>
 				<td>
-					<div style={{ width: "250px" }}><h1 style={{ color: "red" }}>=</h1></div>
+					<div style={{ width: "250px" }}><h1 style={{ color: "green" }}>=</h1></div>
 				</td>
 				<td>
 					<div id="container">
 						<div id="glass3" >
 							<div id="water3" style={height3} onClick={handleClick3}><p style={{ color: "blue" }}>H<sub>2</sub>0</p> <hr /></div>
 						</div>
-						<button onClick={reset3} style={{ color: "red" }}>reset</button>
+						<button onClick={reset3} style={{ color: "blue" }}>reset</button>
 					</div>
 				</td>
 				<td>
-					<div style={{ width: "180px" }}><h1 style={{ color: "red" }}>+</h1></div>
+					<div style={{ width: "180px" }}><h1 style={{ color: "green" }}>+</h1></div>
 				</td>
 				<td>
 					{((height3.height > 155) && (height3.height < 190) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) && setTimeout(()=>{handleSuccess()},2000)?
