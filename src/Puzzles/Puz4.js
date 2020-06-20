@@ -62,7 +62,7 @@ let onFinish = () => {
   setTimeout(() => {
     if(patternState){
     if (patternState.path.join("-") === "20-15-16-17-12-13-14-9-8-7-6-1") {
-      alert("The path is correct and you now have path to the destination")
+      alert("The path is correct and you now have path to the destination on your map!")
       setLevel((level+1)%6)
       setPatternState({ ...patternState, isLoading: false, success: true, disabled: true });
     } else {

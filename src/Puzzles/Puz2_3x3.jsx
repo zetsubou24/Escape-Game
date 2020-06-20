@@ -201,8 +201,14 @@ const Puz2 = (props) =>{
       </div>
       <div>
       <Input type="text" placeholder="Answer here"  value={ans} onChange={(ev)=>setAns(ev.target.value)} style={{opacity:0.7}}/><br/>
-      <Button color="green" onClick={handleAnswer} style={{opacity:0.7}}>Check</Button>
-
+      {/* <Button color="green" onClick={handleAnswer} style={{opacity:0.7}}>Check</Button> */}
+      <Button  
+				id="submitbutton" 
+            	type="button" 
+            	onClick={handleAnswer}
+                color="red"
+                >Submit
+            </Button>
       </div>
     <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}} alt="to construct view of picture from pieces"/>
 
