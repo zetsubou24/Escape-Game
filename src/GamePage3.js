@@ -32,7 +32,7 @@ function GamePage3() {
     2: { name: "puzzle_3", category: "game", description:[""]//People always fascinated with time and stars. Unlike earth, you live 37 minutes longer on MARS. So, don’t waste time, those 37 minutes are prime, because the clock that you see ticks the earth’s time.
     ,hints:["I'll try hovering around things maybe something will pop up. Gold seems to be favourite colour of the astronaut. ","102450"],links:[]},
     3: { name: "puzzle_4", category: "game", description:["\"If you do not change direction, you may end up where you are heading\" Lao Tzu","\n","Move a mile straight, then two miles right. Repeat this again and go a mile straight. Four miles to left, then a mile straight once more. That’s how you reach what you are looking for."
-    ] ,hints:["Start from the bottom left. Hyperlink to Map ","<hyperlink>"],links:["/Puz4Desc","/Puz4Desc2"]},
+    ] ,hints:["<L_R_1>","<L_R_2>"],links:["/Puz4Desc","/Puz4Desc2"]},
     4: { name: "puzzle_5", category: "game", description:["Combine 80 units of Hydrogen and Oxygen units equal to one fourth the  amount of Hydrogen.","\n","This produces Power and Amount of Water equal to the amount of Oxygen plus 10 units."
     ],hints:["Use right colours of Water,Hydrogen and Oxygen","80l/min H2 40l/min O2 and 32g/min H20"],links:[]},
     5: { name: "puzzle_6", category: "game", description:[" This seems to be some sort of device that fell out of the spaceship. ","\n" ,"This seems to be some sort of control system device that fell out of the spaceship suit. Maybe I can learn it for starting my Emergency rover." ]
@@ -167,22 +167,25 @@ function GamePage3() {
 
 		</p>
         </div>
-        {/* <div style={{alignItems:"center",width:"100%",opacity:1.0}}>
-          <Button primary >Hint 1</Button>
-          <Button secondary>Hint 2</Button>
-          </div> */}
+        
           <br/>
           <br/>
           <br/>
           <br/>
 
-          <Hints hidden={hidden1} puzname={state[level].name} hintname="Hint 1" hintdesc={state[level].hints[0]}/>
-          <Hints hidden={hidden2} puzname={state[level].name} hintname="Hint 2" hintdesc={state[level].hints[1]}/>
-          {state[level].links.length>=1?
+          <Hints hidden={hidden1} puzname={state[level].name} hintname="Hint 1" hintdesc={state[level].hints[0]=="<L_R_1>"?
+           <Link to={state[level].links[0]} target="_blank" onClick={(event) => {event.preventDefault(); window.open(state[level].links[0]);}} >click here</Link>
+           :state[level].hints[0]}/>
+
+          <Hints hidden={hidden2} puzname={state[level].name} hintname="Hint 2" hintdesc={state[level].hints[1]=="<L_R_2>"?
+           <Link to={state[level].links[1]} target="_blank" onClick={(event) => {event.preventDefault(); window.open(state[level].links[1]);}} >click here</Link>
+           :state[level].hints[1]}/>
+
+          {state[level].links.length>=1&&state[level].hints[0]!="<L_R_1>"?
           <Link to={state[level].links[0]} target="_blank" onClick={(event) => {event.preventDefault(); window.open(state[level].links[0]);}} ><button style={{width:"100px",height:"50px",backgroundColor:"indigo"}}>click here for details</button></Link>
           :null}
 
-          {state[level].links.length==2?
+          {state[level].links.length==2&&state[level].hints[1]!="<L_R_2>"?
           <Link to={state[level].links[1]} target="_blank" onClick={(event) => {event.preventDefault(); window.open(state[level].links[1]);}} ><button style={{width:"100px",height:"50px",backgroundColor:"indigo"}}>click here for details</button></Link>
           :null}
           <div style={{height:"8vh"}}>

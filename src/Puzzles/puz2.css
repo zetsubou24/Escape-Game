@@ -3,13 +3,14 @@
     /* display: flex; */
     /* background-size: cover; */
     display: grid;
-    grid-template-columns: 40vw 30vw;
+    grid-template-columns: 60vw 30vw;
     grid-template-rows: 60vh;
 
 }
 .Container_puz2_item1
 {
     height: auto;
+    
 }
 .Container_puz2_item2
 {

@@ -19,7 +19,7 @@ function Puz3(props)
 	}
 	function evalVal()
 	{
-		if(value==="102450"||value==="10:24:50")
+		if(value==="10:24:50")
 		{
 			// setLevel((level + 1) % 3)
 			alert("correct!")
@@ -57,7 +57,7 @@ function Puz3(props)
     return(
         <div style={puz3}>
 		
-		{visible1?<div id="puz3-box-visible"><input type="text" name="puz3sol" id="puz3sol" class="puz3solution" placeholder="Solution" onChange={(ev)=>setValue(ev.target.value)} value={value}/>
+		{visible1?<div id="puz3-box-visible"><input type="text" name="puz3sol" id="puz3sol" class="puz3solution" placeholder="" onChange={(ev)=>setValue(ev.target.value)} value={value}/>
 		<button id="puz3but" class="ui red button" style={{height:"40px",display:"flex",alignSelf: "flex-end"}} onClick={evalVal}>Submit</button>
 		</div>:null}
 

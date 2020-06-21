@@ -47,7 +47,7 @@ class App2 extends Component {
         <Route path="/FeedBack" exact component={FeedBack} />
         <Route path="/Puz6Desc" exact component={Puz6Desc} />
         <Route path="/Puz4Desc" exact component={Puz4Desc} />
-        <Route path="/Puz4Desc2" exact component={Puz4Desc} />
+        <Route path="/Puz4Desc2" exact component={Puz4Desc2} />
 
 
 

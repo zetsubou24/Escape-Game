@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./puz5.css"
+import { Dropdown } from "semantic-ui-react"
 
 export default function Puz5(props) {
 	let level = props.handles.level
@@ -11,25 +12,47 @@ export default function Puz5(props) {
 	var onDragOver = props.handles.onDragOver
 	var onDragStart = props.handles.onDragStart
 	var onDrop = props.handles.onDrop
-	const [height, setHeight] = useState({})
+	// const [dp1,setDp1]=useState("./waves3_edit.png")
+	// const [dp2,setDp2]=useState("./waves2_edit.png")
+	// const [dp3,setDp3]=useState("./waves1_edit.png")
+	const [height, setHeight] = useState({
+		// backgroundImage:`url("./waves3_edit.png")`,
+	
+	})
 	const [height2, setHeight2] = useState({})
 	const [height3, setHeight3] = useState({})
+	
+
+
 	const [check, setCheck] = useState(height3.height)
+	// useEffect(()=>{
+	// 	setHeight({ ...height,backgroundImage: `url(${dp1})`})
+	// },[dp1])
+	// useEffect(()=>{
+
+	// 	setHeight({ ...height2,backgroundImage: dp2})
+
+	// },[dp2])
+	// useEffect(()=>{
+
+	// 	setHeight({ ...height3,backgroundImage: dp3})
+		
+	// },[dp3])
 	function handleClick() {
 		let heighto = document.getElementById('water').clientHeight;
 		console.log("height1 " + heighto)
-		setHeight({ height: heighto })
+		setHeight({ ...height,height: heighto})
 	}
 	function handleClick2() {
 		let heightoo = document.getElementById('water2').clientHeight;
 		console.log("height2 " + heightoo)
-		setHeight2({ height: heightoo })
+		setHeight2({ ...height2,height: heightoo })
 
 	}
 	function handleClick3() {
 		let heightooo = document.getElementById('water3').clientHeight;
 		console.log("height3 " + heightooo)
-		setHeight3({ height: heightooo })
+		setHeight3({...height3 ,height: heightooo })
 
 	}
 	function reset1() {
@@ -101,6 +124,19 @@ export default function Puz5(props) {
 							<div id="water" style={height} onClick={handleClick}><p style={{ color: "white" }}>H<sub>2</sub></p></div>
 						</div>
 						<button onClick={reset1} style={{ color: "white" }}>reset</button>
+						{/* <div class="ui compact menu">
+							<div class="ui simple dropdown item"  >
+								Dropdown
+								<i class="dropdown icon"></i>
+								<div class="menu">
+								<div class="item" onClick={(ev)=>setDp1("./waves2_edit.png")}>color 3</div>
+								<div class="item" onClick={(ev)=>setDp1("./waves1.png")}>color 2</div>
+								<div class="item" onClick={(ev)=>setDp1("./waves3_edit.png")}>color 1</div>
+								</div>
+							</div>
+						</div> */}
+						
+
 					</div>
 				</td>
 				<td>
@@ -112,6 +148,7 @@ export default function Puz5(props) {
 							<div id="water2" style={height2} onClick={handleClick2}><p style={{ color: "red" }}>O<sub>2</sub></p></div>
 						</div>
 						<button onClick={reset2} style={{ color: "red" }}>reset</button>
+						
 
 					</div>
 				</td>
@@ -130,7 +167,7 @@ export default function Puz5(props) {
 					<div style={{ width: "180px" }}><h1 style={{ color: "green" }}>+</h1></div>
 				</td>
 				<td>
-					{((height3.height > 155) && (height3.height < 190) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) && setTimeout(()=>{handleSuccess()},2000)?
+					{((height3.height > 220) && (height3.height < 260) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) && setTimeout(()=>{handleSuccess()},2000)?
 						<img src="images/battery.png" alt="battery success"/>
 						: null}
 				</td>

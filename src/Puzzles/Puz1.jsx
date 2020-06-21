@@ -25,7 +25,8 @@ export default function Puz1(props)
     }
     return (
         <div>
-            <Hints hidden={hidden1} puzname="Puzzle 1" hintname="Hint 1" hintdesc="Multiply the gravitational force of Mars with 4000"/>
+            <Hints hidden={hidden1} puzname="Puzzle 1" hintname="Hint 1" hintdesc="Multiply the gravitational force of MARS
+            1with 4000"/>
             <Hints hidden={hidden2} puzname="Puzzle 1" hintname="Hint 2" hintdesc="1512"/>
         <div useMap="#p1intro">
             <img src="images/yolo.png" alt="stuck_on_mars" style={{width:"100%", height: "75vh"}} useMap="#p1intro" / >
