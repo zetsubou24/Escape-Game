@@ -3,8 +3,10 @@ import "./Ending.css"
 import { Link } from 'react-router-dom';
 import Sound from 'react-sound'
 
-export default function Ending()
+export default function Ending(props)
 {
+
+    props.handles.setMusic("/music/ending.mp3")
     const [visible1,setVisible1]=useState(false)
     setTimeout(() => setVisible1(), 5000);
     return(

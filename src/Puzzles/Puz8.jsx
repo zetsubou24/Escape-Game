@@ -22,7 +22,7 @@ export default function Puz8() {
   }
   return (
     <div className="puz8-root">
-      <p class="puz8-top-left">
+      <p className="puz8-top-left" style={{fontFamily:"Orbitron"}}>
         You've almost made it astronaut! Just one last puzzle so that you can
         reach to the Home Base. <br />
         In the most difficult times, it's always a good thing to go back a few

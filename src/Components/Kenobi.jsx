@@ -9,7 +9,7 @@ const Kenobi = () => {
 
     console.log("from kenobi",loginExchange.getCredentials())
 
-    const toDis="Hello Astronauts. Can you hear me?Ah. I can hear you and seems like you're doing fine. Due to alien interception a technicalerror occurred and you've crash landed on MARS. You have everything at your disposal in‘planetary approach suit’. By Demystifying, devise your travel & find your way back to thehuman safe ‘Home Base Pod’. Be cognizant about Oxygen supplyand alien attacks. Yoursurvival is paramount to next human generations. Good luck Astronauts !!"
+    const toDis="Hello, Astronauts. We haven’t received any of your messages. Hope you’re doing fine. Due to an alien interception, you’ve crash landed on MARS. There’s a technical error in the controlling system, allowing communication to happen only one way. Decode the alien locked essentials and devise your EMERGENCY ROVER to find your way back to the HOME BASE POD.Be cognizant about limited oxygen availability and alien attacks. Your survival is of paramount importance for posterity. Good luck, Astronauts!!"
     
     return (
     <div class="container" style={{height:"100vh"}}>

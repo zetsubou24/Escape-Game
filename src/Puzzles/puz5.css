@@ -23,7 +23,7 @@ position: relative;
 #water {
   /* flex-flow: column-reverse; */
   
-background-image: url("./waves3_edit.png");
+/* background-image: url("./waves3_edit.png"); */
 background-position: top right;
 position: absolute;
 bottom: 0px;
@@ -67,7 +67,7 @@ transition: all 5s ease-out;
 
   }
   #water2 {
-  background-image: url("./waves2_edit.png");
+  /* background-image: url("./waves2_edit.png"); */
   background-position: top right;
   position: absolute;
   bottom: 0px;
@@ -107,7 +107,7 @@ transition: all 5s ease-out;
   
     }
     #water3 {
-    background-image: url("./waves1.png");
+    /* background-image: url("./waves1.png"); */
     background-position: top right;
     position: absolute;
     bottom: 0px;

@@ -48,13 +48,7 @@ const Welcome = () =>
 		</form>
 	</div>
 	{/* <Soundo /> */}
-	{/* <Sound
-      url="/music/music.mp3"
-      playStatus={Sound.status.PLAYING}
-    //   playFromPosition={300}
-      loop={true}
-      
-    /> */}
+	
 	
         </div>
     )
