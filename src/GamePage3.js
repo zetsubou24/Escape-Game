@@ -155,7 +155,7 @@ function GamePage3() {
         <ChatExpansion />
         <Scratchpad />
       </div> */}
-      <button onClick={() => handleClick()}>Change Level </button>
+      {/* <button onClick={() => handleClick()}>Change Level </button> */}
       {/* <p className="Game-Level-Description">
        {curDesc}
       </p> */}
