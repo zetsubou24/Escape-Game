@@ -3,6 +3,8 @@ import "../Kenobi.css"
 import "../style.css"
 import { Link } from 'react-router-dom';
 import {loginExchange,quoteExchange} from "../Globals.js"
+import Sound from 'react-sound'
+import Soundo from "./Soundo"
 const Kenobi = () => {
 
     console.log("from kenobi",loginExchange.getCredentials())
@@ -29,6 +31,15 @@ const Kenobi = () => {
   <div class="centered">
     {/* <img src="images/commander.png" /> */}
   </div>
+  {/* <Sound
+      url="/music/music.mp3"
+      playStatus={Sound.status.PLAYING}
+      // playFromPosition={300}
+    //   loop={true}
+      
+    /> */}
+	{/* <Soundo /> */}
+
 </div>
 )
 

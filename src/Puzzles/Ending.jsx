@@ -1,6 +1,7 @@
 import React ,{useState} from "react"
 import "./Ending.css"
 import { Link } from 'react-router-dom';
+import Sound from 'react-sound'
 
 export default function Ending()
 {
@@ -34,7 +35,14 @@ export default function Ending()
         <h4 style={{width:"150px",height:"40px",position:"absolute",top:"0px",left:"0px",backgroundColor:"red"}}>continue</h4>
     </Link>
     
-}
+}   
+<Sound
+      url="/music/ending.mp3"
+      playStatus={Sound.status.PLAYING}
+      // playFromPosition={300}
+    //   loop={true}
+      
+    />
         </div>
     )
 }

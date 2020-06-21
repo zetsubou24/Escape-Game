@@ -18,6 +18,7 @@
     "react-pattern-lock": "^2.0.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-sound": "^1.2.0",
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {

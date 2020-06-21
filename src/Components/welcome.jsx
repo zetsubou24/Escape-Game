@@ -4,11 +4,13 @@ import "../style.css"
 import { Link } from 'react-router-dom';
 import {loginExchange} from "../Globals.js"
 import { Button, Input, Popup } from "semantic-ui-react" 
-
+import Sound from 'react-sound'
+import Soundo from "./Soundo"
 const Welcome = () =>
 {
 	loginExchange.setUserName("taran")
 	loginExchange.setPassWord("taranu")
+	
 	function storeLogin(ev)
 	{
 		loginExchange.setUserName(document.getElementById("username").value)
@@ -45,6 +47,15 @@ const Welcome = () =>
         	</p>
 		</form>
 	</div>
+	{/* <Soundo /> */}
+	{/* <Sound
+      url="/music/music.mp3"
+      playStatus={Sound.status.PLAYING}
+    //   playFromPosition={300}
+      loop={true}
+      
+    /> */}
+	
         </div>
     )
 }

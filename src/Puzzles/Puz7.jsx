@@ -62,10 +62,14 @@ export default function Puz7(props)
       pcb:f.pcb.length>0?f.pcb[f.pcb.length-1]:null
       })
       
-      if(props.handles.inventory.length==0)
-      setFinalPuz(true)
+      // if(inventory.length==0){
+      //   setFinalPuz(true)
+      //   // console.log(inventory)
+
+      // }
 
     },[materials])
+    // useEffect(()=>{if(inventory.length==0&&items.battery!=null)},[items])
     const onDragStart = (ev, id) => {
         ev.dataTransfer.setData("id", id);
       }
@@ -101,6 +105,11 @@ export default function Puz7(props)
 function mouseCoord(event)
     {
         // alert(event.clientX+" "+event.clientY)
+    }
+    function handleSuccess()
+    {
+      props.handles.setpuz7rover('images/roversuccess.jpg')
+      return true;
     }
     return(
               <div className="App" >
@@ -147,7 +156,8 @@ function mouseCoord(event)
                 </div>
                 
                 {
-                  inventory.length==0?
+        
+        items.battery!=null&&items.compass!=null&&items.map!=null&&items.pcb!=null&&handleSuccess()?
                   
                 <Link to="/FinalPuzzle">
                 <button style={{color:"red"}}>Click here to continue</button>
