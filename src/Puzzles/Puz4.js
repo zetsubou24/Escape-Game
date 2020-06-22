@@ -61,15 +61,19 @@ let onChange = path => {
 let onFinish = () => {
   setPatternState({ ...patternState,isLoading: true });
   // an imaginary api call
-  setTimeout(() => {
+ 
     if(patternState){
     if (patternState.path.join("-") === "20-15-16-17-12-13-14-9-8-7-6-1") {
+      setTimeout(() => {
       alert("The path is correct and you now have path to the destination on your map!")
       setLevel((level+1)%6)
+    }, 2000);
       setHidden1(true)
       setHidden2(true)
+      
       setPatternState({ ...patternState, isLoading: false, success: true, disabled: true });
     } else {
+      alert("wrong !")
       setPatternState({...patternState, disabled: true, error: true });
       let errorTimeout = window.setTimeout(() => {
           setPatternState({
@@ -82,7 +86,7 @@ let onFinish = () => {
       }, 2000);
     }
   }
-  }, 1000);
+  
 };
 let onReset = () => {
   setPatternState({

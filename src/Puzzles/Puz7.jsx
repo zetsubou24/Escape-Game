@@ -129,7 +129,7 @@ function mouseCoord(event)
     //   }, 500);
     // }, false);
     return(
-              <div className="App" >
+              <div className="App"  style={{display:"flex",alignContent:"flex-end"}}>
                
                 <div id="rover" 
                 style={{width: "900px", height: "700px"}} 
@@ -175,10 +175,8 @@ function mouseCoord(event)
                 {
         
         items.battery!=null&&items.compass!=null&&items.map!=null&&items.pcb!=null&&handleSuccess()?
-                  
                 <Link to="/FinalPuzzle">
-                
-                <button class="ui green button">Click to continue</button>
+                <button class="ui green button" >Click to continue</button>
                 </Link> 
                 :null
                 }

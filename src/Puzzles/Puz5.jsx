@@ -73,7 +73,7 @@ export default function Puz5(props) {
 	// },[check])
 	function handleSuccess() {
 		
-		alert("Correct,Battery will be auto added to your inventory")
+		alert("Correct.")
 		setLevel((level + 1) % 6)
 		setHidden1(true)
       setHidden2(true)

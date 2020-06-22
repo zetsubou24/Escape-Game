@@ -114,6 +114,8 @@ const Puz2 = (props) =>{
             setLevel((level+1)%6)
             setHidden1(true)
             setHidden2(true)
+        }else{
+          alert('Wrong ! ')
         }
     }
     const onDragStart = (ev, id,parent) => {

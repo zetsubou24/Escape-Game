@@ -11,7 +11,7 @@ export default function Hints(props)
                     <img src = "images/cover.jpg" alt="hint book cover face" />
                 </div>
                 <div class="details">
-                    <h2>{props.puzname}</h2>
+                    {/* <h2>{props.puzname}</h2> */}
                     <h2>{props.hintname}</h2>
                     <p>
                         {props.hintdesc}
