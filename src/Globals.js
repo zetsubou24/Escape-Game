@@ -69,11 +69,13 @@ class QuoteExchange
   {
       let index=(Math.ceil(Math.random()*10))%10
       this.curIndex=index
+      localStorage.setItem("curQuote",this.quotes[this.curIndex])
       return this.quotes[index]
   }
   getCurQuote()
   {
-      return this.quotes[this.curIndex]
+    //   return this.quotes[this.curIndex]
+    return localStorage.getItem("curQuote")
   }
   getQuoteByIndex(a)
   {

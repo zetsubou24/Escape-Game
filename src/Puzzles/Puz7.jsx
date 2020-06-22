@@ -9,6 +9,8 @@ export default function Puz7(props)
     let setHidden1 = props.handles.setHidden1
     let setHidden2 = props.handles.setHidden2
     let cnt=0;
+    // localStorage.setItem('myCat', 'Tom');
+    // console.log(localStorage.getItem('myCat'))
     const [panel,setPanel]=useState(false)
     const [items,setItems]=useState({
       battery:null,
@@ -76,6 +78,11 @@ export default function Puz7(props)
       var onDragOver = (ev) => {
 
         ev.preventDefault();
+        let currento=ev.target
+        currento.className="onDragHover"
+        setTimeout(()=>currento.className="onNotDragHover",1000)
+        
+        
 
       }
       var onDrop = (ev, cat) => {
@@ -111,6 +118,16 @@ function mouseCoord(event)
       props.handles.setpuz7rover('images/roversuccess.jpg')
       return true;
     }
+
+    // document.getElementById('map').addEventListener("mouseover", function( event ) {   
+    //   // highlight the mouseover target
+    //   event.target.style.color = "green";
+    
+    //   // reset the color after a short delay
+    //   setTimeout(function() {
+    //     event.target.style.color = "";
+    //   }, 500);
+    // }, false);
     return(
               <div className="App" >
                
@@ -160,7 +177,8 @@ function mouseCoord(event)
         items.battery!=null&&items.compass!=null&&items.map!=null&&items.pcb!=null&&handleSuccess()?
                   
                 <Link to="/FinalPuzzle">
-                <button style={{color:"red"}}>Click here to continue</button>
+                
+                <button class="ui green button">Click to continue</button>
                 </Link> 
                 :null
                 }

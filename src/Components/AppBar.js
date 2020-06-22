@@ -25,7 +25,7 @@ function Appbar() {
         //     </Toolbar>
         // </AppBar>
         <Segment inverted>
-             <Header inverted>An Astronauts fate</Header>
+             <Header inverted>An Astronaut's fate</Header>
         </Segment>
 
             

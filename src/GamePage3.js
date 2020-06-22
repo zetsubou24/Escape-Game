@@ -32,7 +32,7 @@ function GamePage3(props) {
   ,hints:["Puzzle out the pictures in order to find the code. There are two faces for a coin","11-JAN-2030"] ,links:[]},
     2: { name: "puzzle_3", category: "game", description:[""]//People always fascinated with time and stars. Unlike earth, you live 37 minutes longer on MARS. So, don’t waste time, those 37 minutes are prime, because the clock that you see ticks the earth’s time.
     ,hints:["I'll try hovering around things maybe something will pop up. Gold seems to be favourite colour of the astronaut. ","102450"],links:[]},
-    3: { name: "puzzle_4", category: "game", description:["\"If you do not change direction, you may end up where you are heading\" Lao Tzu","\n","Move a mile straight, then two miles right. Repeat this again and go a mile straight. Four miles to left, then a mile straight once more. That’s how you reach what you are looking for."
+    3: { name: "puzzle_4", category: "game", description:["\"If you do not change direction, you may end up where you are heading\" Lao Tzu","\n","Move a mile straight, then two miles right. Repeat this again and go a mile straight. Three miles to left, then a mile straight once more. That’s how you reach what you are looking for."
     ] ,hints:["<L_R_1>","<L_R_2>"],links:["/Puz4Desc","/Puz4Desc2"]},
     4: { name: "puzzle_5", category: "game", description:["IF YOU COMBINE 80 UNITS OF HYDROGEN AND THEN OXYGEN UNITS  EQUAL TO HALF THE AMOUNT OF HYDROGEN","\n","THIS REACTION PRODUCES POWER AND THEN WATER UNITS EQUAL TO THE AMOUNT OF OXYGEN PLUS 20 UNITS"
     ],hints:["Use right colours of Water,Hydrogen and Oxygen","80 litres/min H2 40 litres/min O2 and about 60 grams/min H20"],links:[]},

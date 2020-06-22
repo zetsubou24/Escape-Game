@@ -6,7 +6,9 @@ import Sound from 'react-sound'
 export default function Ending(props)
 {
 
+
     props.handles.setMusic("/music/ending.mp3")
+    props.handles.setLoop(false)
     const [visible1,setVisible1]=useState(false)
     setTimeout(() => setVisible1(), 5000);
     return(
@@ -38,13 +40,13 @@ export default function Ending(props)
     </Link>
     
 }   
-<Sound
+{/* <Sound
       url="/music/ending.mp3"
       playStatus={Sound.status.PLAYING}
       // playFromPosition={300}
     //   loop={true}
       
-    />
+    /> */}
         </div>
     )
 }

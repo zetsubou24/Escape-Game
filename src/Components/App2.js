@@ -22,6 +22,7 @@ import Test from "./Test"
 
 function App2() {
   const [music,setMusic]=useState("/music/music.mp3")
+  const [loop,setLoop]=useState(true)
   useEffect(()=>{},[])
   return (
     <Router history={history}>
@@ -29,7 +30,7 @@ function App2() {
       url={music}
       playStatus={Sound.status.PLAYING}
     //   playFromPosition={300}
-      loop={true}
+      loop={loop}
     />
       <Switch>
          {/* <Route path="/Test" render={(props) => <Test handles={{music:music,setMusic:setMusic}} />} /> */}
@@ -42,7 +43,7 @@ function App2() {
         <Route path="/GamePage2" render={(props) => <GamePage2 handles={{music:music,setMusic:setMusic}} />} />
         <Route path="/GamePage3" render={(props) => <GamePage3 handles={{music:music,setMusic:setMusic}} />} />
         <Route path="/FinalPuzzle" render={(props) => <Puz8 handles={{music:music,setMusic:setMusic}} />} />
-        <Route path="/Ending" render={(props) => <Ending handles={{music:music,setMusic:setMusic}} />} />
+        <Route path="/Ending" render={(props) => <Ending handles={{music:music,setMusic:setMusic,loop:loop,setLoop:setLoop}} />} />
         <Route path="/FeedBack" render={(props) => <FeedBack handles={{music:music,setMusic:setMusic}} />} />
         <Route path="/Puz6Desc" render={(props) => <Puz6Desc handles={{music:music,setMusic:setMusic}} />} />
         <Route path="/Puz4Desc" render={(props) => <Puz4Desc handles={{music:music,setMusic:setMusic}} />} />
