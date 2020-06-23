@@ -21,8 +21,8 @@ export default function Puz8() {
     }
   }
   return (
-    <div className="puz8-root">
-      <p className="puz8-top-left" style={{fontFamily:"Orbitron"}}>
+    <div className="puz8-root" style={{backgroundImage:`url(images/nicemars2.png)`}}>
+      <p className="puz8-top-left" style={{fontFamily:"Orbitron",marginTop:"40px"}}>
         You've almost made it astronaut! Just one last step so that you can
         reach to the Home Base. <br />
         In the most difficult times, it's always a good thing to go back a few

@@ -126,9 +126,9 @@ export default function Puz5(props) {
 								Fill With
 								<i class="dropdown icon"></i>
 								<div class="menu">
-								<div class="item" onClick={(ev)=>setDp1("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px"}}></div>Red</div>
-								<div class="item" onClick={(ev)=>setDp1("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px"}}></div>Blue</div>
-								<div class="item" onClick={(ev)=>setDp1("images/waves3_edit.png")}><div style={{backgroundColor:"#F5F5F5",width:"15px",height:"15px"}}></div>White</div>
+								<div class="item" onClick={(ev)=>setDp1("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"2px solid black"}}></div>Red</div>
+								<div class="item" onClick={(ev)=>setDp1("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"2px solid black"}}></div>Blue</div>
+								<div class="item" onClick={(ev)=>setDp1("images/waves3_edit.png")}><div style={{backgroundColor:"#F5F5F5",width:"15px",height:"15px",border:"2px solid black"}}></div>White</div>
 								</div>
 							</div>
 						</div>
@@ -150,9 +150,9 @@ export default function Puz5(props) {
 								Fill With
 								<i class="dropdown icon"></i>
 								<div class="menu">
-								<div class="item" onClick={(ev)=>setDp2("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px"}}></div>Red</div>
-								<div class="item" onClick={(ev)=>setDp2("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px"}}></div>Blue</div>
-								<div class="item" onClick={(ev)=>setDp2("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px"}}></div>White</div>
+								<div class="item" onClick={(ev)=>setDp2("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
+								<div class="item" onClick={(ev)=>setDp2("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
+								<div class="item" onClick={(ev)=>setDp2("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
 								</div>
 							</div>
 						</div>
@@ -173,9 +173,9 @@ export default function Puz5(props) {
 								Fill With
 								<i class="dropdown icon"></i>
 								<div class="menu">
-								<div class="item" onClick={(ev)=>setDp3("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px"}}></div>Red</div>
-								<div class="item" onClick={(ev)=>setDp3("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px"}}></div>Blue</div>
-								<div class="item" onClick={(ev)=>setDp3("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px"}}></div>White</div>
+								<div class="item" onClick={(ev)=>setDp3("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
+								<div class="item" onClick={(ev)=>setDp3("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
+								<div class="item" onClick={(ev)=>setDp3("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
 								</div>
 							</div>
 						</div>

@@ -20,7 +20,7 @@ function GamePage3(props) {
   props.handles.setMusic("/music/alltime.mp3")
   var players_available=7
   var max_players=10
-  const [level, setLevel] = useState(1)
+  const [level, setLevel] = useState(4)
   const [temp,setTemp]=useState([])
   const [success,setSuccess]=useState(-1)
   const [hidden1, setHidden1] = useState(true)
@@ -34,7 +34,7 @@ function GamePage3(props) {
     ,hints:["I'll try hovering around things maybe something will pop up. Gold seems to be favourite colour of the astronaut. ","102450"],links:[]},
     3: { name: "puzzle_4", category: "game", description:["\"If you do not change direction, you may end up where you are heading\" Lao Tzu","\n","Move a mile straight, then two miles right. Repeat this again and go a mile straight. Three miles to left, then a mile straight once more. That’s how you reach what you are looking for."
     ] ,hints:["<L_R_1>","<L_R_2>"],links:["/Puz4Desc","/Puz4Desc2"]},
-    4: { name: "puzzle_5", category: "game", description:["IF YOU COMBINE 80 UNITS OF HYDROGEN AND THEN OXYGEN UNITS  EQUAL TO HALF THE AMOUNT OF HYDROGEN","\n","THIS REACTION PRODUCES POWER AND THEN WATER UNITS EQUAL TO THE AMOUNT OF OXYGEN PLUS 20 UNITS"
+    4: { name: "puzzle_5", category: "game", description:[<span> IF YOU COMBINE 80 UNITS OF <p style={{color:"white",display:"inline"}}>HYDROGEN </p>AND  THEN <p style={{color:"red",display:"inline"}}>OXYGEN </p> UNITS  EQUAL TO HALF THE AMOUNT OF HYDROGEN . <br/> THIS REACTION PRODUCES POWER AND THEN <p style={{color:"blue",display:"inline"}}>WATER </p>  UNITS EQUAL TO THE AMOUNT OF OXYGEN PLUS 20 UNITS</span>
     ],hints:["Use right colours of Water,Hydrogen and Oxygen","80 litres/min H2 40 litres/min O2 and about 60 grams/min H20"],links:[]},
     5: { name: "puzzle_6", category: "game", description:[" This seems to be some sort of device that fell out of the spaceship. ","\n" ,"This seems to be some sort of control system device that fell out of the spaceship suit. Maybe I can learn it for starting my Emergency rover." ]
     ,hints:["Switch on/off the correct switches to start the control system "," Switch 1: On; Switch 2: On; Switch 3: On; Switch 4: Off; Switch 5: On "],links:["/Puz6Desc"]},
@@ -112,6 +112,7 @@ function GamePage3(props) {
     state[level].description.forEach(element => {
       if(element=="\n")
         temp.push(<br/>)
+      
       else
       temp.push(element)
 
@@ -156,7 +157,7 @@ function GamePage3(props) {
         <ChatExpansion />
         <Scratchpad />
       </div> */}
-      {/* <button onClick={() => handleClick()}>Change Level </button> */}
+      <button onClick={() => handleClick()}>Change Level </button>
       {/* <p className="Game-Level-Description">
        {curDesc}
       </p> */}
