@@ -26,12 +26,12 @@ function App2() {
   useEffect(()=>{},[])
   return (
     <Router history={history}>
-      {/* <Sound
+      <Sound
       url={music}
       playStatus={Sound.status.PLAYING}
     //   playFromPosition={300}
       loop={loop}
-    /> */}
+    />
       <Switch>
          {/* <Route path="/Test" render={(props) => <Test handles={{music:music,setMusic:setMusic}} />} /> */}
         <Route path="/" exact render={(props) => <Welcome handles={{music:music,setMusic:setMusic}} />} />

@@ -5,7 +5,6 @@ import { Input, Button } from "semantic-ui-react"
 
 const Puz2 = (props) =>{
     let ids=[]
-
     let level=props.handles.level
     let setLevel=props.handles.setLevel
     let success=props.handles.success

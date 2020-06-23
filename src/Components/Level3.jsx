@@ -22,7 +22,7 @@ const Level3 = (props) => {
   let setHidden1 = props.handles.setHidden1
   let setHidden2 = props.handles.setHidden2
   let bg;
-  let music;
+  let musictemp;
   let currentLevel;
   let height,width;
   const [puz7rover,setpuz7rover]=useState('/images/vehicle4.jpg')
@@ -31,7 +31,7 @@ const Level3 = (props) => {
   bg=`url("images/mars1.jpg")`
   height="100%"
   width="100%"
-  music="music/music.mp3"
+  musictemp="music/angel.mpeg"
 
   currentLevel=<Puz2 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
@@ -39,7 +39,9 @@ const Level3 = (props) => {
   bg=`url('/images/17_27_36.png')`
   height="100%"
   width="100%"
-  music="music/alltime.mp3"
+  musictemp="music/angel.mpeg"
+  
+
 
   currentLevel=<Puz3 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
@@ -47,7 +49,7 @@ const Level3 = (props) => {
   bg=`url('/images/marssurface2.jpg')`
   height="100%"
   width="100%"
-  music="music/music.mp3"
+  musictemp="music/angel.mpeg"
 
   currentLevel=<Puz4 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
@@ -55,7 +57,7 @@ const Level3 = (props) => {
   bg=`url("images/mars1.jpg")`
   height="100%"
   width="100%"
-  music="music/music.mp3"
+  musictemp="music/angel.mpeg"
 
   currentLevel=<Puz5 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
@@ -63,7 +65,7 @@ const Level3 = (props) => {
   bg=`url('images/circuit3.png')`
   height="764px"
   width="100%"
-  music="music/music.mp3"
+  musictemp="music/angel.mpeg"
   // bg = null
   // height = "100%"
   // width = "100%"
@@ -74,11 +76,13 @@ const Level3 = (props) => {
   bg=`url(${puz7rover})`
   height="764px"
   width="100%"
-  music="music/music.mp3"
+  
+  musictemp="music/angel.mpeg"
 
   currentLevel=<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,puz7rover:puz7rover,setpuz7rover:setpuz7rover,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
-  
+  if(musictemp!=props.handles.music)
+  props.handles.setMusic(musictemp)
   function handleSongLoading()
   {
 
@@ -93,6 +97,7 @@ const Level3 = (props) => {
   }
   if(level>6)
   Sound.status.PLAYING=false
+  // if(musictemp!=props.handles.music)
 return (
     <div className="item1"  >
         <div className="sub-grid-container" style={{backgroundImage:bg,opacity:1,height:height,width:width}}  >
@@ -111,15 +116,7 @@ return (
               </div>
         </div>
         <div>
-        {/* <Sound
-      url={music}
-      playStatus={Sound.status.PLAYING}
-      // playFromPosition={300}
-      loop={true}
-      onLoading={handleSongLoading}
-      onPlaying={handleSongPlaying}
-      onFinishedPlaying={handleSongFinishedPlaying}
-    /> */}
+       
       </div>
     </div>
 )

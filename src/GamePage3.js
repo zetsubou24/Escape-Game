@@ -17,10 +17,10 @@ import { Button, Input } from "semantic-ui-react"
 
 
 function GamePage3(props) {
-  props.handles.setMusic("/music/alltime.mp3")
+  // props.handles.setMusic("/music/alltime.mp3")
   var players_available=7
   var max_players=10
-  const [level, setLevel] = useState(4)
+  const [level, setLevel] = useState(1)
   const [temp,setTemp]=useState([])
   const [success,setSuccess]=useState(-1)
   const [hidden1, setHidden1] = useState(true)
@@ -147,7 +147,9 @@ function GamePage3(props) {
             success:success,
             setSuccess:setSuccess,
             setHidden1 : setHidden1,
-            setHidden2 : setHidden2
+            setHidden2 : setHidden2,
+            music:props.handles.music,
+            setMusic:props.handles.setMusic
           }}
           />
         
@@ -157,7 +159,7 @@ function GamePage3(props) {
         <ChatExpansion />
         <Scratchpad />
       </div> */}
-      <button onClick={() => handleClick()}>Change Level </button>
+      {/* <button onClick={() => handleClick()}>Change Level </button> */}
       {/* <p className="Game-Level-Description">
        {curDesc}
       </p> */}
