@@ -23,8 +23,16 @@ export default function Puz5(props) {
 		"images/waves2_edit.png":"red",
 		"images/waves1_edit.png":"blue"
 	}
+	// ontransitionrun
+	// let [runner,setRunner]=useState(0)
+	// useEffect(()=>{
+	// 	setInterval(()=>setRunner(runner+1),1)
+	// 	console.log(document.getElementById('water').clientHeight)
+	// },[runner])
+
 	useEffect(()=>{
 		setHeight({ ...height,backgroundImage: `url(${dp1})`})
+		console.log(document.getElementById('water').clientHeight)
 	},[dp1])
 	useEffect(()=>{
 		setHeight2({ ...height2,backgroundImage: `url(${dp2})`})
@@ -53,6 +61,7 @@ export default function Puz5(props) {
 		setDp1("")
 		setHeight({})
 	}
+	var x2=100;
 	function reset2() {
 		setDp2("")
 		setHeight2({})
@@ -118,7 +127,7 @@ export default function Puz5(props) {
 				<td>
 					<div id="container">
 						<div id="glass" >
-							<div id="water" style={height} onClick={handleClick}><p style={{ color: color[dp1] }}>H<sub>2</sub></p></div>
+							<div id="water" style={height} onClick={handleClick}><p style={{ color: color[dp1] }}>H<sub>2</sub></p>{height.height==undefined?"":height.height*100/400}</div>
 						</div>
 						<button onClick={reset1} style={{ color: color[dp1] }}>reset</button>
 						<div class="ui compact menu" style={{marginTop:"20px"}}>
@@ -140,9 +149,10 @@ export default function Puz5(props) {
 					<div style={{ width: "200px" }}><h1 style={{ color: "green" }}>+</h1></div>
 				</td>
 				<td>
+				{/* <div style={{width:"100%",height:"5px",backgroundColor:color[dp2]}}/>  */}
 					<div id="container">
 						<div id="glass2" >
-							<div id="water2" style={height2} onClick={handleClick2}><p style={{ color: color[dp2] }}>O<sub>2</sub></p></div>
+							<div id="water2" style={height2} onClick={handleClick2}><p style={{ color: color[dp2] }}>O<sub>2</sub></p>{height2.height==undefined?"":height2.height*100/400}</div>
 						</div>
 						<button onClick={reset2} style={{ color: color[dp2] }}>reset</button>
 						<div class="ui compact menu" style={{marginTop:"20px"}}>
@@ -165,7 +175,7 @@ export default function Puz5(props) {
 				<td>
 					<div id="container">
 						<div id="glass3" >
-							<div id="water3" style={height3} onClick={handleClick3}><p style={{ color: color[dp3] }}>H<sub>2</sub>0</p> <hr /></div>
+							<div id="water3" style={height3} onClick={handleClick3}><p style={{ color: color[dp3] }}>H<sub>2</sub>0</p> {height3.height==undefined?"":height3.height*100/400}</div>
 						</div>
 						<button onClick={reset3} style={{ color: color[dp3] }}>reset</button>
 						<div class="ui compact menu"  style={{marginTop:"20px"}}>
@@ -186,7 +196,7 @@ export default function Puz5(props) {
 				</td>
 				<td>
 					
-					{(color[dp1]==="white")&&(color[dp2]==="red")&&(color[dp3]==="blue")&&((height3.height > 220) && (height3.height < 260) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) && setTimeout(()=>{handleSuccess()},2000)?
+					{(color[dp1]==="red")&&(color[dp2]==="white")&&(color[dp3]==="blue")&&((height3.height > 200) && (height3.height < 260) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) && setTimeout(()=>{handleSuccess()},2000)?
 						<img src="images/battery.png" alt="battery success"/>
 						: null}
 				</td>
