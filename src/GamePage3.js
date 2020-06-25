@@ -36,7 +36,7 @@ function GamePage3(props) {
     ] ,hints:["<L_R_1>","<L_R_2>"],links:["/Puz4Desc","/Puz4Desc2"]},
     4: { name: "puzzle_5", category: "game", description:[<span> IF YOU COMBINE 80 UNITS OF <p style={{color:"white",display:"inline"}}>HYDROGEN </p>AND  THEN <p style={{color:"red",display:"inline"}}>OXYGEN </p> UNITS  EQUAL TO HALF THE AMOUNT OF HYDROGEN . <br/> THIS REACTION PRODUCES POWER AND THEN <p style={{color:"blue",display:"inline"}}>WATER </p>  UNITS EQUAL TO THE AMOUNT OF OXYGEN PLUS 20 UNITS</span>
     ],hints:["Use right colours of Water,Hydrogen and Oxygen","80 litres/min H2 40 litres/min O2 and about 60 grams/min H20"],links:[]},
-    5: { name: "puzzle_6", category: "game", description:[" This seems to be some sort of device that fell out of the spaceship. ","\n" ,"This seems to be some sort of control system device that fell out of the spaceship suit. Maybe I can learn it for starting my Emergency rover." ]
+    5: { name: "puzzle_6", category: "game", description:["This seems to be some sort of control system device that fell out of the spaceship suit. Maybe I can learn it for starting my Emergency rover." ]
     ,hints:["Switch on/off the correct switches to start the control system "," Switch 1: On; Switch 2: On; Switch 3: On; Switch 4: Off; Switch 5: On "],links:["/Puz6Desc"]},
     6: { name: "puzzle_7", category: "game", description:["Oh YES! That's the Emergency Rover! ","\n","But it seems to be in unpacked shape" ]
     ,hints:["Assemble the missing parts of the rover","Drag the parts from the inventory and assemble them to the rover at right location"],links:[]},

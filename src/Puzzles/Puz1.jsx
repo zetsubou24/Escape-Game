@@ -35,7 +35,7 @@ export default function Puz1(props)
 	<div style={{display : "flex",backgroundImage:`url('images/mars1.jpg')`,backgroundSize:"cover",height:"25vh"}}>
 		<div style={{display : "flex", flexWrap : "wrap"}}>
         <div style={{width:"100px"}}></div>
-        <p style={{color: "orange",width:"75%",opacity:1.0,fontSize:"large"}}>
+        <p style={{color: "orange",width:"75%",opacity:1.0,fontSize:"large",fontFamily:'Orbitron'}}>
         We must ascertain the value of gravity on the planet.<br />
 			"Aren’t you curious to know your weight and then go forth? Your weight is 4000 kilograms including your space suit.  Do this easy math and ace."
             &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; 
