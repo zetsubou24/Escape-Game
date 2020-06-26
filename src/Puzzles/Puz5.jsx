@@ -21,7 +21,10 @@ export default function Puz5(props) {
 	const color={
 		"images/waves3_edit.png":"white",
 		"images/waves2_edit.png":"red",
-		"images/waves1_edit.png":"blue"
+		"images/waves1_edit.png":"blue",
+		"images/waves4_edit.png":"yellow",
+		"images/waves7_edit.png":"brown"
+
 	}
 	// ontransitionrun
 	// let [runner,setRunner]=useState(0)
@@ -138,6 +141,10 @@ export default function Puz5(props) {
 								<div class="item" onClick={(ev)=>setDp1("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"2px solid black"}}></div>Red</div>
 								<div class="item" onClick={(ev)=>setDp1("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"2px solid black"}}></div>Blue</div>
 								<div class="item" onClick={(ev)=>setDp1("images/waves3_edit.png")}><div style={{backgroundColor:"#F5F5F5",width:"15px",height:"15px",border:"2px solid black"}}></div>White</div>
+								<div class="item" onClick={(ev)=>setDp1("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
+								<div class="item" onClick={(ev)=>setDp1("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
+
+
 								</div>
 							</div>
 						</div>
@@ -163,6 +170,9 @@ export default function Puz5(props) {
 								<div class="item" onClick={(ev)=>setDp2("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
 								<div class="item" onClick={(ev)=>setDp2("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
 								<div class="item" onClick={(ev)=>setDp2("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
+								<div class="item" onClick={(ev)=>setDp2("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
+								<div class="item" onClick={(ev)=>setDp2("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
+
 								</div>
 							</div>
 						</div>
@@ -186,6 +196,9 @@ export default function Puz5(props) {
 								<div class="item" onClick={(ev)=>setDp3("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
 								<div class="item" onClick={(ev)=>setDp3("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
 								<div class="item" onClick={(ev)=>setDp3("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
+								<div class="item" onClick={(ev)=>setDp3("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
+								<div class="item" onClick={(ev)=>setDp3("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
+
 								</div>
 							</div>
 						</div>

@@ -17,7 +17,7 @@ import Puz6Desc from "../Puzzles/Puz6-desc"
 import Puz4Desc from "../Puzzles/Puz4-desc"
 import Puz4Desc2 from "../Puzzles/Puz4-desc2"
 
-import Test from "./Test"
+
 
 
 function App2() {
@@ -27,7 +27,7 @@ function App2() {
   return (
     <Router history={history}>
       <Sound
-      url={music}
+      url={music}   
       playStatus={Sound.status.PLAYING}
     //   playFromPosition={300}
       loop={loop}
