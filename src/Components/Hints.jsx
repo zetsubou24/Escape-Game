@@ -5,12 +5,12 @@ export default function Hints(props)
 {
     return (
         // <div className="Hints-Container" style={{backgroundImage:`url('images/befmars.jpg')`,height:"100%",width:"100%"}}>
-        <div class="sub-container" style={{display : props.hidden ? "none" : "block"}}>
-            <div class="book">
-                <div class="cover">
+        <div className="sub-container" style={{display : props.hidden ? "none" : "block"}}>
+            <div className="book">
+                <div className="cover">
                     <img src = "images/cover.jpg" alt="hint book cover face" />
                 </div>
-                <div class="details">
+                <div className="details">
                     {/* <h2>{props.puzname}</h2> */}
                     <h2>{props.hintname}</h2>
                     <p>

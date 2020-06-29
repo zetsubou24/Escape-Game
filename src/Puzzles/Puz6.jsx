@@ -86,7 +86,7 @@ export default function Puz6(props)
     return (
         <div style={{height:"100%",width:"100%"}}>
         <div className="puz6-container"  onClick={mouseCoord}>
-      <div style={{backgroundImage:input1?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"5px"}}>   
+      <div style={{backgroundImage:input1?`url('/images/toggle-on.png')`:`url('/images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"5px"}}>   
     <button id="1" onClick={onPress} style={{height:"100px",width:"100px"}}></button><br />
     </div>   
     <div style={{backgroundImage:input2?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`,height:"100px",width:"100px",position:"relative",left:"20px",top:"15px"}}>   

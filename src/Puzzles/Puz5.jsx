@@ -103,18 +103,16 @@ export default function Puz5(props) {
 		></div>])
 	}
 	return (
-		<table>
+		<table className="puz5-table">
 			<tr>
-				<td>
-					
-				
+				<td style={{display:"flex",alignItems:"column"}}>
 					<div style={{display:"flex"}}>
-					<div class="vl"></div>
+					<div className="vl"></div>
 					<div id="scale" style={{ height: "400px", width: "20px", color: "green", justifyContent: "space-between" }}>
 						<hr style={{width:"1000px"}}></hr>
-						<div id="100" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/> &gt;100</div>
-						<div id="90" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
-						<div id="80" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/>80</div>
+						<div id="100" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "1px",width:"40px"}}/> &gt;100</div>
+						<div id="90" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "1px",width:"15px"}}/></div>
+						<div id="80" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "1px",width:"40px"}}/>80</div>
 						<div id="70" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
 						<div id="60" style={{ height: "40px", textAlign: "left" ,fontSize:"65%" }}><hr style={{borderTop:"4px solid green",height: "5px",width:"40px"}}/>60</div>
 						<div id="50" style={{ height: "40px", textAlign: "left",fontSize:"65%" }}><hr style={{borderTop:"3px solid green",height: "5px",width:"15px"}}/></div>
@@ -133,16 +131,16 @@ export default function Puz5(props) {
 							<div id="water" style={height} onClick={handleClick}><p style={{ color: color[dp1] }}>H<sub>2</sub></p>{height.height==undefined?"":height.height*100/400}</div>
 						</div>
 						<button onClick={reset1} style={{ color: color[dp1] }}>reset</button>
-						<div class="ui compact menu" style={{marginTop:"20px"}}>
-							<div class="ui simple dropdown item"  >
+						<div className="ui compact menu" style={{marginTop:"20px"}}>
+							<div className="ui simple dropdown item"  >
 								Fill With
-								<i class="dropdown icon"></i>
-								<div class="menu">
-								<div class="item" onClick={(ev)=>setDp1("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"2px solid black"}}></div>Red</div>
-								<div class="item" onClick={(ev)=>setDp1("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"2px solid black"}}></div>Blue</div>
-								<div class="item" onClick={(ev)=>setDp1("images/waves3_edit.png")}><div style={{backgroundColor:"#F5F5F5",width:"15px",height:"15px",border:"2px solid black"}}></div>White</div>
-								<div class="item" onClick={(ev)=>setDp1("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
-								<div class="item" onClick={(ev)=>setDp1("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
+								<i className="dropdown icon"></i>
+								<div className="menu">
+								<div className="item" onClick={(ev)=>setDp1("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"2px solid black"}}></div>Red</div>
+								<div className="item" onClick={(ev)=>setDp1("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"2px solid black"}}></div>Blue</div>
+								<div className="item" onClick={(ev)=>setDp1("images/waves3_edit.png")}><div style={{backgroundColor:"#F5F5F5",width:"15px",height:"15px",border:"2px solid black"}}></div>White</div>
+								<div className="item" onClick={(ev)=>setDp1("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
+								<div className="item" onClick={(ev)=>setDp1("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
 
 
 								</div>
@@ -161,17 +159,17 @@ export default function Puz5(props) {
 						<div id="glass2" >
 							<div id="water2" style={height2} onClick={handleClick2}><p style={{ color: color[dp2] }}>O<sub>2</sub></p>{height2.height==undefined?"":height2.height*100/400}</div>
 						</div>
-						<button onClick={reset2} style={{ color: color[dp2] }}>reset</button>
-						<div class="ui compact menu" style={{marginTop:"20px"}}>
-							<div class="ui simple dropdown item"  >
+						<button onClick={reset2} style={{ color: color[dp2]  }}>reset</button>
+						<div className="ui compact menu" style={{marginTop:"20px"}}>
+							<div className="ui simple dropdown item"  >
 								Fill With
-								<i class="dropdown icon"></i>
-								<div class="menu">
-								<div class="item" onClick={(ev)=>setDp2("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
-								<div class="item" onClick={(ev)=>setDp2("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
-								<div class="item" onClick={(ev)=>setDp2("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
-								<div class="item" onClick={(ev)=>setDp2("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
-								<div class="item" onClick={(ev)=>setDp2("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
+								<i className="dropdown icon"></i>
+								<div className="menu">
+								<div className="item" onClick={(ev)=>setDp2("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
+								<div className="item" onClick={(ev)=>setDp2("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
+								<div className="item" onClick={(ev)=>setDp2("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
+								<div className="item" onClick={(ev)=>setDp2("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
+								<div className="item" onClick={(ev)=>setDp2("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
 
 								</div>
 							</div>
@@ -188,16 +186,16 @@ export default function Puz5(props) {
 							<div id="water3" style={height3} onClick={handleClick3}><p style={{ color: color[dp3] }}>H<sub>2</sub>0</p> {height3.height==undefined?"":height3.height*100/400}</div>
 						</div>
 						<button onClick={reset3} style={{ color: color[dp3] }}>reset</button>
-						<div class="ui compact menu"  style={{marginTop:"20px"}}>
-							<div class="ui simple dropdown item"  >
+						<div className="ui compact menu"  style={{marginTop:"20px"}}>
+							<div className="ui simple dropdown item"  >
 								Fill With
-								<i class="dropdown icon"></i>
-								<div class="menu">
-								<div class="item" onClick={(ev)=>setDp3("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
-								<div class="item" onClick={(ev)=>setDp3("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
-								<div class="item" onClick={(ev)=>setDp3("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
-								<div class="item" onClick={(ev)=>setDp3("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
-								<div class="item" onClick={(ev)=>setDp3("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
+								<i className="dropdown icon"></i>
+								<div className="menu">
+								<div className="item" onClick={(ev)=>setDp3("images/waves2_edit.png")}><div style={{backgroundColor:"red",width:"15px",height:"15px",border:"3px solid black"}}></div>Red</div>
+								<div className="item" onClick={(ev)=>setDp3("images/waves1_edit.png")}><div style={{backgroundColor:"blue",width:"15px",height:"15px",border:"3px solid black"}}></div>Blue</div>
+								<div className="item" onClick={(ev)=>setDp3("images/waves3_edit.png")}><div style={{backgroundColor:"white",width:"15px",height:"15px",border:"3px solid black"}}></div>White</div>
+								<div className="item" onClick={(ev)=>setDp3("images/waves4_edit.png")}><div style={{backgroundColor:"yellow",width:"15px",height:"15px",border:"2px solid black"}}></div>Yellow</div>
+								<div className="item" onClick={(ev)=>setDp3("images/waves7_edit.png")}><div style={{backgroundColor:"brown",width:"15px",height:"15px",border:"2px solid black"}}></div>Brown</div>
 
 								</div>
 							</div>

@@ -1,21 +1,32 @@
-import React from 'react'
-import { ThemeProvider, CSSReset, theme, Progress } from '@chakra-ui/core'
+import React, { Component } from 'react'
+import { Button, Progress } from 'semantic-ui-react'
 
-const ProgressBar = (props) => (
-  <ThemeProvider theme={theme}>
-    <CSSReset />
-    <Progress
-      value={((props.value-1)/6)*100}
-      color="teal"
-      size="lg"
-      display="block"
-      fontWeight="bold"
-      textAlign="center"
-      backgroundColor="whiteAlpha.500"
-      shadow={1}
-    />
+// export default class ProgressBar extends Component {
   
-  </ThemeProvider>
-)
+//   state = { percent: ((this.props.value-1)/6)*100 }
 
-export default ProgressBar
+//   increment = () =>
+//     this.setState((prevState) => ({
+//       percent: prevState.percent >= 100 ? 0 : prevState.percent + 20,
+//     }))
+
+//   render() {
+//     return (
+//       <div>
+//         <Progress percent={this.state.percent} indicating />
+//         {/* <Button onClick={this.increment}>Increment</Button> */}
+//       </div>
+//     )
+//   }
+// }
+export default function ProgressBar(props)
+{
+
+  return (
+    <div>
+      <Progress percent={((props.value-1)/6)*100} indicating />
+    </div>
+  )
+}
+
+// {((props.value-1)/6)*100}

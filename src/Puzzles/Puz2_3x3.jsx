@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import "./puz2.css"
 import PicDisplay from "./PicDisplay"
-import { Input, Button } from "semantic-ui-react"
-
+import { Input, Button, Modal } from "semantic-ui-react"
+import ModalAlert from "../Components/ModalAlert"
 const Puz2 = (props) =>{
     let ids=[]
     let level=props.handles.level
@@ -13,6 +13,11 @@ const Puz2 = (props) =>{
     let setInventory=props.handles.setInventory
     let setHidden1 = props.handles.setHidden1
     let setHidden2 = props.handles.setHidden2
+    //modal
+    let [modalState,setModalState] = useState({ modalOpen: false })
+    let handleOpen = () => setModalState({ modalOpen: true })
+    let handleClose = () => setModalState({ modalOpen: false })
+    //
     const [mapVisible,setMapVisible]=useState(false)
     const [grid,setGrid]=useState({
         tasks:[
@@ -97,8 +102,7 @@ const Puz2 = (props) =>{
     {
         if(ans==="11-JAN-2030")
         {
-            // setSuccess(1)
-            alert("correct")
+            setModalState({ modalOpen: true })
             props.handles.setInventory([<div 
               id={"map"}
               key={"map"}
@@ -110,11 +114,15 @@ const Puz2 = (props) =>{
               draggable
             ></div>])
             // setLevel((level+1)%3)
+            setTimeout(()=>{
             setLevel((level+1)%6)
             setHidden1(true)
             setHidden2(true)
+          },1000)
         }else{
-          alert('Wrong ! ')
+          setModalState({ modalOpen: true })
+
+          // alert('Wrong ! ')
         }
     }
     const onDragStart = (ev, id,parent) => {
@@ -131,12 +139,6 @@ const Puz2 = (props) =>{
         let curCell=ev.currentTarget.id
         let fromCell=ev.dataTransfer.getData("fromid")
         let status=ev.currentTarget.children[0].id
-       
-        // if(objId==ev.currentTarget.id)
-        // {
-        //   console.log("confirmed")
-        // }
-
         if(status!==undefined&&status!=="puzzle")
         {
             grid.tasks.map((task) => {
@@ -166,26 +168,27 @@ const Puz2 = (props) =>{
         var elems=props.handles.elems
     
         return(
-      <div class="grid-item-puz-collection"
+      <div className="grid-item-puz-collection" 
       onDragOver={(e)=>onDragOver(e)}
       onDrop={(e)=>{onDrop(e, "puzzle")}}>{elems}</div>
         )
     }
+    
     const SolutionDNDBoard = (props) =>{
         var onDragOver=props.handles.onDragOver
         var onDrop=props.handles.onDrop
         var elems=props.handles.elems
         function GridItemPuz(props){
           return(
-          <div id={props.id} className="grid-item-puz2"
+          <div id={props.id} key={props.id} className="grid-item-puz2"
           onDragOver={(e)=>onDragOver(e)}
           onDrop={(e)=>{onDrop(e, props.id)}}>{props.val}</div>
           )
         }
         for(let i=1;i<10;i++)
-          ids.push(<GridItemPuz id={i.toString()} val={elems[i.toString()]} />)
+          ids.push(<GridItemPuz id={i.toString()} val={elems[i.toString()]} key={i.toString()}/>)
         return(
-            <div id="solutionDNDBoard" class="grid-container-puz2">
+            <div id="solutionDNDBoard" className="grid-container-puz2">
               {ids}
             </div>
           )
@@ -216,12 +219,13 @@ const Puz2 = (props) =>{
       <Input type="text" placeholder=""  value={ans} onChange={(ev)=>setAns(ev.target.value)} style={{opacity:0.7}}/><br/>
       {/* <Button color="green" onClick={handleAnswer} style={{opacity:0.7}}>Check</Button> */}
       <Button  
-				id="submitbutton" 
-            	type="button" 
-            	onClick={handleAnswer}
-                color="red"
-                >Submit
-            </Button>
+          id="submitbutton" 
+          type="button" 
+          onClick={handleAnswer}
+            color="red"
+            >Submit
+      </Button>
+      <ModalAlert handles={{success:ans==="11-JAN-2030",modalState:modalState,setModalState:setModalState,handleOpen:handleOpen,handleClose:handleClose}}/>
       </div>
     {/* <img src="images/orig_puz4_dummy.png" style={{height:"90px",width:"100px"}} alt="to construct view of picture from pieces"/> */}
 

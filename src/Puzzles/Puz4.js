@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import PatternLock from "react-pattern-lock";
 import Pattern from "./Pattern"
 import "./puz4.css"
+import { Button } from 'semantic-ui-react'
+import ModalAlert from "../Components/ModalAlert"
+
 function Puz4(props) {
 	let level=props.handles.level
 	let setLevel=props.handles.setLevel
@@ -9,6 +12,11 @@ function Puz4(props) {
   let setInventory=props.handles.setInventory
   let setHidden1 = props.handles.setHidden1
   let setHidden2 = props.handles.setHidden2
+  //modal
+  let [modalState,setModalState] = useState({ modalOpen: false })
+  let handleOpen = () => setModalState({ modalOpen: true })
+  let handleClose = () => setModalState({ modalOpen: false })
+  //
 	var onDragOver=props.handles.onDragOver
     var onDragStart=props.handles.onDragStart
     var onDrop=props.handles.onDrop
@@ -59,13 +67,13 @@ let onChange = path => {
   setPatternState({ ...patternState, path: [...path] });
 };
 let onFinish = () => {
-  setPatternState({ ...patternState,isLoading: true });
+    setPatternState({ ...patternState,isLoading: true });
   // an imaginary api call
  
     if(patternState){
     if (patternState.path.join("-") === "20-15-16-17-12-13-14-9-8-7-6-1") {
       setTimeout(() => {
-      alert("The path is correct and you now have path to the destination on your map!")
+      // alert("The path is correct and you now have path to the destination on your map!")
       setLevel((level+1)%6)
     }, 2000);
       setHidden1(true)
@@ -73,7 +81,7 @@ let onFinish = () => {
       
       setPatternState({ ...patternState, isLoading: false, success: true, disabled: true });
     } else {
-      alert("wrong !")
+      // alert("wrong !")
       setPatternState({...patternState, disabled: true, error: true });
       let errorTimeout = window.setTimeout(() => {
           setPatternState({
@@ -86,6 +94,7 @@ let onFinish = () => {
       }, 2000);
     }
   }
+  setModalState({modalOpen:true})
   
 };
 let onReset = () => {
@@ -109,7 +118,8 @@ let onReset = () => {
     </div> */}
   
     
-    <div style={{width:"40%",height:"80%",backgroundImage:`url('images/mars-map.png')`,backgroundSize:"cover"}} ><PatternLock
+    <div style={{width:"40%",height:"80%",backgroundImage:`url('images/mars-map.png')`,backgroundSize:"cover"}} >
+    <PatternLock
     size={5}
     onChange={onChange}
     path={patternState.path}
@@ -118,12 +128,17 @@ let onReset = () => {
     connectorThickness={5}
     disabled={patternState.disabled || patternState.isLoading}
     success={patternState.success}
-    
+    connectorRoundedCorners={true}
+    allowJumping={true}
+    pointActiveSize={70}
+    style={{padding:"0px",marjin:"0px"}}
   /></div>
     
+		<ModalAlert handles={{success:patternState.path.join("-") === "20-15-16-17-12-13-14-9-8-7-6-1",modalState:modalState,setModalState:setModalState,handleOpen:handleOpen,handleClose:handleClose}}/>
 
     </div>
-    <button onClick={reset} style={{color:"blue"}}>Reset</button>
+    
+    <Button onClick={reset} style={{color:"blue"}} loading={false}>Reset</Button>
     </div>
     
    

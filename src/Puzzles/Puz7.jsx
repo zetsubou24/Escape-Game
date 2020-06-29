@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from "react"
 import { Link } from 'react-router-dom';
+import { Image, Reveal } from 'semantic-ui-react'
 import "./puz7.css"
 export default function Puz7(props)
 {
@@ -167,6 +168,7 @@ function mouseCoord(event)
                 <div id="battery" style={{position:"absolute",height:"100px",width:"120px",left:800,top:530}}
                 onDragOver={(e)=>onDragOver(e)}
                 onDrop={(e)=>{onDrop(e, "battery")}}>
+                 
                   {items.battery!=null?items.battery:<p style={{color:"red",height:"10px"}}>
                   {/* battery */}
                   </p>}

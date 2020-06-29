@@ -23,8 +23,8 @@
     background-color:inherit;
     border-radius: 10px;
     border-style: groove;
-    max-width: 33%;
-    max-height: 33%;
+    /* max-width: 33%;
+    max-height: 33%; */
   }
   
 .grid-item-puz2 {

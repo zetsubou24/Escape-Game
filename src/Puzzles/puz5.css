@@ -6,7 +6,10 @@
 }
 
 
-
+.puz5-table{
+  /* border-spacing: 0px;
+  border-color: transparent; */
+}
 
 #container {
 margin-left:auto;

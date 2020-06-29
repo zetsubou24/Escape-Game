@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import {loginExchange,quoteExchange} from "../Globals.js"
 import Sound from 'react-sound'
 import Soundo from "./Soundo"
+import { Button, Icon } from 'semantic-ui-react'
 const Kenobi = () => {
 
     console.log("from kenobi",loginExchange.getCredentials())
@@ -25,7 +26,10 @@ const Kenobi = () => {
   <div class="kenobi-bottom-right">
     {/* <button name="next" onclick={assign()}>Click to Continue</button> */}
     <Link to="/HomePuzzle">
-    <button >Click to Continue</button>
+    <Button icon labelPosition='right'>
+      Click to continue
+      <Icon name='right arrow' />
+    </Button>
     </Link>
   </div>
   <div class="centered">

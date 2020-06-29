@@ -32,7 +32,6 @@ const Level3 = (props) => {
   height="100%"
   width="100%"
   musictemp="music/angel.mpeg"
-
   currentLevel=<Puz2 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
   else if(level===2){
@@ -40,9 +39,6 @@ const Level3 = (props) => {
   height="100%"
   width="100%"
   musictemp="music/angel.mpeg"
-  
-
-
   currentLevel=<Puz3 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
   else if(level===3){
@@ -66,22 +62,16 @@ const Level3 = (props) => {
   height="764px"
   width="100%"
   musictemp="music/angel.mpeg"
-  // bg = null
-  // height = "100%"
-  // width = "100%"
-
   currentLevel=<Puz6 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
   else{
   bg=`url(${puz7rover})`
   height="764px"
   width="100%"
-  
   musictemp="music/angel.mpeg"
-
   currentLevel=<Puz7 handles={{level:level,setLevel:setLevel,success:success,setSuccess:setSuccess,inventory:props.handles.inventory,setInventory:props.handles.setInventory,puz7rover:puz7rover,setpuz7rover:setpuz7rover,setHidden1 : props.handles.setHidden1, setHidden2 : props.handles.setHidden2}}/>
   }
-  if(musictemp!=props.handles.music)
+  if(musictemp!==props.handles.music)
   props.handles.setMusic(musictemp)
   function handleSongLoading()
   {
@@ -97,12 +87,10 @@ const Level3 = (props) => {
   }
   if(level>6)
   Sound.status.PLAYING=false
-  // if(musictemp!=props.handles.music)
-return (
+  return (
     <div className="item1"  >
         <div className="sub-grid-container" style={{backgroundImage:bg,opacity:1,height:height,width:width}}  >
               <div className="sub-grid-item1"
-              
               onDragOver={(e)=>onDragOver(e)}
             //   onDrop={(e)=>{onDrop(e, "game")}}
               >

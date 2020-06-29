@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import "../Game.css"
+import ModalAlert from "../Components/ModalAlert"
+
 function Puz3(props)
 {
 	let level=props.handles.level
@@ -10,9 +12,15 @@ function Puz3(props)
 	let setHidden2 = props.handles.setHidden2
 	var onDragOver=props.handles.onDragOver
     var onDragStart=props.handles.onDragStart
-    var onDrop=props.handles.onDrop
+	var onDrop=props.handles.onDrop
+	//modal
+    let [modalState,setModalState] = useState({ modalOpen: false })
+    let handleOpen = () => setModalState({ modalOpen: true })
+    let handleClose = () => setModalState({ modalOpen: false })
+    //
 	const [visible1,setVisible1]=useState(false)
 	const [value,setValue]=useState("")
+
 	function viewSol()
 	{
 		setVisible1(!visible1)
@@ -22,7 +30,6 @@ function Puz3(props)
 		if(value==="10:24:50")
 		{
 			// setLevel((level + 1) % 3)
-			alert("correct!")
 			props.handles.setInventory(
 				[
 					...inventory,
@@ -38,13 +45,17 @@ function Puz3(props)
 				></div>
 				]
 			)
+			setTimeout(()=>{
 			setLevel((level + 1) % 6)
 			setHidden1(true)
-      		setHidden2(true)
+			  setHidden2(true)
+			},1000)
 		}
 		else{
-			alert("wrong!")
+			
 		}
+		setModalState({modalOpen:true})
+
 	}
 	let puz3={height:"100%",
 	width:"100%",
@@ -67,9 +78,9 @@ function Puz3(props)
 			<img src="images/bettercompass.png" className="bomb" onClick={viewSol} alt="compass"/><br />
 			<img src="images/pngguru.png" className="bomb2" onClick={puz3_doc} /><br />
 			<img src="images/Enchanted_Nether_Star.png" className="star" alt="EASTER EGG"/><br />
-
-
 		</div>
+		<ModalAlert handles={{success:value==="10:24:50",modalState:modalState,setModalState:setModalState,handleOpen:handleOpen,handleClose:handleClose}}/>
+
 		</div>
     )
 }

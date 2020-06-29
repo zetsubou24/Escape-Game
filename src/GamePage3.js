@@ -1,12 +1,9 @@
 import React, { Component, useState, useEffect } from 'react';
-
 import Hints from "./Components/Hints"
-
-
 import AppBar from "./Components/AppBar"
-import ChatExpansion from "./Components/ChatExpansion"
+// import ChatExpansion from "./Components/ChatExpansion"
 import ProgressBar from "./Components/ProgressBar"
-import Scratchpad from "./Components/ScratchPad"
+// import Scratchpad from "./Components/ScratchPad"
 
 import './Game.css';
 import "./App.css"
@@ -20,7 +17,7 @@ function GamePage3(props) {
   // props.handles.setMusic("/music/alltime.mp3")
   var players_available=7
   var max_players=10
-  const [level, setLevel] = useState(1)
+  const [level, setLevel] = useState(4)
   const [temp,setTemp]=useState([])
   const [success,setSuccess]=useState(-1)
   const [hidden1, setHidden1] = useState(true)
@@ -134,7 +131,6 @@ function GamePage3(props) {
       <AppBar />
       <ProgressBar value={level} />
       <div className="game-grid-container" >
-        
           <Level3 handles={{
             onDragOver: onDragOver,
             onDragStart: onDragStart,
@@ -159,7 +155,7 @@ function GamePage3(props) {
         <ChatExpansion />
         <Scratchpad />
       </div> */}
-      {/* <button onClick={() => handleClick()}>Change Level </button> */}
+      <button onClick={() => handleClick()}>Change Level </button>
       {/* <p className="Game-Level-Description">
        {curDesc}
       </p> */}
