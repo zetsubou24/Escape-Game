@@ -14,15 +14,20 @@ export default function Puz8() {
     var x = document.getElementById("end");
     if (ans == quoteExchange.getCurQuote()) {
       alert("correct!");
-      window.location.href = "/Ending"
+      window.location.href = "/Ending";
     } else {
-        alert("wrong!");
-
+      alert("wrong!");
     }
   }
   return (
-    <div className="puz8-root" style={{backgroundImage:`url(images/nicemars2.png)`}}>
-      <p className="puz8-top-left" style={{fontFamily:"Orbitron",marginTop:"50px"}}>
+    <div
+      className="puz8-root"
+      style={{ backgroundImage: `url(images/nicemars2.png)` }}
+    >
+      <p
+        className="puz8-top-left"
+        style={{ fontFamily: "Orbitron", marginTop: "50px" }}
+      >
         You've almost made it astronaut! Just one last step so that you can
         reach to the Home Base. <br />
         In the most difficult times, it's always a good thing to go back a few
@@ -39,9 +44,14 @@ export default function Puz8() {
           />
         </p>
         <p>
-          <a id="butt" onClick={() => {
-              setTimeout(()=>{checkAns();},2000)
-          }}>
+          <a
+            id="butt"
+            onClick={() => {
+              setTimeout(() => {
+                checkAns();
+              }, 2000);
+            }}
+          >
             <span></span>
             <span></span>
             <span></span>

@@ -17,7 +17,7 @@ function GamePage3(props) {
   // props.handles.setMusic("/music/alltime.mp3")
   var players_available=7
   var max_players=10
-  const [level, setLevel] = useState(4)
+  const [level, setLevel] = useState(1)
   const [temp,setTemp]=useState([])
   const [success,setSuccess]=useState(-1)
   const [hidden1, setHidden1] = useState(true)
