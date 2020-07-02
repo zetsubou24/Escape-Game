@@ -2,6 +2,8 @@ import React, { useEffect,useState } from "react"
 import { Link } from 'react-router-dom';
 import { Image, Reveal } from 'semantic-ui-react'
 import "./puz7.css"
+import ModalAlert from "../Components/ModalAlert"
+
 export default function Puz7(props)
 {
 
@@ -10,6 +12,11 @@ export default function Puz7(props)
     let setHidden1 = props.handles.setHidden1
     let setHidden2 = props.handles.setHidden2
     let cnt=0;
+     //modal
+	let [modalState,setModalState] = useState({ modalOpen: false })
+	let handleOpen = () => setModalState({ modalOpen: true })
+	let handleClose = () => setModalState({ modalOpen: false })
+	//
     // localStorage.setItem('myCat', 'Tom');
     // console.log(localStorage.getItem('myCat'))
     const [panel,setPanel]=useState(false)
@@ -182,6 +189,9 @@ function mouseCoord(event)
                 </Link> 
                 :null
                 }
+                {/* <ModalAlert handles={{success:items.battery!=null&&items.compass!=null&&items.map!=null&&items.pcb!=null
+					,modalState:{modalOpen:items.battery!=null&&items.compass!=null&&items.map!=null&&items.pcb!=null},
+					setModalState:setModalState,handleOpen:handleOpen,handleClose:handleClose}}/> */}
                 
 
 

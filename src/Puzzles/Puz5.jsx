@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./puz5.css"
+import ModalAlert from "../Components/ModalAlert"
+
 
 export default function Puz5(props) {
 	let level = props.handles.level
@@ -18,6 +20,11 @@ export default function Puz5(props) {
 	const [height2, setHeight2] = useState({})
 	const [height3, setHeight3] = useState({})
 	const [check, setCheck] = useState(height3.height)
+	//modal
+	let [modalState,setModalState] = useState({ modalOpen: false })
+	let handleOpen = () => setModalState({ modalOpen: true })
+	let handleClose = () => setModalState({ modalOpen: false })
+	//
 	const color={
 		"images/waves3_edit.png":"white",
 		"images/waves2_edit.png":"red",
@@ -85,7 +92,7 @@ export default function Puz5(props) {
 	// },[check])
 	function handleSuccess() {
 		
-		alert("Correct.")
+		// alert("Correct.")
 		setLevel((level + 1) % 6)
 		setHidden1(true)
       setHidden2(true)
@@ -210,6 +217,10 @@ export default function Puz5(props) {
 					{(color[dp1]==="red")&&(color[dp2]==="white")&&(color[dp3]==="blue")&&((height3.height > 200) && (height3.height < 260) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2) && setTimeout(()=>{handleSuccess()},2000)?
 						<img src="images/battery.png" alt="battery success"/>
 						: null}
+					<ModalAlert handles={{success:(color[dp1]==="red")&&(color[dp2]==="white")&&(color[dp3]==="blue")&&((height3.height > 200) && (height3.height < 260) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2)
+					,modalState:{modalOpen:(color[dp1]==="red")&&(color[dp2]==="white")&&(color[dp3]==="blue")&&((height3.height > 200) && (height3.height < 260) && (height.height / height2.height) >= 1.7 && (height.height / height2.height) < 2.2)},
+					setModalState:setModalState,handleOpen:handleOpen,handleClose:handleClose}}/>
+
 				</td>
 			</tr>
 			<tr><td>

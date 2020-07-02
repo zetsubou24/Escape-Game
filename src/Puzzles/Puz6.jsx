@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from "react"
 import "./Puz6.css"
+import ModalAlert from "../Components/ModalAlert"
+
 export default function Puz6(props)
 {
     let level=props.handles.level
@@ -21,6 +23,11 @@ export default function Puz6(props)
     const [or3,setOr3]=useState(false)
     const [or4,setOr4]=useState(false)
     const [not,setNot]=useState(false)
+    //modal
+	let [modalState,setModalState] = useState({ modalOpen: false })
+	let handleOpen = () => setModalState({ modalOpen: true })
+	let handleClose = () => setModalState({ modalOpen: false })
+	//
     function onPress(ev)
     {
         if(ev.target.id=="1")
@@ -111,6 +118,11 @@ export default function Puz6(props)
             {or4==1 && setTimeout(() =>tempsuccess(), 2000) ? 
             <img src="images/videocard.png" style={{position:"absolute",left:"75vw",top:"60vh"}}/>
             :null}
+            <ModalAlert handles={{success:(or4==1)
+					,modalState:{modalOpen:(or4==1)},
+					setModalState:setModalState,handleOpen:handleOpen,handleClose:handleClose}}/>
+
+
             <br/>
             </div>
         </div>

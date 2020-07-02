@@ -24,7 +24,7 @@ export default function ProgressBar(props)
 
   return (
     <div>
-      <Progress percent={((props.value-1)/6)*100} indicating />
+      <Progress percent={((props.value)/6)*100} indicating />
     </div>
   )
 }
