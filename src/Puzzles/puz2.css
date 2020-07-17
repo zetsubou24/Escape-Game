@@ -1,0 +1,198 @@
+.Container_puz2{
+    display: flex;
+    justify-content: space-between;
+    /* display: flex; */
+    /* background-size: cover; */
+    /* display: grid; */
+    /* grid-template-columns: 60vw 30vw;
+    grid-template-rows: 60vh; */
+    grid-template-columns: 60vw 33vw;
+    /* grid-template-rows: 72vh; */
+
+}
+.Container_puz2_item1
+{
+    height: auto;
+    
+}
+.Container_puz2_item2
+{
+    height: auto;
+
+}
+.grid-container-puz2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:inherit;
+    border-radius: 10px;
+    border-style: groove;
+    max-width: 33%;
+    max-height: 33%;
+  }
+  
+.grid-item-puz2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    
+    font-size: 30px;
+    height:150px;
+    width: 150px;
+    text-align: center;
+}
+.grid-item-collection{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /* padding: 20px; */
+    font-size: 30px;
+    height: 150px;
+    width: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    text-align: center;
+}
+.puz2-draggable-3x3 {
+    display: flex;
+    width: 150px;
+    height:150px;
+    background-color: yellow;
+    /* background-size: cover; */
+}
+.flex-container-puz2
+{
+    display: flex;
+}
+.grid-item-puz-collection
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column ;
+    height:490px;
+    width:450px;
+    align-items: start;
+
+}
+
+
+/* ====================   Mobile Responsive ( 576px)   ====================== */
+
+@media (max-width: 576px) and (min-width: 300px) {
+    .grid-item-puz-collection{       
+        width: 100%;
+        height: 390px;
+    }
+
+    .Container_puz2{   
+        display: block;
+    }
+    .puz2-draggable-3x3 {
+        width: 100%;
+        height: 90px;
+    }
+    .grid-container-puz2 {
+        max-width: 100%;
+      }
+    .grid-item-puz2 {
+        height: 90px;
+        width: 100%;
+    }
+    .width_mb_73{
+        width:  72.4%;
+    }
+    .mtb_mb{
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+/* ====================   Mobile Responsive ( 576px) end  ====================== */
+
+
+
+/* ====================   Tab Responsive ( 576px - 767px )   ====================== */
+
+@media (max-width: 767px) and (min-width: 577px) {
+.grid-item-puz-collection{       
+    width: 100%;
+    height: 390px;
+}
+
+.Container_puz2{   
+    display: block;
+}
+.puz2-draggable-3x3 {
+    width: 100%;
+    height: 90px;
+}
+.grid-container-puz2 {
+    max-width: 100%;
+    }
+.grid-item-puz2 {
+    height: 90px;
+    width: 100%;
+}
+.width_mb_73{
+    width:  72.4%;
+}
+.mtb_mb{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+}
+/* ====================   Tab Responsive ( 576px - 767px ) end  ====================== */
+
+
+
+/* ====================   Large Screens ( 768px - 1023px )   ====================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+.grid-item-puz-collection{       
+    /* width: 70%;
+    height: 328px;
+    margin: 0 auto;*/
+    height: 430px;
+    width: 364px;
+}
+
+/* .Container_puz2{   
+    display: block;
+} */
+.puz2-draggable-3x3 {
+    width: 100%;
+    height: 120px;
+}
+.grid-container-puz2 {
+    max-width: 67%;
+    /* margin: 0px auto; */
+}
+.grid-item-puz2 {
+    height: 120px;
+    width: 106px;
+}
+.width_mb_73{
+    width: 82.4%;
+}
+.mtb_mb{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.center_main{
+    display: inline-flex;
+}
+}
+
+
+/* ====================   Large Screens ( 768px - 1023px ) end   ====================== */
+
+
+
+/* ====================   Large Screens ( 1024px )   ====================== */
+
+@media (min-width: 1024px) and (max-width: 1365px){
+ 
+
+}
+/* ====================   Large Screens ( 1024px ) end   ====================== */
+
+/* sushma css ends */
+

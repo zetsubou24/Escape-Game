@@ -1,0 +1,47 @@
+import React from "react"
+import "../Kenobi.css"
+import "../style.css"
+import { Link } from 'react-router-dom';
+import {loginExchange,quoteExchange} from "../Globals.js"
+import Sound from 'react-sound'
+import Soundo from "./Soundo"
+const Kenobi = () => {
+
+    console.log("from kenobi",loginExchange.getCredentials())
+
+    const toDis="Hello, Astronaut. We haven’t received any of your messages. Hope you’re doing fine. Due to an alien interception, you’ve crash landed on MARS. There’s a technical error in the controlling system, allowing communication to happen only one way. Decode the alien locked essentials and devise your EMERGENCY ROVER to find your way back to the HOME BASE POD. Be cognizant about limited oxygen availability and alien attacks. Your survival is of paramount importance for posterity. Good luck, Astronauts!!"
+    
+    return (
+    <div class="container" style={{height:"98vh"}}>
+  <img src="images/bg_welcome2.jpg" className="bg_welcome" alt="bg for breifing page"/>
+  {/* <div class="kenobi-bottom-left">Please Select your Leader
+  </div> */}
+  <div class="kenobi-top-left">
+    <p className="home_banner_text" >{toDis}</p><br />
+    <p className="home_banner_subtext" style={{fontFamily:'Orbitron'}}>Remember this Astronaut:</p>
+    <p className="home_banner_heading" style={{fontFamily:'Orbitron'}}> {quoteExchange.getRandomQuote()}</p>
+    {/* <p style={{className:'quote'}}> {quoteExchange.getRandomQuote()}</p> */}
+  </div>
+  <div class="kenobi-bottom-right">
+    {/* <button name="next" onclick={assign()}>Click to Continue</button> */}
+    <Link to="/HomePuzzle">
+    <button className="button_white">Click to Continue</button>
+    </Link>
+  </div>
+  <div class="centered">
+    {/* <img src="images/commander.png" /> */}
+  </div>
+  {/* <Sound
+      url="/music/music.mp3"
+      playStatus={Sound.status.PLAYING}
+      // playFromPosition={300}
+    //   loop={true}
+      
+    /> */}
+	{/* <Soundo /> */}
+
+</div>
+)
+
+}
+export default Kenobi

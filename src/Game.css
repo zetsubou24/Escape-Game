@@ -1,0 +1,299 @@
+.App {
+  text-align: center;
+  width: 95%;
+  margin: 15px auto;
+}
+
+.container-drag {
+  display:flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.wip {
+  /* position: absolute; */
+  /* align-self: flex-start; */
+  width: 150px;
+  height: 100vh;
+  background-color: #EEEEEE;
+  border-right: 1px dotted;
+}
+.droppable {
+  /* align-self: flex-end; */
+  width: 150px;
+  height: 100vh;
+  background-color: #9E9E9E;
+  border-left: 1px dotted;
+}
+
+.wip2 {
+  /* position: absolute; */
+  align-self: center;
+  width: 300px;
+  height: 300vh;
+  /* top: 50; */
+  background-color: #EEEEEE;
+  border-right: 1px dotted;
+}
+
+.header {
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 10px;
+  /* background-color: red; */
+  width:100%;
+}
+
+.to_take
+{
+  /* position: absolute; */
+  width: 150px;
+  height: 100vh;
+  /* right: 0;
+  top: 10; */
+  background-color: #9E9E9E;
+  border-left: 1px dotted;
+}
+.task-header {
+  /* display: inline-block; */
+  background-color: skyblue;
+  width:100%;
+}
+
+p.Game-Level-Description {
+  height: 100%;
+  margin-bottom: 20px;
+}
+.draggable {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  background-color: yellow;
+}
+.game-draggable {
+  width: 200px;
+  height: 50px;
+  background-color: yellow;
+}
+
+.puz3solution
+{
+  display:flex;
+  align-self: flex-end;
+}
+#puz3-box-visible
+{
+  display:flex;
+  margin-bottom: 14px;
+
+}
+.bomb{
+  /* background-image: url('Resmages/bomb.png'); */
+  width: 40px;
+  height: 40px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left: 600px ;
+  top:170px;
+  transform:rotate(-10deg)
+
+}
+.bomb:hover{
+
+  width: 250px;
+  height: 250px;
+  transform: rotate(360deg);
+  position: absolute;
+  left: 600px ;
+  top:170px;
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+.bomb2{
+  /* background-image: url('Resmages/bomb.png'); */
+  width: 35px;
+  height: 30px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left:500px;
+  bottom:60px;
+  transform:rotate(-10deg)
+
+}
+/* .puz3-items{
+     display:flex;
+
+} */
+.bomb2:hover{
+
+  width: 280px;
+  height: 280px;
+  transform: rotate(360deg);
+ 
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+
+.star{
+  /* background-image: url('Resmages/bomb.png'); */
+  width: 35px;
+  height: 30px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left:100px;
+  top:400px;
+  transform:rotate(-10deg)
+
+}
+.star:hover{
+
+  width: 280px;
+  height: 280px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+
+#puz3sol
+{
+  position:"relative";
+  right:0;
+  font-size: 18px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+}
+.puz4-grid-map
+{
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+}
+.puz3solution{
+  /* /* position: absolute;
+  bottom: 10px;
+  right: 16px; */
+  font-size: 30px; 
+
+}
+
+.docs{
+  /* background-image: url('Resources/Images/pngguru.com.png'); */
+  width: 10px;
+  height: 10px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  left: 70%;
+  /* right: 90%; */
+  bottom: 50px;
+  top: 60%;
+
+}
+.docs:hover{
+
+  width: 200px;
+  height: 200px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+.star{
+  /* background-image: url('Resources/Images/pngguru.com.png'); */
+  width: 10px;
+  height: 10px;
+  transition: width 4s, height 4s, transform 4s;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.star:hover{
+
+  width: 200px;
+  height: 200px;
+  transform: rotate(360deg);
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+}
+
+
+/* ====================   Mobile Responsive ( 576px)   ====================== */
+
+@media (max-width: 576px) and (min-width: 300px) {
+  .bomb{
+    /* background-image: url('Resmages/bomb.png'); */
+    width: 20px;
+    height: 20px;
+    position: unset;
+
+  
+  }
+  .bomb2{
+    /* background-image: url('Resmages/bomb.png'); */
+    width: 25px;
+    height: 20px;
+    position: unset;  
+  }
+
+  #puz3-box-visible{
+    width: 70%;
+    margin: 0px auto 14px auto;
+  }
+  #puz3sol {
+    width: 75%;
+    font-size: 18px;
+    border-top-left-radius: 5px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+  }
+
+}
+
+/* ====================   Mobile Responsive ( 576px) end  ====================== */
+
+
+
+/* ====================   Tab Responsive ( 576px - 767px )   ====================== */
+
+@media (max-width: 767px) and (min-width: 577px) {
+  
+ 
+}
+/* ====================   Tab Responsive ( 576px - 767px ) end  ====================== */
+
+
+
+/* ====================   Large Screens ( 768px - 1023px )   ====================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ 
+}
+
+
+/* ====================   Large Screens ( 768px - 1023px ) end   ====================== */
+
+
+
+/* ====================   Large Screens ( 1024px )   ====================== */
+
+@media (min-width: 1024px) and (max-width: 1365px){
+ 
+
+}
+/* ====================   Large Screens ( 1024px ) end   ====================== */
+
+

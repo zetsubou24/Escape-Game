@@ -1,0 +1,18 @@
+.bg_welcome
+{
+    width:100%; 
+    background-size: cover;
+    height: 100vh;
+    /* background-image: url('./Resources/Images/bg_welcome.jpg'); */
+}
+/* .container
+{
+    width:100%; 
+    background-size: cover;
+    background-image: url('./Resources/Images/bg_welcome.jpg');
+} */
+/* .commander
+{
+
+    background-image: url('./Resources/Images/commander.png');
+} */

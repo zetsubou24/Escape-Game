@@ -1,0 +1,112 @@
+.Container_puz2
+{
+    /* display: flex; */
+    /* background-size: cover; */
+    display: grid;
+    grid-template-columns: 40vw 30vw;
+    grid-template-rows: 60vh;
+
+}
+.Container_puz2_item1
+{
+    height: auto;
+}
+.Container_puz2_item2
+{
+    height: auto;
+
+}
+.grid-container-puz {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color:inherit;
+    border-radius: 10px;
+    border-style: groove;
+    max-width: 33%;
+    max-height: 33%;
+  }
+  
+.grid-item-puz {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    
+    font-size: 30px;
+    height:100px;
+    width: 100px;
+    text-align: center;
+}
+.grid-item-collection{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /* padding: 20px; */
+    font-size: 30px;
+    height: 100px;
+    width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    text-align: center;
+}
+.puz2-draggable {
+    display: flex;
+    width: 100px;
+    height:100px;
+    background-color: yellow;
+    /* background-size: cover; */
+}
+.flex-container-puz2
+{
+    display: flex;
+}
+.grid-item-puz-collection
+{
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction:column ;
+    height:400px;
+    width:400px;
+}
+
+
+
+
+
+/* ====================   Mobile Responsive ( 576px)   ====================== */
+
+@media (max-width: 576px) and (min-width: 300px) {
+ 
+  
+  }
+  
+  /* ====================   Mobile Responsive ( 576px) end  ====================== */
+  
+  
+  
+  /* ====================   Tab Responsive ( 576px - 767px )   ====================== */
+  
+  @media (max-width: 767px) and (min-width: 577px) {
+    
+  
+  }
+  /* ====================   Tab Responsive ( 576px - 767px ) end  ====================== */
+  
+  
+  
+  /* ====================   Large Screens ( 768px - 1023px )   ====================== */
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+  
+  }
+  
+  
+  /* ====================   Large Screens ( 768px - 1023px ) end   ====================== */
+  
+  
+  
+  /* ====================   Large Screens ( 1024px )   ====================== */
+  
+  @media (min-width: 1024px) and (max-width: 1365px){
+   
+  
+  }
+  /* ====================   Large Screens ( 1024px ) end   ====================== */
+  

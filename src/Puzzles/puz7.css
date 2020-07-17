@@ -1,0 +1,31 @@
+.puz7-panel
+{
+    z-index: 5;
+    
+}
+/* #map :hover{
+    border: 5px solid #333333;
+        overflow: hidden; 
+}
+#compass :hover{
+    border: 5px solid #333333;
+        overflow: hidden; 
+}
+#pcb :hover{
+    border: 5px solid #333333;
+        overflow: hidden; 
+}
+#battery :hover{
+    border: 5px solid #333333;
+        overflow: hidden; 
+} */
+
+.onDragHover{
+    border: 5px solid #333333;
+        overflow: hidden; 
+}
+.onNotDragHover{
+    border: 0;
+        
+}
+

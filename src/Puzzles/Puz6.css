@@ -1,0 +1,178 @@
+.output {
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    display: inline-block;
+    border-radius: 10px;
+  }
+.puz6-container
+{
+    /* display:grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto auto; */
+}
+.on_off_btn{
+  width: 100px;
+  height: 100px;
+}
+.on_off_img1{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 20px;
+  top: 5px;
+}
+.on_off_img2{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 20px;
+  top: 15px;
+}
+.on_off_img3{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 20px;
+  top: 25px;
+}
+.on_off_img4{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 20px;
+  top: 55px;
+}
+.on_off_img5{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 20px;
+  top: 70px;
+}
+.dot_color_1{
+  position: absolute;
+  left: 460px;
+  top: 214px;
+}
+.dot_color_2{
+  position: absolute;
+  left: 462px;
+  top: 464px;
+}
+.dot_color_3{
+  position: absolute;
+  left: 462px;
+  top: 672px;
+}
+.dot_color_4{
+  position: absolute;
+  left: 842px;
+  top: 321px;
+}
+.dot_color_5{
+  position: absolute;
+  left: 852px;
+  top: 562px;
+}
+
+/* ====================   Mobile Responsive ( 576px)   ====================== */
+
+@media (max-width: 576px) and (min-width: 300px) {
+  .on_off_btn{
+    width: 100px;
+    height: 100px;
+  }
+  .on_off_img1{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 20px;
+    top: 5px;
+  }
+  .on_off_img2{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 20px;
+    top: 15px;
+  }
+  .on_off_img3{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 20px;
+    top: 25px;
+  }
+  .on_off_img4{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 20px;
+    top: 55px;
+  }
+  .on_off_img5{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 20px;
+    top: 70px;
+  }
+  .dot_color_1{
+    position: absolute;
+    left: 460px;
+    top: 214px;
+  }
+  .dot_color_2{
+    position: absolute;
+    left: 462px;
+    top: 464px;
+  }
+  .dot_color_3{
+    position: absolute;
+    left: 462px;
+    top: 672px;
+  }
+  .dot_color_4{
+    position: absolute;
+    left: 842px;
+    top: 321px;
+  }
+  .dot_color_5{
+    position: absolute;
+    left: 852px;
+    top: 562px;
+  }
+}
+
+/* ====================   Mobile Responsive ( 576px) end  ====================== */
+
+
+
+/* ====================   Tab Responsive ( 576px - 767px )   ====================== */
+
+@media (max-width: 767px) and (min-width: 577px) {
+ 
+}
+/* ====================   Tab Responsive ( 576px - 767px ) end  ====================== */
+
+
+
+/* ====================   Large Screens ( 768px - 1023px )   ====================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+
+/* ====================   Large Screens ( 768px - 1023px ) end   ====================== */
+
+
+
+/* ====================   Large Screens ( 1024px )   ====================== */
+
+@media (min-width: 1024px) and (max-width: 1365px){
+ 
+ 
+}
+/* ====================   Large Screens ( 1024px ) end   ====================== */

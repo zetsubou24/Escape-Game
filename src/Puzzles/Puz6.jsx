@@ -1,0 +1,119 @@
+import React,{useState,useEffect} from "react"
+import "./Puz6.css"
+export default function Puz6(props)
+{
+    let level=props.handles.level
+	let setLevel=props.handles.setLevel
+	let inventory=props.handles.inventory
+    let setInventory=props.handles.setInventory
+    let setHidden1 = props.handles.setHidden1
+    let setHidden2 = props.handles.setHidden2
+	var onDragOver=props.handles.onDragOver
+    var onDragStart=props.handles.onDragStart
+    var onDrop=props.handles.onDrop
+    const [input1,setInput1]=useState(false)
+    const [input2,setInput2]=useState(false)
+    const [input3,setInput3]=useState(false)
+    const [input4,setInput4]=useState(false)
+    const [input5,setInput5]=useState(false)
+    const [or1,setOr1]=useState(false)
+    const [or2,setOr2]=useState(false)
+    const [or3,setOr3]=useState(false)
+    const [or4,setOr4]=useState(false)
+    const [not,setNot]=useState(false)
+    function onPress(ev)
+    {
+        if(ev.target.id=="1")
+        setInput1(!input1)
+        if(ev.target.id=="2")
+        setInput2(!input2)
+        if(ev.target.id=="3")
+        setInput3(!input3)
+        if(ev.target.id=="4")
+        setInput4(!input4)
+        if(ev.target.id=="5")
+        setInput5(!input5)
+    }
+    useEffect(()=>{
+        setOr1(input1&input2)
+        setOr2(input3&input5)
+        setOr3(or1&or2)
+        setNot(!input4)
+        setOr4(not&or3)
+    })
+    function mouseCoord(event)
+    {
+        // alert(event.clientX+" "+event.clientY)
+    }
+    const tempsuccess = () => {
+        handleSuccess()
+    }
+
+    function handleSuccess()
+    {
+
+        
+        // alert("correct")
+        setLevel((level+1)%6)
+        setHidden1(true)
+      setHidden2(true)
+        // let temp=inventory
+        // temp.push(<div 
+		// 	id="pcb"
+		// 	key="pcb"
+		// 	style={{width: "100px",
+		// 			height: "50px",
+		// 			backgroundRepeat:"no-repeat",
+		// 			backgroundImage:`url(images/videocard.png)`}}
+		// 	onDragStart={(e) => onDragStart(e,"pcb")}
+		// 	draggable
+        //     ></div>)
+		// setInventory(inventory.concat(<div 
+		// 	id="pcb"
+		// 	key="pcb"
+		// 	style={{width: "100px",
+		// 			height: "50px",
+		// 			backgroundRepeat:"no-repeat",
+		// 			backgroundImage:`url(images/videocard.png)`}}
+		// 	onDragStart={(e) => onDragStart(e,"pcb")}
+		// 	draggable
+        //     ></div>))
+		console.log("wtf")
+    
+        
+        
+    }
+    return (
+        <div style={{height:"100%",width:"100%"}}>
+        <div className="puz6-container"  onClick={mouseCoord}>
+      <div className="on_off_img1" style={{backgroundImage:input1?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`}}>   
+    <button id="1" onClick={onPress} className="on_off_btn"></button><br />
+    </div>   
+    <div className="on_off_img2" style={{backgroundImage:input2?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`}}>   
+    <button id="2" onClick={onPress} className="on_off_btn"></button><br />
+    </div>   
+    <div className="on_off_img3" style={{backgroundImage:input3?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`}}>   
+    <button id="3" onClick={onPress} className="on_off_btn"></button><br />
+    </div>   
+    <div className="on_off_img4" style={{backgroundImage:input4?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`}}>   
+    <button id="4" onClick={onPress} className="on_off_btn"></button><br />
+    </div>   
+    <div className="on_off_img5" style={{backgroundImage:input5?`url('images/toggle-on.png')`:`url('images/toggle-off.png')`}}>   
+    <button id="5" onClick={onPress} className="on_off_btn"></button><br />
+    </div>   
+    
+        <div style={{color:"red"}}>
+            <div className="dot_color_1"><div className="output" style={{background:or1==1?"green":"red"}}></div></div><br/>
+            <div className="dot_color_2"><div className="output" style={{background:or2==1?"green":"red"}} ></div></div><br/>
+            <div className="dot_color_3"><div className="output" style={{background:not?"green":"red"}}></div></div><br/>
+            <div className="dot_color_4"><div className="output" style={{background:or3==1?"green":"red"}}></div></div>
+            <div className="dot_color_5"><div className="output" style={{background:or4==1?"green":"red"}}></div></div>
+            {or4==1 && setTimeout(() =>tempsuccess(), 2000) ? 
+            <img src="images/videocard.png" style={{position:"absolute",left:"75vw",top:"60vh"}}/>
+            :null}
+            <br/>
+            </div>
+        </div>
+        </div>
+    )
+}

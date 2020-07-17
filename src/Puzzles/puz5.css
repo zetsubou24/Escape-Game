@@ -1,0 +1,241 @@
+
+.vl {
+  border-left: 6px solid green;
+  height: 530px;
+  
+}
+
+
+
+
+#container {
+margin-left:auto;
+margin-right:auto;
+width: 100px;
+}
+#glass {
+/* background: rgba( 255, 255, 255, 0.50); */
+width: 80px;
+height: 400px;
+position: relative;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+#water {
+  /* flex-flow: column-reverse; */
+  
+/* background-image: url("./waves3_edit.png"); */
+background-position: top right;
+position: absolute;
+bottom: 0px;
+width: 80px;
+height: 2em;
+border-radius: 100%;
+-webkit-transition: all 3s ease-out;
+-moz-transition: all 3s ease-out;
+-o-transition: all 3s ease-out;
+transition: all 3s ease-out;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+
+}
+#glass:hover #water {
+height: 13em;
+background-position: top left;
+-webkit-transition: all 3s ease-out;
+-moz-transition: all 3s ease-out;
+-o-transition: all 3s ease-out;
+transition: all 5s ease-out;
+}
+#scale
+{
+  display:flex;
+  justify-content: space-evenly;
+  flex-flow:column
+}
+#container2 {
+  margin-left:auto;
+  margin-right:auto;
+  width: 100px;
+  }
+  #glass2 {
+  /* background: rgba(235, 57, 57, 1); */
+  width: 80px;
+  height: 400px;
+  position: relative;
+    border-radius: 100%;
+    margin: 0 auto;
+
+  }
+  #water2 {
+  /* background-image: url("./waves2_edit.png"); */
+  background-position: top right;
+  position: absolute;
+  bottom: 0px;
+  width: 80px;
+  height: 2em;
+  border-radius: 100%;
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+  transition: all 3s ease-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  
+  }
+  #glass2:hover #water2 {
+  height: 13em;
+  background-position: top left;
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+  transition: all 5s ease-out;
+  }
+
+
+  #container3 {
+    margin-left:auto;
+    margin-right:auto;
+    width: 100px;
+    }
+    #glass3 {
+    /* background: rgba(235, 57, 57, 1); */
+    width: 80px;
+    height: 400px;
+    position: relative;
+    border-radius: 100%;
+    margin: 0 auto;
+    }
+    #water3 {
+    /* background-image: url("./waves1.png"); */
+    background-position: top right;
+    position: absolute;
+    bottom: 0px;
+    width: 80px;
+    height: 2em;
+    max-height: 420px;
+      border-radius: 100%;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    }
+    #glass3:hover #water3 {
+    height: 13em;
+    background-position: top left;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 5s ease-out;
+    }
+    #water3 hr
+    {
+      position:absolute;
+      background-color:red;
+      bottom:420px
+    }
+ 
+.glass1_width{
+  width: 180px;
+}
+.glass2_width{
+  width: 200px;
+}
+.glass3_width{
+  width: 250px;
+}
+.hr_width{
+  width: 1000px;
+}
+    
+
+/* ====================   Mobile Responsive ( 576px)   ====================== */
+
+@media (max-width: 576px) and (min-width: 300px) {
+  .glass1_width{
+    width: 60px;
+  }
+  .glass2_width{
+    width: 40px;
+  }
+  .glass3_width{
+    width: 70px;
+  }
+  .hr_width{
+    width: 700px;
+  }
+  .responsive_mb{
+    overflow-x: auto;
+  }
+}
+
+/* ====================   Mobile Responsive ( 576px) end  ====================== */
+
+
+
+/* ====================   Tab Responsive ( 576px - 767px )   ====================== */
+
+@media (max-width: 767px) and (min-width: 577px) {
+  .glass1_width{
+    width: 60px;
+  }
+  .glass2_width{
+    width: 40px;
+  }
+  .glass3_width{
+    width: 70px;
+  }
+  .hr_width{
+    width: 700px;
+  }
+}
+/* ====================   Tab Responsive ( 576px - 767px ) end  ====================== */
+
+
+
+/* ====================   Large Screens ( 768px - 1023px )   ====================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .glass1_width{
+    width: 60px;
+  }
+  .glass2_width{
+    width: 40px;
+  }
+  .glass3_width{
+    width: 70px;
+  }
+  .hr_width{
+    width: 700px;
+  }
+}
+
+
+/* ====================   Large Screens ( 768px - 1023px ) end   ====================== */
+
+
+
+/* ====================   Large Screens ( 1024px )   ====================== */
+
+@media (min-width: 1024px) and (max-width: 1365px){
+ 
+  .glass1_width{
+    width: 120px;
+  }
+  .glass2_width{
+    width: 120px;
+  }
+  .glass3_width{
+    width: 130px;
+  }
+  .hr_width{
+    width: 900px;
+  }
+}
+/* ====================   Large Screens ( 1024px ) end   ====================== */
