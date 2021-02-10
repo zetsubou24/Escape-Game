@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <style>
+            body{
+    margin: 0;
+    padding: 0;
+    background-image: url('befmars.jpg');
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: cadetblue;
+}
+.book{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+}
+.book:hover{
+    z-index: 1;
+    transform:perspective(2000px);
+    box-shadow: inset 10px 0 50px rgba(0,0,0,0.5);
+}
+.book .cover{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+.book:hover .cover{
+    transform: rotateY(-135deg);
+}
+.book .cover img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.book .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.details p,h2{
+    padding: 10px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="book">
+                <div class="cover">
+                    <img src = "cover.jpg" />
+                </div>
+                <div class="details">
+                    <h2>Puzzle 1</h2>
+                    <h2>Hint 1</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla hic esse tempore, quibusdam ex sunt eius, nemo voluptatem inventore rerum earum iusto quasi debitis exercitationem expedita modi omnis commodi a.
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
